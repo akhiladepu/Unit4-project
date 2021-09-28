@@ -97,20 +97,116 @@ export const ViewYourAdd = () => {
                 
                 <div className="d-flex flex-column" style={{width:"21.80%"}}>
                     
-                    <div className="col-12" style={{ boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)", marginBottom:"3.2%"}}>
-                        <div>
-                            vd
-                        </div>
+                    <div className="col-12 d-flex flex-column" style={{ boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)", marginBottom: "3.2%" }}>
+                        
+                            <div className="col-10 d-flex flex-row" style={{ margin:"10px auto",justifyContent: "space-between",marginTop:"20px"}}>
+                                <div><p>$ 20000</p></div>
+                                <div><p>Today</p></div>
+                            </div>
+                            
+                        <div className="col-10" style={{margin:"10px auto",textAlign: 'start'}}><p>West Bengal,India</p></div>
+                            
+                            <div className="col-10 d-flex flex-row" style={{margin:"10px auto",justifyContent: "space-between",marginBottom:"20px"}}>
+                            <div style={{width: "47%",border: "1px solid black"}}><p>Edit Ad</p></div>
+                                <div style={{width: "47%",border: "1px solid black"}} ><p>Remove ad</p></div>
+                            </div>
+                        
                     </div>
                         
-                    <div className="col-12" style={{ boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)"}}>
-                        price 1
+                    <div className="col-12 d-flex flex-column" style={{ boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)"}}>
+                        
+                        <div className="col-10" style={{margin:"10px auto",marginTop:"20px",textAlign:"start"}}>
+                            <p>Seller Details</p>
+                        </div>
+
+                        <div className="col-10 d-flex flex-row" style={{margin:"10px auto"}}>
+                            <div> <img src="" alt="" /> </div>
+                            <div>
+                                <p>Rahul singh</p>
+                                <p>Member since sept,2021</p>
+                            </div>
+                        </div>
+
+                        <div className="col-10 d-flex flex-row" style={{margin:"10px auto"}}>
+                            <div>
+                                <p>Contact no</p>
+                                <p>E-mail</p>
+                            </div>
+                            <div>
+                                <p>87907896767</p>
+                                <p>rahul@masai</p>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
             {/* 2nd row ends */}
+
+            {/* 3rd row start */}
+            <div className="col-12 d-flex flex-column" style={{ margin: '100px auto' }} >
+                <div className="col-6" style={{marginLeft: '3.89%',textAlign:"start"}}>
+                    <p>Releated Items</p>
+                </div>
+
+                <div className="d-flex flex-row" style={{width:"92.22%",margin:"10px 3.89%",justifyContent:"space-between"}} >
+                    <div className="d-flex flex-column" style={{width:"23.78%",border: '1px solid black'}}>
+                        <div >
+                            <img src="" alt=""  />
+                        </div>
+                        <div className="d-flex flex-row">
+                            <p>$ 59000</p>
+                            <p>3 DAYS AGO</p>
+                        </div>
+                        <div style={{textAlign:"start"}}><p>Maruti suzuki</p></div>
+                        <div style={{textAlign:"start"}}>
+                            <p>biahr california</p>
+                        </div>
+                    </div>
+                    <div style={{width:"23.78%",border: '1px solid black'}}>
+                        <div>
+                            <img src="" alt="" />
+                        </div>
+                        <div className="d-flex flex-row">
+                            <p>$ 59000</p>
+                            <p>3 DAYS AGO</p>
+                        </div>
+                        <div style={{textAlign:"start"}}><p>Maruti suzuki</p></div>
+                        <div style={{textAlign:"start"}}>
+                            <p>biahr california</p>
+                        </div>
+                    </div>
+                    <div style={{width:"23.78%",border: '1px solid black'}}>
+                        <div>
+                            <img src="" alt="" />
+                        </div>
+                        <div className="d-flex flex-row">
+                            <p>$ 59000</p>
+                            <p>3 DAYS AGO</p>
+                        </div>
+                        <div style={{textAlign:"start"}}><p>Maruti suzuki</p></div>
+                        <div style={{textAlign:"start"}}>
+                            <p>biahr california</p>
+                        </div>
+                    </div>
+                    <div style={{width:"23.78%",border: '1px solid black'}}>
+                        <div>
+                            <img src="" alt="" />
+                        </div>
+                        <div className="d-flex flex-row">
+                            <p>$ 59000</p>
+                            <p>3 DAYS AGO</p>
+                        </div>
+                        <div style={{textAlign:"start"}}><p>Maruti suzuki</p></div>
+                        <div style={{textAlign:"start"}}>
+                            <p>biahr california</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* 3rd row ends */}
 
         </div>
     )

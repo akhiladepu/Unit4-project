@@ -39,9 +39,9 @@ export const ViewYourAdd = () => {
 
                 <div className="d-flex flex-column" style={{width:"37.43%",marginLeft: '3.89%',marginRight:"1.67%"}}>
                     <div style={{position:"relative"}}>
-                        <button onClick={AddImg} style={{ outline: "none",border: "none",background: "rgb(255,255,255,0.7)", width: "40px", height: "40px", justifyContent: "center", borderRadius: "50%", position: "absolute", right: "3%", top: "40%" }}><img src={`SliderLeft.svg`} alt="" style={{position: "absolute", top:"30%",right:"30%",left:"40%",bottom:"30%"}} /></button>
+                        <button onClick={AddImg} style={{ outline: "none",border: "none",background: "rgb(255,255,255,0.7)", width: "38px", height: "38px", justifyContent: "center", borderRadius: "50%", position: "absolute", right: "3%", top: "40%" }}><img src={`SliderLeft.svg`} alt="" style={{position: "absolute", top:"30%",right:"30%",left:"40%",bottom:"30%"}} /></button>
                         <img src={arr[picIndex]} className="img-fluid" style={{ height: "345px", width: "100%" }} alt="" />
-                        <button  onClick={DecImg} style={{outline: "none",border: "none",background: "rgb(255,255,255,0.7)", width: "40px", height: "40px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "3%", top: "40%" }}><img src={`SliderLeft.svg`} alt="" style={{position: "absolute", top:"30%",right:"40%",left:"30%",bottom:"30%",transform:"scaleX(-1)"}} /></button>
+                        <button  onClick={DecImg} style={{outline: "none",border: "none",background: "rgb(255,255,255,0.7)", width: "38px", height: "38px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "3%", top: "40%" }}><img src={`SliderLeft.svg`} alt="" style={{position: "absolute", top:"30%",right:"40%",left:"30%",bottom:"30%",transform:"scaleX(-1)"}} /></button>
                     </div>
                     <div className="d-flex flex-row" style={{justifyContent:"space-between",marginTop:"23px"}}>
                         <div style={{width:"26.5%"}}>
@@ -99,42 +99,54 @@ export const ViewYourAdd = () => {
                     
                     <div className="col-12 d-flex flex-column" style={{ boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)", marginBottom: "3.2%" }}>
                         
-                            <div className="col-10 d-flex flex-row" style={{ margin:"10px auto",justifyContent: "space-between",marginTop:"20px"}}>
-                                <div><p>$ 20000</p></div>
-                                <div><p>Today</p></div>
+                            <div className="col-10 d-flex flex-row" style={{ margin:"10px auto",justifyContent: "space-between",marginTop:"32px"}}>
+                            <div>
+                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"600",fontSize:"24px",lineHeight:"26px",color:"#002F34" }}>
+                                $ 20,000
+                                </p>
+                            </div>
+                            <div>
+                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34" }}>Today</p>
+                            </div>
                             </div>
                             
-                        <div className="col-10" style={{margin:"10px auto",textAlign: 'start'}}><p>West Bengal,India</p></div>
+                        <div className="col-10" style={{ margin: "0px auto", textAlign: 'start' }}>
+                            <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34",marginBottom:"53px" }}>West Bengal,India</p>
+                        </div>
                             
                             <div className="col-10 d-flex flex-row" style={{margin:"10px auto",justifyContent: "space-between",marginBottom:"20px"}}>
-                            <div style={{width: "47%",border: "1px solid black"}}><p>Edit Ad</p></div>
-                                <div style={{width: "47%",border: "1px solid black"}} ><p>Remove ad</p></div>
+                            <div style={{ width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
+                                <p style={{textAlign: "center",paddingTop: "10px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"16px",lineHeight:"18px",color:"rgb(0,47,52,0.8)"}}>Edit Ad</p>
+                            </div>
+                                <div style={{ width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
+                                <p style={{textAlign: "center",paddingTop: "10px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"16px",lineHeight:"18px",color:"rgb(0,47,52,0.8)"}}>Remove Ad</p>
+                            </div>
                             </div>
                         
                     </div>
                         
                     <div className="col-12 d-flex flex-column" style={{ boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)"}}>
                         
-                        <div className="col-10" style={{margin:"10px auto",marginTop:"20px",textAlign:"start"}}>
-                            <p>Seller Details</p>
+                        <div className="col-10" style={{margin:"0px auto",textAlign:"start"}}>
+                            <p style={{ marginTop:"24px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"500",fontSize:"18px",lineHeight:"20px",color:"#002F34"}}>Seller Details</p>
                         </div>
 
-                        <div className="col-10 d-flex flex-row" style={{margin:"10px auto"}}>
-                            <div> <img src="" alt="" /> </div>
-                            <div>
-                                <p>Rahul singh</p>
-                                <p>Member since sept,2021</p>
+                        <div className="col-10 d-flex flex-row" style={{margin:"20px auto"}}>
+                            <div style={{  width: "64px", height: "64px", borderRadius: "50%" }}> <img src={arr[1]} alt="" style={{ width: "64px",height:"64px",borderRadius: "50%"}}/> </div>
+                            <div style={{marginLeft: "24px",textAlign: "start"}}>
+                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"16px",lineHeight:"18px",letterSpace:"0.06em",color:"#000000" }}>Rahul singh</p>
+                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Member since sept,2021</p>
                             </div>
                         </div>
 
-                        <div className="col-10 d-flex flex-row" style={{margin:"10px auto"}}>
+                        <div className="col-10 d-flex flex-row" style={{margin:"0px auto",textAlign:"start"}}>
                             <div>
-                                <p>Contact no</p>
-                                <p>E-mail</p>
+                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Contact no</p>
+                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Email</p>
                             </div>
                             <div>
-                                <p>87907896767</p>
-                                <p>rahul@masai</p>
+                                <p style={{fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>87907896767</p>
+                                <p style={{fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Rahul@masai</p>
                             </div>
                         </div>
 
@@ -148,59 +160,95 @@ export const ViewYourAdd = () => {
             {/* 3rd row start */}
             <div className="col-12 d-flex flex-column" style={{ margin: '100px auto' }} >
                 <div className="col-6" style={{marginLeft: '3.89%',textAlign:"start"}}>
-                    <p>Releated Items</p>
+                    <p style={{fontFamily:"Roboto",fontWeight:"400",fontSize:"36px",lineHeight:"42.19px"}}>Releated Items</p>
                 </div>
 
-                <div className="d-flex flex-row" style={{width:"92.22%",margin:"10px 3.89%",justifyContent:"space-between"}} >
-                    <div className="d-flex flex-column" style={{width:"23.78%",border: '1px solid black'}}>
-                        <div >
-                            <img src="" alt=""  />
+                <div className="d-flex flex-row" style={{width:"92.22%",margin:"10px 3.89%",justifyContent:"space-between",color:"#002F34"}} >
+                    <div className="d-flex flex-column" style={{height:"341px",width:"314px",boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)",borderRadius: "4px"}}>
+                        <div style={{ width: "100%", height: "52.7%" }}>
+                            {/* fhdj */}
+                            <div style={{ position: "relative" }}>
+                                <button onClick={AddImg} style={{ outline: "none", border: "none", background: "rgb(255,255,255,0.7)", width: "74px", height: "21px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "10px",right:"230px", top: "10px" }}><img src={`Feature.svg`} alt="" /></button>
+                                <img src={arr[1]} alt="" style={{width:"100%"}}  />
+                                <button onClick={AddImg} style={{ outline: "none", border: "none", background: "rgb(255,255,255,0.7)", width: "32px", height: "32px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "275px",right:"14px", top: "14px" }}><img src={`like.svg`} alt="" style={{ position: "absolute", top: "8px", right: "7px", left: "7px", bottom: "7.12px" }} /></button>
+                                </div>
+                            {/* fbhdslf */}
+                            
                         </div>
-                        <div className="d-flex flex-row">
-                            <p>$ 59000</p>
-                            <p>3 DAYS AGO</p>
+                        <div className="d-flex flex-row" style={{marginTop:"47px",marginLeft:"24px",marginRight:"24px",justifyContent:"space-between"}}>
+                            <p style={{fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"20px",lineHeight:"22px",color:"#002F34"}}>$ 59000</p>
+                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>3 DAYS AGO</p>
                         </div>
-                        <div style={{textAlign:"start"}}><p>Maruti suzuki</p></div>
-                        <div style={{textAlign:"start"}}>
+                        <div style={{ textAlign: "start", margin: "0px 24px" }}>
+                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34"}}>Maruti suzuki</p>
+                        </div>
+                        <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
                             <p>biahr california</p>
                         </div>
                     </div>
-                    <div style={{width:"23.78%",border: '1px solid black'}}>
-                        <div>
-                            <img src="" alt="" />
+                     <div className="d-flex flex-column" style={{height:"341px",width:"314px",boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)",borderRadius: "4px"}}>
+                        <div style={{ width: "100%", height: "52.7%" }}>
+                            {/* fhdj */}
+                            <div style={{ position: "relative" }}>
+                                <button onClick={AddImg} style={{ outline: "none", border: "none", background: "rgb(255,255,255,0.7)", width: "74px", height: "21px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "10px",right:"230px", top: "10px" }}><img src={`Feature.svg`} alt="" /></button>
+                                <img src={arr[1]} alt="" style={{width:"100%"}}  />
+                                <button onClick={AddImg} style={{ outline: "none", border: "none", background: "rgb(255,255,255,0.7)", width: "32px", height: "32px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "275px",right:"14px", top: "14px" }}><img src={`like.svg`} alt="" style={{ position: "absolute", top: "8px", right: "7px", left: "7px", bottom: "7.12px" }} /></button>
+                                </div>
+                            {/* fbhdslf */}
+                            
                         </div>
-                        <div className="d-flex flex-row">
-                            <p>$ 59000</p>
-                            <p>3 DAYS AGO</p>
+                        <div className="d-flex flex-row" style={{marginTop:"47px",marginLeft:"24px",marginRight:"24px",justifyContent:"space-between"}}>
+                            <p style={{fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"20px",lineHeight:"22px",color:"#002F34"}}>$ 59000</p>
+                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>3 DAYS AGO</p>
                         </div>
-                        <div style={{textAlign:"start"}}><p>Maruti suzuki</p></div>
-                        <div style={{textAlign:"start"}}>
+                        <div style={{ textAlign: "start", margin: "0px 24px" }}>
+                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34"}}>Maruti suzuki</p>
+                        </div>
+                        <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
                             <p>biahr california</p>
                         </div>
                     </div>
-                    <div style={{width:"23.78%",border: '1px solid black'}}>
-                        <div>
-                            <img src="" alt="" />
+                     <div className="d-flex flex-column" style={{height:"341px",width:"314px",boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)",borderRadius: "4px"}}>
+                        <div style={{ width: "100%", height: "52.7%" }}>
+                            {/* fhdj */}
+                            <div style={{ position: "relative" }}>
+                                <button onClick={AddImg} style={{ outline: "none", border: "none", background: "rgb(255,255,255,0.7)", width: "74px", height: "21px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "10px",right:"230px", top: "10px" }}><img src={`Feature.svg`} alt="" /></button>
+                                <img src={arr[1]} alt="" style={{width:"100%"}}  />
+                                <button onClick={AddImg} style={{ outline: "none", border: "none", background: "rgb(255,255,255,0.7)", width: "32px", height: "32px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "275px",right:"14px", top: "14px" }}><img src={`like.svg`} alt="" style={{ position: "absolute", top: "8px", right: "7px", left: "7px", bottom: "7.12px" }} /></button>
+                                </div>
+                            {/* fbhdslf */}
+                            
                         </div>
-                        <div className="d-flex flex-row">
-                            <p>$ 59000</p>
-                            <p>3 DAYS AGO</p>
+                        <div className="d-flex flex-row" style={{marginTop:"47px",marginLeft:"24px",marginRight:"24px",justifyContent:"space-between"}}>
+                            <p style={{fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"20px",lineHeight:"22px",color:"#002F34"}}>$ 59000</p>
+                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>3 DAYS AGO</p>
                         </div>
-                        <div style={{textAlign:"start"}}><p>Maruti suzuki</p></div>
-                        <div style={{textAlign:"start"}}>
+                        <div style={{ textAlign: "start", margin: "0px 24px" }}>
+                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34"}}>Maruti suzuki</p>
+                        </div>
+                        <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
                             <p>biahr california</p>
                         </div>
                     </div>
-                    <div style={{width:"23.78%",border: '1px solid black'}}>
-                        <div>
-                            <img src="" alt="" />
+                     <div className="d-flex flex-column" style={{height:"341px",width:"314px",boxShadow: "0px 4px 20px rgba(0, 47, 52, 0.12)",borderRadius: "4px"}}>
+                        <div style={{ width: "100%", height: "52.7%" }}>
+                            {/* fhdj */}
+                            <div style={{ position: "relative" }}>
+                                <button onClick={AddImg} style={{ outline: "none", border: "none", background: "rgb(255,255,255,0.7)", width: "74px", height: "21px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "10px",right:"230px", top: "10px" }}><img src={`Feature.svg`} alt="" /></button>
+                                <img src={arr[1]} alt="" style={{width:"100%"}}  />
+                                <button onClick={AddImg} style={{ outline: "none", border: "none", background: "rgb(255,255,255,0.7)", width: "32px", height: "32px", justifyContent: "center", borderRadius: "50%", position: "absolute", left: "275px",right:"14px", top: "14px" }}><img src={`like.svg`} alt="" style={{ position: "absolute", top: "8px", right: "7px", left: "7px", bottom: "7.12px" }} /></button>
+                                </div>
+                            {/* fbhdslf */}
+                            
                         </div>
-                        <div className="d-flex flex-row">
-                            <p>$ 59000</p>
-                            <p>3 DAYS AGO</p>
+                        <div className="d-flex flex-row" style={{marginTop:"47px",marginLeft:"24px",marginRight:"24px",justifyContent:"space-between"}}>
+                            <p style={{fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"20px",lineHeight:"22px",color:"#002F34"}}>$ 59000</p>
+                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>3 DAYS AGO</p>
                         </div>
-                        <div style={{textAlign:"start"}}><p>Maruti suzuki</p></div>
-                        <div style={{textAlign:"start"}}>
+                        <div style={{ textAlign: "start", margin: "0px 24px" }}>
+                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34"}}>Maruti suzuki</p>
+                        </div>
+                        <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
                             <p>biahr california</p>
                         </div>
                     </div>

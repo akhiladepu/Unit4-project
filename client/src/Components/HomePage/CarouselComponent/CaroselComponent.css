@@ -1,0 +1,113 @@
+.carousel {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+
+.displayProductComponent{
+    margin:12px 12px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 47, 52, 0.12);
+    border-radius: 4px;
+}
+
+.displayProductComponentImage{
+    position:absolute;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 314px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.displayProductComponentRupeesSymbol{
+    position:absolute;
+    margin-top:208px;
+    margin-left:29px;
+}
+
+.displayProductComponentPrice{
+    position: absolute;
+    font-family: 'Graphik';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top:204px;
+    margin-left:44px;
+    max-width: 125px;
+    height: 22px;
+    overflow: hidden;
+    color: #002F34;
+
+}
+
+.displayProductComponentPostedOn{
+    position: absolute;
+    font-family: 'Graphik';
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 13px;
+    margin-top:205px;
+    margin-left:220px;
+    max-width: 70px;
+    height: 13px;
+    overflow: hidden;
+    color: rgba(0, 47, 52, 0.8);
+
+}
+
+.displayProductComponentName{
+    position: absolute;
+    font-family: 'Graphik';
+    height: 37px;
+    margin-top:243px;
+    margin-left:24px;
+    font-weight: 400;
+    width: 266px;
+    height: 37px;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 15px;
+    color: #002F34;
+}
+
+.displayProductComponentLocation{
+    position: absolute;
+    max-width: 200px;
+    height: 13px;
+    overflow: hidden;
+    margin-left: 24px;
+    margin-top: 290px;
+    font-family: Graphik;
+    font-weight: 300;
+    font-size: 10px !important;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: rgba(0, 47, 52, 0.8);
+}
+
+.displayProductComponentFeatured{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #FFCE32;
+    padding: 4px 12px; */
+    position: absolute;
+    font-size: 20px;
+    width: 74px;
+    height: 21px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.displayProductComponentWishlistIcon{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin-left: 268px;
+    margin-top: 14px;
+}

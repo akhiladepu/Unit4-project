@@ -1,0 +1,97 @@
+.closebox {
+  text-align: right;
+  align-items: end;
+  padding-right: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.continuepage {
+  border: 1px solid white;
+  height: 530px;
+  width: 360px;
+  margin: auto;
+  margin-top: 50px;
+  align-items: center;
+  background-color: white;
+}
+.guitar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.leftarrow {
+  cursor: pointer;
+}
+.rightarrow {
+  cursor: pointer;
+}
+.help {
+  width: 230px;
+  margin: auto;
+  margin-bottom: 15px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  font-family: sans-serif;
+  color: #000000;
+}
+.dots div {
+  font-size: 8px;
+  width: 7px;
+  height: 7px;
+  color: grey;
+  margin: 5px;
+  background: #c4c4c4;
+  border-radius: 15px;
+}
+.dots {
+  display: flex;
+  margin-top: 25px;
+  width: 60px;
+  margin: auto;
+}
+.continueWithPhone {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 40px;
+  width: 300px;
+  background: #ffffff;
+  border: 2px solid #002f34;
+  text-decoration: underline #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 20px auto;
+}
+.phonelogo {
+  margin-right: 40px;
+}
+.phonetext {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+.details {
+  color: black;
+  font-size: 10px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  font-weight: 500;
+}
+.policy {
+  font-size: 12px;
+  width: 250px;
+  margin: auto;
+  color: grey;
+}
+.policy span {
+  color: #40a2fd;
+}

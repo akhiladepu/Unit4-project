@@ -1,0 +1,55 @@
+.otppage {
+  border: 1px solid white;
+  height: 530px;
+  width: 360px;
+  margin: auto;
+  margin-top: 50px;
+  /* align-items: center; */
+  background-color: white;
+}
+.otpbox {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin: auto;
+}
+.otp-field {
+  width: 40px;
+  height: 45px;
+  text-align: center;
+}
+.text span {
+  font-size: 14px;
+  color: #002f34;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.text {
+  font-family: sans-serif;
+  width: 274px;
+  height: 15px;
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+  color: #6f6f6f;
+}
+.resend {
+  text-align: left;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+  margin-left: 10px;
+  color: #0083fc;
+}
+p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+}

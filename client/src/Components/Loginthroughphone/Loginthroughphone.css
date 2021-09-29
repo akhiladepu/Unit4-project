@@ -1,0 +1,88 @@
+.loginpage {
+  border: 1px solid white;
+  height: 530px;
+  width: 360px;
+  margin: auto;
+  margin-top: 50px;
+  align-items: center;
+  background-color: white;
+}
+.number span {
+  padding-left: 5px;
+}
+p {
+  font-weight: bold;
+}
+body {
+  background-color: grey;
+}
+.olxlogo {
+  margin-top: 80px;
+}
+.enternumber {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  margin-top: 25px;
+  color: #002f34;
+}
+.number {
+  height: 40px;
+  width: 85%;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  background: #ffffff;
+  border: 1px solid #7f9799;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.code {
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  padding-top: 5px;
+  /* identical to box height */
+
+  color: #a9a9a9;
+}
+.line {
+  width: 0px;
+  height: 28px;
+  margin-top: 5px;
+  border: 1px solid #888888;
+  margin: 5px;
+}
+.numinput {
+  width: 300px;
+  border: 1px solid #ffffff;
+  border-left: 0;
+  font-size: 16px;
+  margin-left: 20px;
+  color: #002f34;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+.next {
+  width: 85%;
+  margin: auto;
+  height: 45px;
+  margin-top: 60px;
+  background: linear-gradient(0deg, #ebeeef, #ebeeef), #ffffff;
+  border: 1px solid #a9a9a9;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+p {
+  font-size: 11px;
+  margin: 5px 20px;
+}

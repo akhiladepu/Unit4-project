@@ -1,10 +1,13 @@
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <div className="App">
-        olx home page
+    <div>
+      <Navbar />
+      <Footer />
     </div>
   );
 }

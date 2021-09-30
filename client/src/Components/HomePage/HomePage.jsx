@@ -1,5 +1,5 @@
 import "./HomePage.css";
-import data from "./HomePage.json";
+import data from "../../database.json"
 
 export const HomePage = () => {
 
@@ -7,11 +7,11 @@ export const HomePage = () => {
     let topPicsForYou = [];
     let freshRecommendations = [];
     for (let i = 0; i < 4; i++){
-        moreOnCars.push(data.cars[i]);
-        topPicsForYou.push(data.cars[4 + i]);
+        moreOnCars.push(data.Cars[i]);
+        topPicsForYou.push(data.Cars[4 + i]);
     }
 
-    freshRecommendations = data.cars.slice(0, 12);
+    freshRecommendations = data.Cars.slice(0, 12);
     
     return (<>
         <div style={{display:"flex", height:"403px"}}>

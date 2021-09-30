@@ -1,23 +1,24 @@
 {
-    "Cars":[{
-        "productLocalId":1,
+    "Cars":[
+    {
+        "productLocalId":"1",
         "productImages":[
-            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
-            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
-            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
-            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+            "https://apollo-singapore.akamaized.net/v1/files/jrpq90r1mve33-IN/image;s=780x0;q=60",
+            "https://apollo-singapore.akamaized.net/v1/files/ro5ay1enofdn-IN/image;s=780x0;q=60",
+            "https://apollo-singapore.akamaized.net/v1/files/clf3ozicqqxo-IN/image;s=780x0;q=60", 
+            "https://apollo-singapore.akamaized.net/v1/files/tyno0giczkeu2-IN/image;s=780x0;q=60"
         ],
-        "productName":"Maruti Suzuki Etriga GT",
-        "brandName":"Maruti Suzuki ",
+        "productName":"Hyundai Creta",
+        "brandName":"Hyundai",
         "yearOfPurchase":"2015",
-        "model":"Maruti Suzuki Etriga S-CNG",
-        "physicalCondition":"Gently Used",
-        "description":"Adjustable External Mirror,Alloy Wheels,Aux Compatibility, perfect condition, used only for a week, buy it",
-        "price":20000,
-        "location":"West Bengal, India",
-        "postedOn":"22 Sept 2015",
+        "model":"Hyundai class zx4",
+        "physicalCondition":"Never used",
+        "description":"Lock System,Parking Sensors,Power steering,Rear Parking Camera,Sunroof,USB Compatibility,Comprehensive insurance valid,Superior leather seat covers",
+        "price":"8,00,000",
+        "location":"Naranpura,Ahmedabad",
+        "postedOn":"13 Nov 2020",
         "featured":true,
-        "sellerLocalId":1
+        "sellerLocalId":"1"
     },
     {
         "productLocalId":"2",
@@ -122,20 +123,20 @@
     {
         "productLocalId":"7",
         "productImages":[
-            "https://apollo-singapore.akamaized.net/v1/files/jrpq90r1mve33-IN/image;s=780x0;q=60",
-            "https://apollo-singapore.akamaized.net/v1/files/ro5ay1enofdn-IN/image;s=780x0;q=60",
-            "https://apollo-singapore.akamaized.net/v1/files/clf3ozicqqxo-IN/image;s=780x0;q=60", 
-            "https://apollo-singapore.akamaized.net/v1/files/tyno0giczkeu2-IN/image;s=780x0;q=60"
+            "https://apollo-singapore.akamaized.net/v1/files/psqu3ux1aaay2-IN/image;s=780x0;q=60",
+            "https://apollo-singapore.akamaized.net/v1/files/yvx4s5mz1ls11-IN/image;s=780x0;q=60",
+            "https://apollo-singapore.akamaized.net/v1/files/dalmotjj4gxj1-IN/image;s=780x0;q=60", 
+            "https://apollo-singapore.akamaized.net/v1/files/6mea2ti2nyya1-IN/image;s=780x0;q=60"
         ],
-        "productName":"Hyundai Creta",
-        "brandName":"Hyundai",
-        "yearOfPurchase":"2015",
-        "model":"Hyundai class zx4",
-        "physicalCondition":"Never used",
-        "description":"Lock System,Parking Sensors,Power steering,Rear Parking Camera,Sunroof,USB Compatibility,Comprehensive insurance valid,Superior leather seat covers",
-        "price":"8,00,000",
-        "location":"Naranpura,Ahmedabad",
-        "postedOn":"13 Nov 2020",
+        "productName":"BMW X3",
+        "brandName":"BMW",
+        "yearOfPurchase":"2011",
+        "model":"BMW xg-3",
+        "physicalCondition":"Gently Used",
+        "description":"Sensors,Power steering,Rear Parking Camera,Sunroof,USB Compatibility,Comprehensive insurance valid,Superior leather seat covers",
+        "price":"29,90,000",
+        "location":"Bengaluru,India",
+        "postedOn":"13 Oct 2020",
         "featured":true,
         "sellerLocalId":"7"
     },
@@ -282,23 +283,24 @@
     {
         "productLocalId":"15",
         "productImages":[
-            "https://apollo-singapore.akamaized.net/v1/files/psqu3ux1aaay2-IN/image;s=780x0;q=60",
-            "https://apollo-singapore.akamaized.net/v1/files/yvx4s5mz1ls11-IN/image;s=780x0;q=60",
-            "https://apollo-singapore.akamaized.net/v1/files/dalmotjj4gxj1-IN/image;s=780x0;q=60", 
-            "https://apollo-singapore.akamaized.net/v1/files/6mea2ti2nyya1-IN/image;s=780x0;q=60"
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
         ],
-        "productName":"BMW X3",
-        "brandName":"BMW",
-        "yearOfPurchase":"2011",
-        "model":"BMW xg-3",
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
         "physicalCondition":"Gently Used",
-        "description":"Sensors,Power steering,Rear Parking Camera,Sunroof,USB Compatibility,Comprehensive insurance valid,Superior leather seat covers",
-        "price":"29,90,000",
-        "location":"Bengaluru,India",
-        "postedOn":"13 Oct 2020",
-        "featured":true,
+        "description":"Adjustable External Mirror,Alloy Wheels,Aux Compatibility, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"22 Sept 2015",
+        "featured":false,
         "sellerLocalId":"15"
-    }],
+    }
+    ],
     "Mobiles":[
         {
         "productLocalId":1,

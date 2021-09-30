@@ -1,9 +1,10 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-// import { HomePage } from './Components/HomePage/HomePage.jsx';
 import { BrowserRouter } from 'react-router-dom';
-
-import {Login} from "./Components/Login/Login"
+// import { HomePage } from './Components/HomePage/HomePage.jsx';
+// import { Sample } from './Components/Sample/sample';
+// import { PaymentSuccessful } from './Components/PaymentSuccessful/PaymentSuccessful.jsx';
+// import {Login} from "./Components/Login/Login"
 
 function App() {
   
@@ -12,7 +13,9 @@ function App() {
     <div className="App">
         OLX Home Page
       {/* <HomePage /> */}
-      <Login />
+      {/* <Login /> */}
+      {/* <PaymentSuccessful/> */}
+      {/* <Sample/> */}
     </div>
     </BrowserRouter>
   );

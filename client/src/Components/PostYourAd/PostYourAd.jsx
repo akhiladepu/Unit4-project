@@ -35,7 +35,9 @@ export const PostYourAd = () => {
         //console.log(imageList, addUpdateIndex);
         setImages(imageList);
     };
-    console.log(images);
+    images.forEach((el) => {
+        console.log(el.data_url)
+    })
     //////////////// used to store images ends
     const handleChange = (e) => {
         const { name, value } = e.target;

@@ -1,0 +1,404 @@
+{"cars":[
+    {
+        "productLocalId":1,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":1
+    },{
+        "productLocalId":2,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":false,
+        "wishlisted":true,
+        "sellerLocalId":2
+    },{
+        "productLocalId":3,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":3
+    },{
+        "productLocalId":4,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":false,
+        "wishlisted":true,
+        "sellerLocalId":4
+    },{
+        "productLocalId":5,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":5
+    },{
+        "productLocalId":6,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":1
+    },{
+        "productLocalId":7,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":2
+    },{
+        "productLocalId":8,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":3
+    },{
+        "productLocalId":9,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":false,
+        "wishlisted":true,
+        "sellerLocalId":4
+    },{
+        "productLocalId":10,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":5
+    },{
+        "productLocalId":11,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":false,
+        "wishlisted":true,
+        "sellerLocalId":1
+    },{
+        "productLocalId":12,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":2
+    },{
+        "productLocalId":13,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":3
+    },{
+        "productLocalId":14,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":4
+    },{
+        "productLocalId":15,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":5
+    },{
+        "productLocalId":16,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":1
+    },{
+        "productLocalId":17,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":2
+    },{
+        "productLocalId":18,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":3
+    },{
+        "productLocalId":19,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":4
+    },{
+        "productLocalId":20,
+        "productImages":[
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80",
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80", 
+            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        ],
+        "productName":"Maruti Suzuki Etriga GT",
+        "brandName":"Maruti Suzuki ",
+        "yearOfPurchase":"2015",
+        "model":"Maruti Suzuki Etriga S-CNG",
+        "physicalCondition":"Gently Used",
+        "description":"2 battery 2 lenses and 8gb memory card, perfect condition, used only for a week, buy it",
+        "price":"20,000",
+        "location":"West Bengal, India",
+        "postedOn":"Today",
+        "featured":true,
+        "wishlisted":false,
+        "sellerLocalId":5
+    }
+]
+}

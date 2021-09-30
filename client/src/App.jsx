@@ -3,7 +3,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 // import { ViewYourAdd } from './Components/ViewYourAdd/ViewYourAdd';
-import { PostYourAd } from './Components/PostYourAd/PostYourAd';
+// import { PostYourAd } from './Components/PostYourAd/PostYourAd';
 
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
@@ -20,7 +20,7 @@ function App() {
     <div className="App">
 
       {/* <ViewYourAdd /> */}
-      <PostYourAd />
+      {/* <PostYourAd /> */}
 
         {/* OLX Home Page */}
       {/* <HomePage /> */}

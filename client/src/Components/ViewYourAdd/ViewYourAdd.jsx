@@ -1,11 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 
 export const ViewYourAdd = () => {
 
     const [picIndex, setPicIndex] = useState(0);
+    const [incData,setIncData]=useState([]);
 
-    const arr = ["https://cloudfront-us-east-2.images.arcpublishing.com/reuters/INW62ON2YNNWHKBCMY6IFIETG4.jpg","https://i2-prod.manchestereveningnews.co.uk/incoming/article21678284.ece/ALTERNATES/s615/1_GettyImages-1342424026.jpg","https://images.indianexpress.com/2021/09/cristiano-ronaldo-manchester-united.jpg","https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTgzNDQ5NTQyMjQ5Njg2NDM0/cristiano-ronaldo-man-united-return.jpg","https://cdn.wionews.com/sites/default/files/styles/story_page/public/2020/06/05/143417-untitled-design-54.jpg"];
+    useEffect(() => {
+        axios.get("http://localhost:4000/cars")
+            .then((data) => { setIncData(data.data)})
+    },[])
 
+    let arr = incData[0].productImages;
+
+        console.log(arr);
+    
     const AddImg = () => {
         if (picIndex === arr.length - 1) {
             setPicIndex(0);
@@ -86,10 +95,10 @@ export const ViewYourAdd = () => {
                             <p style={{ margin:"24px 32px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"500",fontSize:"18px",color:"#002F34" }}>Physical Condition</p>
                         </div>
                         <div className="col-6" style={{textAlign: 'start'}}>
-                            <p style={{ margin:"24px 32px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"18px",color:"#002F34" }}>Brand Name</p>
-                            <p style={{ margin:"24px 32px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"18px",color:"#002F34" }}>Year of purchase</p>
-                            <p style={{ margin:"24px 32px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"18px",color:"#002F34" }}>Model</p>
-                            <p style={{ margin:"24px 32px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"18px",color:"#002F34" }}>Physical Condition</p>
+                            <p style={{ margin: "24px 32px", fontFamily: "Graphik", fontStyle: "normal", fontWeight: "400", fontSize: "18px", color: "#002F34" }}>{incData[0].brandName}</p>
+                            <p style={{ margin:"24px 32px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"18px",color:"#002F34" }}>{incData[0].yearOfPurchase}</p>
+                            <p style={{ margin: "24px 32px", fontFamily: "Graphik", fontStyle: "normal", fontWeight: "400", fontSize: "18px", color: "#002F34" }}>{incData[0].model}</p>
+                            <p style={{ margin: "24px 32px", fontFamily: "Graphik", fontStyle: "normal", fontWeight: "400", fontSize: "18px", color: "#002F34" }}>{incData[0].physicalCondition}</p>
                         </div>
                     </div>
 
@@ -102,16 +111,16 @@ export const ViewYourAdd = () => {
                             <div className="col-10 d-flex flex-row" style={{ margin:"10px auto",justifyContent: "space-between",marginTop:"32px"}}>
                             <div>
                                 <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"600",fontSize:"24px",lineHeight:"26px",color:"#002F34" }}>
-                                $ 20,000
+                                    {incData[0].price}
                                 </p>
                             </div>
                             <div>
-                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34" }}>Today</p>
+                                <p style={{ fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{incData[0].postedOn}</p>
                             </div>
                             </div>
                             
                         <div className="col-10" style={{ margin: "0px auto", textAlign: 'start' }}>
-                            <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34",marginBottom:"53px" }}>West Bengal,India</p>
+                            <p style={{ fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34", marginBottom: "53px" }}>{incData[0].location}</p>
                         </div>
                             
                             <div className="col-10 d-flex flex-row" style={{margin:"10px auto",justifyContent: "space-between",marginBottom:"20px"}}>

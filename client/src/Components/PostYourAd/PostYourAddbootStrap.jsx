@@ -23,6 +23,7 @@ margin-left:56px;
 width:563px;
 height : 56px;
 border-radius :4px;
+padding-left:10px;
 `
 const Downarrow = styled.i`
 position:absolute;
@@ -35,6 +36,7 @@ width:563px;
 height : 56px;
 border-radius :4px;
 border: 1px solid #002F34;
+
 &:hover {
     border: 1px solid #002F34;
   }
@@ -65,6 +67,7 @@ background: #FFFFFF;
 border: 1px solid #002F34;
 box-sizing: border-box;
 border-radius: 4px;
+cursor:pointer;
 `
 
 const FootButton = styled.div`

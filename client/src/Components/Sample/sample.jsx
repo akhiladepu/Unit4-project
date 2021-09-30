@@ -17,7 +17,7 @@ export const Sample = () => {
     const [userAvatar, setUserAvatar] = useState(0);
 
     const getProducts = async () => {
-        await instance("/cars").then((data) => {
+        await instance("/cars").then((data) => {        // laptops , bikes , mobiles
             console.log(data.data);
             return data;
         })
@@ -31,13 +31,13 @@ export const Sample = () => {
         
     }, [])
 
-    // useEffect(() => {
-    //     getProducts();
-    // }, [])
+    useEffect(() => {
+        getProducts();
+    }, [])
     
     return <>
-        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_wh7ho6zf.json" background="transparent" speed="1" style={{ width: "300px", height: "300px"}} loop autoplay></lottie-player>
-        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_fvhi4ck1.json" background="transparent" speed="1" style={{ width: "300px", height: "300px"}} loop autoplay></lottie-player>
+        {/* <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_wh7ho6zf.json" background="transparent" speed="1" style={{ width: "300px", height: "300px"}} loop autoplay></lottie-player> */}
+        {/* <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_fvhi4ck1.json" background="transparent" speed="1" style={{ width: "300px", height: "300px"}} loop autoplay></lottie-player> */}
         {/* {userAvatar !== 0 ? <img src={`https://statics.olx.in/external/base/img/avatar_${userAvatar}.png`} alt="avatar" /> : <></>} */}
     </>;
 }

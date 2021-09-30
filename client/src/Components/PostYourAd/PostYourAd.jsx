@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import "./PostYourAd.css"
 import { Headd, InpHead, InpBar, Downarrow, Footer, ImgTaker, FootButton, SelectBar, OptionBar } from './PostYourAddbootStrap';
 import ImageUploading from "react-images-uploading";
+import axios from 'axios';
 
 
 const initState = {
@@ -15,11 +16,27 @@ const initState = {
     "pincode":""
 }
 
+
+
+
 export const PostYourAd = () => {
 
-    const [text, setText] = useState(initState);
+    const [text, setText] = useState(initState);   // used for storing text documents
+
     const [totalData, setTotalData] = useState([]);
 
+    const [fetchedData, setFetchedData] = useState([]);
+    
+    ///////////// used for setting image and storing images
+    const [images, setImages] = React.useState([]);
+    const maxNumber = 69;
+    const onChange = (imageList, addUpdateIndex) => {
+        // data for submit
+        //console.log(imageList, addUpdateIndex);
+        setImages(imageList);
+    };
+    console.log(images);
+    //////////////// used to store images ends
     const handleChange = (e) => {
         const { name, value } = e.target;
         setText({...text,[name]: value});
@@ -29,14 +46,33 @@ export const PostYourAd = () => {
         setTotalData([...totalData,text])
     }
 
+    let trig = "cars";
 
-    const [images, setImages] = React.useState([]);
-    const maxNumber = 69;
-    const onChange = (imageList, addUpdateIndex) => {
-        // data for submit
-        console.log(imageList, addUpdateIndex);
-        setImages(imageList);
-    };
+    useEffect(() => {
+        axios.get(`http://localhost:4000/${trig}`)
+            .then((data) => { setFetchedData(data.data);})
+    },[])
+
+    let brandSelect = [];
+    let physicalapp = [];
+    
+     for (let i = 0;i< fetchedData.length; i++)
+     {
+         brandSelect.push(fetchedData[i].brandName);
+        physicalapp.push(fetchedData[i].physicalCondition)
+    }
+    const newBrandSelect = Array.from(new Set(brandSelect));
+    const newPhysicalapp = Array.from(new Set(physicalapp));
+
+    let modelbase = [];
+    for (let i = 0;i< fetchedData.length; i++)
+    {
+        if (text.brandName === fetchedData[i].brandName) {
+            modelbase.push(fetchedData[i].model)
+        }
+    }
+    const newModelbase = Array.from(new Set(modelbase));
+
 
     return (
         <div className="col-12">
@@ -63,28 +99,32 @@ export const PostYourAd = () => {
                         
                         <SelectBar className="form-select" name="brandName" onChange={handleChange}>
                             <OptionBar value=""></OptionBar>
-                            <OptionBar value="Canon">Canon</OptionBar>
-                            <OptionBar value="Sony">Sony</OptionBar>
-                            <OptionBar value="Nikon">Nikon</OptionBar>
-                            <OptionBar value="Samsung">Samsung</OptionBar>
-                            <OptionBar value="Panasonic">Panasonic</OptionBar>
+
+                            {newBrandSelect.map((el) => {
+                                return <OptionBar value={el}>{el}</OptionBar>
+                            })}
                         </SelectBar>
                     </div>
                     <div>
                         <InpHead>Year of Purchase *</InpHead>
-                        <SelectBar className="form-select" type="text" name="yearOfPurchase" onChange={handleChange}>
+                        <SelectBar className="form-select"  type="text" name="yearOfPurchase" onChange={handleChange}>
                             <OptionBar value=""></OptionBar>
-                            <OptionBar value="2020">2020</OptionBar>
-                            <OptionBar value="2019">2019</OptionBar>
-                            <OptionBar value="2018">2018</OptionBar>
-                            <OptionBar value="2017">2017</OptionBar>
-                            <OptionBar value="2016">2016</OptionBar>
+                            {[2020, 2019, 2018, 2017, 2016, 2015,
+                                2014, 2013, 2012, 2010, 2009,2008,
+                                2007, 2006, 2005, 2004, 2003, 2002,
+                                2001, 2000].map((el) => {
+                                    return <OptionBar value={el}>{el}</OptionBar>
+                                })}
                         </SelectBar>
                     </div>
                     <div>
                         <InpHead>Model *</InpHead>
-                        <InpBar type="text" name="model" onChange={handleChange}>
-                        </InpBar>
+                        <SelectBar className="form-select" type="text" name="model" onChange={handleChange}>
+                            <OptionBar value=""></OptionBar>
+                            {newModelbase.map((el) => {
+                                return <OptionBar  value={el}>{el}</OptionBar>
+                            })}
+                        </SelectBar>
                     </div>
                     <div>
                         <InpHead>Physical Condition *</InpHead>
@@ -92,6 +132,9 @@ export const PostYourAd = () => {
                             <OptionBar value=""></OptionBar>
                             <OptionBar value="Almost Like new">Almost Like new</OptionBar>
                             <OptionBar value="Minor Scratches">Minor Scratches</OptionBar>
+                            {newPhysicalapp.map((el) => {
+                                return <OptionBar value={el}>{el}</OptionBar>
+                            })}
                             <OptionBar value="Critical but reparable">Critical but reparable</OptionBar>
                             <OptionBar value="Broken">Broken</OptionBar>
                             <OptionBar value="Internal Damages">Internal Damages</OptionBar>
@@ -110,12 +153,9 @@ export const PostYourAd = () => {
                 
                 <div style={{ width: "652px",marginLeft:"113px" }}>
                     <InpHead style={{ marginLeft: "0px" }}>Description *</InpHead>
-                    <div className="col-12 d-flex flex-row" style={{flexFlow:"row wrap",justifyContent:"space-between"}}>
+                    {/* <div className="col-12 d-flex flex-row" style={{flexFlow:"row wrap",justifyContent:"space-between"}}> */}
 
-                        <ImgTaker>
-                            <div style={{ margin: "71px 80.5px", position: "relative" }}>
-                               
-                                {/* juggad */}
+                            {/* follows the same hirarcy as commented above */}
                                 <div>
                                      <ImageUploading
                                     multiple
@@ -135,84 +175,144 @@ export const PostYourAd = () => {
                                     }) => (
                                     // write your building UI
                                     <div className="upload__image-wrapper">
-                                        <button
-                                        style={isDragging ? { color: "red" } : null}
-                                        onClick={onImageUpload}
-                                        {...dragProps}
-                                        >
-                                        Click or Drop here
-                                        </button>
-                                        &nbsp;
-                                        <button onClick={onImageRemoveAll}>Remove all images</button>
-                                        {imageList.map((image, index) => (
-                                        <div key={index} className="image-item">
-                                            <img src={image.data_url} alt="" width="100" />
-                                            <div className="image-item__btn-wrapper">
-                                            <button onClick={() => onImageUpdate(index)}>Update</button>
-                                            <button onClick={() => onImageRemove(index)}>Remove</button>
-                                            </div>
-                                        </div>
-                                        ))}
+
+                                    <div className="col-12 d-flex flex-row" style={{flexFlow:"row wrap",justifyContent:"space-between"}}>
+
+                                            {/* big juggad */}
+
+                                            {imageList[0] === undefined ? 
+                                    
+                                            <ImgTaker>
+                            <div onClick={onImageUpload} {...dragProps} style={{ margin: "71px 80.5px", position: "relative" }}>
+                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
+                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
+                            </div>
+                                            </ImgTaker> :
+                                            <ImgTaker style={{ position: 'relative' }}>
+                                                <div onClick={() => onImageRemove(0)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <img src={imageList[0].data_url} alt="" width="100%" height="100%" />
+                                            </ImgTaker>
+                                        }
+
+                                        {imageList[1] === undefined ? 
+                                    
+                                            <ImgTaker>
+                            <div onClick={onImageUpload} {...dragProps} style={{ margin: "71px 80.5px", position: "relative" }}>
+                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
+                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
+                            </div>
+                                            </ImgTaker> :
+                                            <ImgTaker style={{ position: 'relative' }}>
+                                                <div onClick={() => onImageRemove(1)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <img src={imageList[1].data_url} alt="" width="100%" height="100%" />
+                                            </ImgTaker>
+                                        }
+
+                                        {imageList[2] === undefined ? 
+                                    
+                                            <ImgTaker>
+                            <div onClick={onImageUpload} {...dragProps} style={{ margin: "71px 80.5px", position: "relative" }}>
+                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
+                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
+                            </div>
+                                            </ImgTaker> :
+                                            <ImgTaker style={{ position: 'relative' }}>
+                                                <div onClick={() => onImageRemove(2)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <img src={imageList[2].data_url} alt="" width="100%" height="100%" />
+                                            </ImgTaker>
+                                        }
+
+                                        {imageList[3] === undefined ? 
+                                    
+                                            <ImgTaker>
+                            <div onClick={onImageUpload} {...dragProps} style={{ margin: "71px 80.5px", position: "relative" }}>
+                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
+                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
+                            </div>
+                                            </ImgTaker> :
+                                            <ImgTaker style={{ position: 'relative' }}>
+                                                <div onClick={() => onImageRemove(3)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <img src={imageList[3].data_url} alt="" width="100%" height="100%" />
+                                            </ImgTaker>
+                                        }
+
+                                        {imageList[4] === undefined ? 
+                                    
+                                            <ImgTaker>
+                            <div onClick={onImageUpload} {...dragProps} style={{ margin: "71px 80.5px", position: "relative" }}>
+                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
+                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
+                            </div>
+                                            </ImgTaker> :
+                                            <ImgTaker style={{ position: 'relative' }}>
+                                                <div onClick={() => onImageRemove(4)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <img src={imageList[4].data_url} alt="" width="100%" height="100%" />
+                                            </ImgTaker>
+                                        }
+
+                                        {imageList[5] === undefined ? 
+                                    
+                                            <ImgTaker>
+                            <div onClick={onImageUpload} {...dragProps} style={{ margin: "71px 80.5px", position: "relative" }}>
+                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
+                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
+                            </div>
+                                            </ImgTaker> :
+                                            <ImgTaker style={{ position: 'relative' }}>
+                                                <div onClick={() => onImageRemove(5)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <img src={imageList[5].data_url} alt="" width="100%" height="100%" />
+                                            </ImgTaker>
+                                        }
+
+                                        {imageList[6] === undefined ? 
+                                    
+                                            <ImgTaker>
+                            <div onClick={onImageUpload} {...dragProps} style={{ margin: "71px 80.5px", position: "relative" }}>
+                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
+                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
+                            </div>
+                                            </ImgTaker> :
+                                            <ImgTaker style={{ position: 'relative' }}>
+                                                <div onClick={() => onImageRemove(6)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <img src={imageList[6].data_url} alt="" width="100%" height="100%" />
+                                            </ImgTaker>
+                                        }
+
+                                        {imageList[7] === undefined ? 
+                                    
+                                            <ImgTaker>
+                            <div onClick={onImageUpload} {...dragProps} style={{ margin: "71px 80.5px", position: "relative" }}>
+                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
+                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
+                            </div>
+                                            </ImgTaker> :
+                                            <ImgTaker style={{ position: 'relative' }}>
+                                                <div onClick={() => onImageRemove(7)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <img src={imageList[7].data_url} alt="" width="100%" height="100%" />
+                                            </ImgTaker>
+                                        }
+                                        {imageList[8] === undefined ? 
+                                    
+                                            <ImgTaker>
+                            <div onClick={onImageUpload} {...dragProps} style={{ margin: "71px 80.5px", position: "relative" }}>
+                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
+                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
+                            </div>
+                                            </ImgTaker> :
+                                            <ImgTaker style={{ position: 'relative' }}>
+                                                <div onClick={() => onImageRemove(8)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"#002F34"}}>X</div>
+                                                <img src={imageList[8].data_url} alt="" width="100%" height="100%" />
+                                            </ImgTaker>
+                                        }
+                                            {/* big juggad */}
+                                    </div>
+                            
                                     </div>
                                     )}
                                 </ImageUploading>
                                 </div>
-                                {/* jugaad */}
-                                
-                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
-                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
-                            </div>
-                        </ImgTaker>
-                        <ImgTaker>
-                            <div style={{ margin: "71px 80.5px",position: "relative"}}>
-                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
-                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
-                            </div>
-                        </ImgTaker>
-                        <ImgTaker >
-                            <div style={{ margin: "71px 80.5px",position: "relative"}}>
-                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
-                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
-                            </div>
-                        </ImgTaker>
-                        <ImgTaker >
-                            <div style={{ margin: "71px 80.5px",position: "relative"}}>
-                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
-                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
-                            </div>
-                        </ImgTaker>
-                        <ImgTaker >
-                            <div style={{ margin: "71px 80.5px",position: "relative"}}>
-                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
-                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
-                            </div>
-                        </ImgTaker>
-                        <ImgTaker >
-                            <div style={{ margin: "71px 80.5px",position: "relative"}}>
-                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
-                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
-                            </div>
-                        </ImgTaker>
-                        <ImgTaker >
-                            <div style={{ margin: "71px 80.5px",position: "relative"}}>
-                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
-                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
-                            </div>
-                        </ImgTaker>
-                        <ImgTaker >
-                            <div style={{ margin: "71px 80.5px",position: "relative"}}>
-                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
-                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
-                            </div>
-                        </ImgTaker>
-                        <ImgTaker >
-                            <div style={{ margin: "71px 80.5px",position: "relative"}}>
-                                <div style={{ border: "2px solid black",width:"15px",height:"15px",borderRadius: "50%",position: "absolute",top:"10px",left:"13px"}}></div>
-                                <img src={`/POSTYOURAD/Cameravector.svg`} alt="" />
-                            </div>
-                        </ImgTaker>
-
-                    </div>
+                    {/* end of that hireracy  */}
+                    {/* </div> */}
                 </div>
 
                 

@@ -35,9 +35,7 @@ export const PostYourAd = () => {
         //console.log(imageList, addUpdateIndex);
         setImages(imageList);
     };
-    images.forEach((el) => {
-        console.log(el.data_url)
-    })
+    
     //////////////// used to store images ends
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -45,7 +43,21 @@ export const PostYourAd = () => {
     }
 
     const handleInput = () => {
-        setTotalData([...totalData,text])
+        const netData = {
+
+            "brandName": text.brandName,
+        "yearOfPurchase": text.yearOfPurchase,
+        "model": text.model,
+        "physicalCondition": text.physicalCondition,
+        "adTitle": text.adTitle,
+        "descrption": text.descrption,
+        "price": text.price,
+            "pincode": text.pincode,
+        "productImages":[...images]
+        }
+          console.log(netData);  
+        setTotalData([netData]);
+        
     }
 
     let trig = "cars";

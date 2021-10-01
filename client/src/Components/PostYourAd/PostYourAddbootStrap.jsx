@@ -48,6 +48,7 @@ const OptionBar = styled.option`
 margin-left:56px;
 width:563px;
 height : 56px;
+font-size:20px;
 border-radius :4px;
 `
 

@@ -26,9 +26,8 @@ function App() {
    <BrowserRouter>
     <div className="App">
 
-        <ViewYourAd2 />
-      {/* <ViewYourAdd /> */}
-      {/* <PostYourAd /> */}
+        {/* <ViewYourAd2 /> */}
+      <PostYourAd />
         {/* <Facebooklogin /> */}
         
         {/* OLX Home Page */}

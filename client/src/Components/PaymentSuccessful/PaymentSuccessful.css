@@ -52,3 +52,13 @@
     position:absolute;
     margin-left:134px;
 }
+
+.header{
+    position: absolute;
+width: 100vh;
+height: 900px;
+left: 0px;
+top: 0px;
+background: #F5FAFA;
+backdrop-filter: blur(50px);
+}

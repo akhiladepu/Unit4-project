@@ -1,5 +1,7 @@
-import "./HomePage.css";
 import data from "../../database.json"
+import "./HomePage.css";
+import Navbar from "../Navbar/Navbar.jsx"
+import Footer from "../Footer/Footer.jsx"
 
 export const HomePage = () => {
 
@@ -13,9 +15,10 @@ export const HomePage = () => {
 
     freshRecommendations = data.Cars.slice(0, 12);
     
-    return (<div style={{ display: "block" }}>
+    return (<div style={{ display: "block", position:"absolute", zIndex:"1"}}>
+        <Navbar/>
         <div>
-            <img className="frameDescription" src={ `/SVGComponents/Homepage/Component0/FrameDescription.svg`} alt=""/>
+            <img className="frameDescription" style={{marginTop:"84px"}}src={ `/SVGComponents/Homepage/Component0/FrameDescription.svg`} alt=""/>
         </div>
         <div style={{display:"", height:"403px"}}>
             <img className="mainImage" src={`/SVGComponents/Homepage/Component1/Final SVG.svg`} alt="" />
@@ -87,5 +90,6 @@ export const HomePage = () => {
             </div>
             <img className="loadMoreButton" src={ `/SVGComponents/Homepage/Component4/LoadmoreButton.svg`} alt=""/>
         </div>
+        <Footer/>
     </div>);
 }

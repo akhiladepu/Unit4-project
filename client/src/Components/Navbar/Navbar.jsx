@@ -1,12 +1,17 @@
 import "./Navbar.css";
 import axios from "axios"
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
+// import { Redirect } from "react-router-dom";
+
+import { useHistory } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import Dropdown from 'react-dropdown';
+// import 'react-dropdown/style.css';
 
 
 function Navbar() {
+
+  const history = useHistory();
   const [product,setProduct]=useState()
   const [searchedProducts,setSearchedProducts]=useState([])
 
@@ -92,6 +97,10 @@ console.log(arr)
 })
 }
 
+  const routeChange = (setPath) =>{ 
+    let path = `/${setPath}`; 
+    history.push(path);
+  }
 
   return (
     <>
@@ -129,8 +138,8 @@ console.log(arr)
                 </div>
           </div>
           <div className="loginAndSellingbox">
-        <div className="login">Login</div>
-        <div className="startSelling">Start Selling</div>
+          <div className="login" onClick={() => { routeChange("Loginthroughphone") }}>Login</div>
+        <div className="startSelling" onClick={() => { routeChange("startSelling") }}>Start Selling</div>
         </div>
        
     </div>

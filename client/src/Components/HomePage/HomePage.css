@@ -1,3 +1,9 @@
+.frameDescription{
+    margin-left: 145px;
+    margin-top: 16px;
+    margin-bottom:16px;
+}
+
 .mainImage{
     position:absolute;
     width: 100%;

@@ -13,8 +13,11 @@ export const HomePage = () => {
 
     freshRecommendations = data.Cars.slice(0, 12);
     
-    return (<>
-        <div style={{display:"flex", height:"403px"}}>
+    return (<div style={{ display: "block" }}>
+        <div>
+            <img className="frameDescription" src={ `/SVGComponents/Homepage/Component0/FrameDescription.svg`} alt=""/>
+        </div>
+        <div style={{display:"", height:"403px"}}>
             <img className="mainImage" src={`/SVGComponents/Homepage/Component1/Final SVG.svg`} alt="" />
             <img className="mainHead" src={`/SVGComponents/Homepage/Component1/Now, Buy and Sell Cars directly with OLX Autos.svg`} alt="" />
             <img onClick={ ()=>{console.log("Buy Car Button Clicked")}} className="mainButtonBuyCar" src={`/SVGComponents/Homepage/Component1/ButtonsBuyCar.svg`} alt="" />
@@ -84,5 +87,5 @@ export const HomePage = () => {
             </div>
             <img className="loadMoreButton" src={ `/SVGComponents/Homepage/Component4/LoadmoreButton.svg`} alt=""/>
         </div>
-    </>);
+    </div>);
 }

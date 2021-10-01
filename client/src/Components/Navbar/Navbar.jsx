@@ -1,48 +1,130 @@
 import "./Navbar.css";
-
+import axios from "axios"
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-const data = [
-  { country: "Delhi", id: 1 },
-  { country: "Jaipur", id: 2 },
-  { country: "Noida", id: 3 },
-  { country: "Gurugaon", id: 4 },
-  { country: "Pune", id: 5 },
-  { country: "Mumbai", id: 6 },
-  { country: "Chandigad", id: 7 },
-  { country: "Mohali", id: 8 },
-  { country: "Banguluru", id: 9 },
-];
 
 function Navbar() {
-  const [option] = useState(data);
+  const [product,setProduct]=useState()
+  const [searchedProducts,setSearchedProducts]=useState([])
 
-  const options = [
-    `All Categories`,'India', 'Russia', 'USA','China'
+  const locations=[`All India`,`Delhi`,`Mumbai`,`Kolkata`,`hyderabad`,`Chennai`]
+
+  const countries = [
+    `All Categories`,'Electronics & appliances', 'Properties', 'Mobile & Tablets',
+    'Commercial Vehicles & spares',`Books,Sports & Hobbies`
   ];
-  const defaultOption = options[0];
+  useEffect(()=>{
+    search()
+  },[])
+  var element;
+  var arr;
+  
+  var p1,p2,p3;
+  var a
+const search=()=>{
+  axios.get(`http://localhost:3005/Cars`)
+  .then((res)=>{
+    arr=res.data
+console.log(arr)
+    a=[]
+    for(let i=0;i<arr.length;i++){
+       element=arr[i].productName.split(" ")
+      p1=element[0].toLowerCase()
+      if(p1===product){
+        a.push(arr[i])
+      }
+    }
+    if(product==="cars"){
+      a=arr
+    }
+   setSearchedProducts([...a])
+})
+axios.get(`http://localhost:3005/Laptops`)
+  .then((res)=>{
+    arr=res.data
+console.log(arr)
+    for(let i=0;i<arr.length;i++){
+       element=arr[i].productName.split(" ")
+      p1=element[0].toLowerCase()
+      if(p1===product){
+        a.push(arr[i])
+      }
+    }
+    if(product==="laptops"){
+      a=arr
+    }
+   setSearchedProducts([...a])
+})
+axios.get(`http://localhost:3005/Mobiles`)
+  .then((res)=>{
+    arr=res.data
+console.log(arr)
+    for(let i=0;i<arr.length;i++){
+       element=arr[i].productName.split(" ")
+      p1=element[0].toLowerCase()
+      if(p1===product){
+        a.push(arr[i])
+      }
+    }
+    if(product==="mobiles"){
+      a=arr
+    }
+   setSearchedProducts([...a])
+})
+axios.get(`http://localhost:3005/Bikes`)
+  .then((res)=>{
+    arr=res.data
+console.log(arr)
+    for(let i=0;i<arr.length;i++){
+       element=arr[i].productName.split(" ")
+      p1=element[0].toLowerCase()
+      if(p1===product){
+        a.push(arr[i])
+      }
+    }
+    if(product==="bikes"){
+      a=arr
+    }
+   setSearchedProducts([...a])
+})
+}
+
 
   return (
+    <>
     <div className="header">
       <img src={`/NavbarImages/olx.svg`} className="logo" alt="" />
-        <div className="location">
-            <img src={`/NavbarImages/location.svg`} alt="" />
-                All India
-            <div className="downArrowKey"><img src={`/NavbarImages/down.svg`} alt="" /></div>
-        </div>
+      <div className="locationlogo"><img src={`/NavbarImages/location.svg`} alt="" /></div>
+        <select className="location">
+            
+              {
+                locations.map(el=>(
+                  <option className="options" title={el}>{el}</option>
+                ))
+              }
+        </select>
         <div className="search">
                 <div >
-                <Dropdown className="categories " options={options}  value={defaultOption} placeholder="Select an option" />
+                <select className="categories">
+                {
+                  countries.map(el=>(
+                    <option className="options" title={el}>{el}</option>
+                  ))
+                }
+                </select>
                 </div>
                 <div><input
+                onChange={(e=>setProduct(e.target.value))}
                 type="text"
                 className="input"
                   placeholder="Search for Cars,Mobile Phones and more"
                 /></div>
-                <div className="searchBar">
+                <div className="searchBar"
+                onClick={search}
+                >
                       <img src={`/NavbarImages/searchIcon.svg`} className="searchIcon" alt="" />
                 </div>
           </div>
@@ -50,7 +132,15 @@ function Navbar() {
         <div className="login">Login</div>
         <div className="startSelling">Start Selling</div>
         </div>
+       
     </div>
+    {
+      searchedProducts.map(el=>(
+        <p>{el.productName}</p>
+      ))
+      
+    }
+    </>
   );
 }
 

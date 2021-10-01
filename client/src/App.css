@@ -1,9 +1,12 @@
-.carLogo{
+.carLogo {
   position: absolute;
   left: 3.89%;
   /* right: 58.68%;
   top: 11.25%;
   bottom: 65.6%; */
-  background: #C4C4C4;
+  background: #c4c4c4;
   border-radius: 4px;
+}
+.App {
+  text-align: center;
 }

@@ -7,31 +7,65 @@
   align-items: center;
   justify-content: space-between;
 }
+.related {
+  position: absolute;
+  margin: 300px;
+}
 
 .location {
-  width: 144px;
+  min-width: 144px;
+  max-width: 144px;
   height: 42px;
   background: #ffffff;
   border: 1px solid #002f34;
   box-sizing: border-box;
   border-radius: 4px;
+  color: #002f34;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 16px;
+  text-align: center;
+  cursor: pointer;
 }
+.locationlogo {
+  position: absolute;
+  margin-left: 135px;
+}
+
 .categories {
-  width: 164px;
+  max-width: 164px;
+  max-width: 164px;
   height: 42px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #002f34;
   align-items: center;
   text-align: center;
   align-items: center;
-  background: black;
+  background: #ebeeef;
   border: 1px solid #002f34;
   box-sizing: border-box;
   border-radius: 4px 0px 0px 4px;
+  cursor: pointer;
 }
+select:focus {
+  min-width: 164px;
+  width: auto;
+}
+/* .options {
+  min-height: 100px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 18px;
+  padding: 50px;
+  color: #002f34;
+} */
 
 .input {
   width: 357px;
@@ -48,11 +82,13 @@
   cursor: pointer;
 }
 .downArrowKey {
+  margin-right: 10px;
   cursor: pointer;
 }
+
 .search {
   display: flex;
-  margin-right: 140px;
+  margin-right: 130px;
 }
 .searchBar {
   width: 42px;

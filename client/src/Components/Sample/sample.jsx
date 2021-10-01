@@ -8,36 +8,49 @@ const instance = axios.create({
 //   timeout: 1000,
 });
 
-const randomIntFromInterval = (min, max) => { // min and max included 
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
+// const randomIntFromInterval = (min, max) => { // min and max included 
+//   return Math.floor(Math.random() * (max - min + 1) + min)
+// }
 
 export const Sample = () => {
 
-    const [userAvatar, setUserAvatar] = useState(0);
+    // const [userAvatar, setUserAvatar] = useState(0);
 
-    const getProducts = async () => {
-        await instance("/cars").then((data) => {
-            console.log(data.data);
-            return data;
-        })
-    }
+    // const getProducts = async () => {
+    //     await instance("/cars").then((data) => {
+    //         console.log(data.data);
+    //         return data;
+    //     })
+    // }
 
-    useEffect(() => {
+    // useEffect(() => {
         
-        const rndInt = randomIntFromInterval(1, 4);
+    //     const rndInt = randomIntFromInterval(1, 4);
 
-        setUserAvatar(rndInt);
+    //     setUserAvatar(rndInt);
         
-    }, [])
+    // }, [])
 
     // useEffect(() => {
     //     getProducts();
     // }, [])
+
+    const getUsers = async () => {
+        await instance("/users").then((data) => {
+            console.log(data.data);
+            return data;
+        })
+    }
+    
+    useEffect(() => {
+        getUsers();
+    }, [])
     
     return <>
-        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_wh7ho6zf.json" background="transparent" speed="1" style={{ width: "300px", height: "300px"}} loop autoplay></lottie-player>
-        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_fvhi4ck1.json" background="transparent" speed="1" style={{ width: "300px", height: "300px"}} loop autoplay></lottie-player>
+        
+        {/* <lottie-player src={`/SVGComponents/lf20_af67hsoz.json`} background="transparent" speed="1" style={{ width: "120px", height: "120px"}} loop autoplay></lottie-player>
+        <lottie-player src={`/SVGComponents/lf20_x3rqvhjl.json`} background="transparent" speed="1" style={{ width: "120px", height: "120px"}} loop autoplay></lottie-player>
+        <img src={`/SVGComponents/uploading.gif`} alt=""/> */}
         {/* {userAvatar !== 0 ? <img src={`https://statics.olx.in/external/base/img/avatar_${userAvatar}.png`} alt="avatar" /> : <></>} */}
     </>;
 }

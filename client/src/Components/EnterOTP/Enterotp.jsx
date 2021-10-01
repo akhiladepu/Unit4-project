@@ -16,8 +16,9 @@ export function Enterotp(){
 
     return <>
     <div className="otppage">
+    <img className="x" src={ `/LoginImages/x.svg`} alt="1" />
         <div className="olxlogo" ><img src={`/LoginImages/olx.svg`} alt="olxlogo"/></div>
-        <div className="enternumber">Enter the OTP</div>
+        <div className="enternumber">Enter Your received</div>
         <div className="text">We sent a 4-digit code to <span >+{phoneNumber}</span></div>
         
     <div className="row mb-5 mt-3" >
@@ -39,10 +40,9 @@ export function Enterotp(){
     }
     </div>
     </div>
-    <div className="resend">
-     <p>RESEND CODE BY SMS</p>
-     <p>RESEND CODE BY CALL</p>
-     </div>
+
+     <div className="resend">RESEND CODE BY SMS</div>
+     <div className="call">RESEND CODE BY CALL</div>
 </div>
 
      

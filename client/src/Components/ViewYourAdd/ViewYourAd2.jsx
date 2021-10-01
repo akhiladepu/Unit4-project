@@ -4,12 +4,32 @@ import { UpperDiv,PhotoClg,ProductDetail,AdDetailKey,DescriptionKey,Pricing,Smal
 
 export const ViewYourAd2 = () => {
 
-    const [allData, setAllData] = useState([]);
-    const [images,setImages]=useState([]);
+    const [allData, setAllData] = useState([]);    // handlimng all datas
+    const [images, setImages] = useState([]);   // handle main images 
+
+    const [lowerImg1, setLowerImg1] = useState([]);
+    const [lowerImg2, setLowerImg2] = useState([]);
+    const [lowerImg3, setLowerImg3] = useState([]);
+    const [lowerImg4, setLowerImg4] = useState([]);
+    const [lowerData1, setLowerData1] = useState([]);
+    const [lowerData2, setLowerData2] = useState([]);
+    const [lowerData3, setLowerData3] = useState([]);
+    const [lowerData4,setLowerData4]=useState([]); 
 
     useEffect(() => {
         axios.get("http://localhost:4000/cars")
-            .then((data) => { setAllData(data.data[0]); setImages(data.data[0].productImages)})
+            .then((data) => {
+                setAllData(data.data[0]);
+                setImages(data.data[0].productImages);
+                setLowerImg1(data.data[1].productImages);
+                setLowerImg2(data.data[2].productImages)
+                setLowerImg3(data.data[3].productImages)
+                setLowerImg4(data.data[4].productImages)
+                setLowerData1(data.data[1]);
+                setLowerData2(data.data[2]);
+                setLowerData3(data.data[3]);
+                setLowerData4(data.data[4]);
+            })
     },[])
 
     
@@ -17,13 +37,7 @@ export const ViewYourAd2 = () => {
 
     const [trig, setTrig] = useState(0);
 
-    //const arr=["https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg","https://idsb.tmgrup.com.tr/ly/uploads/images/2021/06/24/124204.jpg","https://storage.googleapis.com/afs-prod/media/78f59bc7477e4ccb86bb8b5a0fe19496/400.jpeg","https://pbs.twimg.com/media/E_vMfXFWQAYgxFp.jpg"]
-
-    //  const arr=[...allData.productImages]
-    //const imageTray = allData.productImages;
     
-    
-
     const handleTrig1 = () => {
        
         if (trig === images.length-1) {
@@ -252,23 +266,23 @@ export const ViewYourAd2 = () => {
                         <div onClick={handleLike1} style={{ position: 'absolute', width: "32px", top: '10px', right: "10px", height: "32px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.6)" }}>
                             {hover1 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
                         </div>
-                        <img src="https://pbs.twimg.com/media/E_vMfXFWQAYgxFp.jpg" alt="" style={{width:"100%",height:"100%"}} />
+                        <img src={lowerImg1[0]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
                     <div className="d-flex flex-row">
-                        <p style={{ marginTop: "24px", marginBottom: "17px", marginLeft: "29px", marginRight: "104px", fontFamily: "Graphik", fontWeight: "600", fontStyle: "normal", fontSize: "20px", lineHeight: "22px", color: "#002F34" }}>
-                            ₹ 59000
+                        <p style={{ marginTop: "24px", marginBottom: "17px", marginLeft: "29px", marginRight: "104px", fontFamily: "Graphik", fontWeight: "600", fontStyle: "normal", fontSize: "14.8px", lineHeight: "22px", color: "#002F34" }}>
+                            ₹ {lowerData1.price}
                         </p>
                         <p style={{ marginTop: "25px", marginBottom: "17px", marginRight: "24px", fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "12px", lineHeight: "13.2px", color: "rgb(0,47,52,0.8)" }}>
-                            3 DAYS AGO
+                            {lowerData1.postedOn}
                         </p>
                     </div>
                     <div style={{ textAlign: "start", marginLeft: "24px" }}>
                         <p style={{ fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>
-                            Maruti suzuki
+                            {lowerData1.brandName }
                         </p>
                     </div>
                     <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
-                            <p>biahr california</p>
+                        <p>{lowerData1.location}</p>
                         </div>
                 </SmallPicINF>
 
@@ -278,17 +292,17 @@ export const ViewYourAd2 = () => {
                         <div onClick={handleLike2} style={{ position: 'absolute', width: "32px", top: '10px', right: "10px", height: "32px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.6)" }}>
                             {hover2 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
                         </div>
-                        <img src="https://pbs.twimg.com/media/E_vMfXFWQAYgxFp.jpg" alt="" style={{width:"100%",height:"100%"}} />
+                        <img src={lowerImg2[1]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
                     <div className="d-flex flex-row">
-                        <p style={{ marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"20px",lineHeight:"22px",color:"#002F34"}}>₹ 59000</p>
-                        <p style={{marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>3 DAYS AGO</p>
+                        <p style={{ marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"16px",lineHeight:"22px",color:"#002F34"}}>₹ {lowerData2.price}</p>
+                        <p style={{marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData2.postedOn}</p>
                     </div>
                     <div style={{ textAlign: "start", marginLeft: "24px" }}>
-                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34"}}>Maruti suzuki</p>
+                        <p style={{ fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData2.brandName}</p>
                     </div>
                     <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
-                            <p>biahr california</p>
+                            <p>{lowerData2.location}</p>
                         </div>
                 </SmallPicINF>
 
@@ -298,17 +312,17 @@ export const ViewYourAd2 = () => {
                         <div onClick={handleLike3} style={{ position: 'absolute', width: "32px", top: '10px', right: "10px", height: "32px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.6)" }}>
                             {hover3 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
                         </div>
-                        <img src="https://pbs.twimg.com/media/E_vMfXFWQAYgxFp.jpg" alt="" style={{width:"100%",height:"100%"}} />
+                        <img src={lowerImg3[0]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
                     <div className="d-flex flex-row">
-                        <p style={{ marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"20px",lineHeight:"22px",color:"#002F34"}}>₹ 59000</p>
-                        <p style={{marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>3 DAYS AGO</p>
+                        <p style={{ marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"14.5px",lineHeight:"22px",color:"#002F34"}}>₹ {lowerData3.price}</p>
+                        <p style={{marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData3.postedOn}</p>
                     </div>
                     <div style={{ textAlign: "start", marginLeft: "24px" }}>
-                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34"}}>Maruti suzuki</p>
+                        <p style={{ fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData3.brandName}</p>
                     </div>
                     <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
-                            <p>biahr california</p>
+                            <p>{lowerData3.location}</p>
                         </div>
                 </SmallPicINF>
 
@@ -318,17 +332,17 @@ export const ViewYourAd2 = () => {
                         <div onClick={handleLike4} style={{ position: 'absolute', width: "32px", top: '10px', right: "10px", height: "32px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.6)" }}>
                             {hover4 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> }
                         </div>
-                        <img src="https://pbs.twimg.com/media/E_vMfXFWQAYgxFp.jpg" alt="" style={{width:"100%",height:"100%"}} />
+                        <img src={lowerImg4[1]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
                     <div className="d-flex flex-row">
-                        <p style={{ marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"20px",lineHeight:"22px",color:"#002F34"}}>₹ 59000</p>
-                        <p style={{marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>3 DAYS AGO</p>
+                        <p style={{ marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"14.5px",lineHeight:"22px",color:"#002F34"}}>₹ {lowerData4.price}</p>
+                        <p style={{marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData4.postedOn}</p>
                     </div>
                     <div style={{ textAlign: "start", marginLeft: "24px" }}>
-                            <p style={{fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"14px",lineHeight:"15px",color:"#002F34"}}>Maruti suzuki</p>
+                        <p style={{ fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData4.brandName}</p>
                     </div>
                     <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
-                            <p>biahr california</p>
+                        <p>{lowerData4.location}</p>
                         </div>
                 </SmallPicINF>
 

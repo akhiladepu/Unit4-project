@@ -1,21 +1,57 @@
-import data from "../../database.json"
 import "./HomePage.css";
 import Navbar from "../Navbar/Navbar.jsx"
-import Footer from "../Footer/Footer.jsx"
+import Footer from "../Footer/Footer.jsx";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+let moreOnCars = [];
+let topPicsForYou = [];
+let freshRecommendations = [];
 
 export const HomePage = () => {
 
-    let moreOnCars = [];
-    let topPicsForYou = [];
-    let freshRecommendations = [];
-    for (let i = 0; i < 4; i++){
-        moreOnCars.push(data.Cars[i]);
-        topPicsForYou.push(data.Cars[4 + i]);
-    }
+    const [appData, setAppData] = useState([]);
 
-    freshRecommendations = data.Cars.slice(0, 12);
+    useEffect(() => {
+
+        getProducts();
+
+    }, []);
+
+    const getProducts = async () => {
+
+        let fetchedData = [];
+        
+        await axios("http://localhost:4000/cars").then((data) => {
+            fetchedData = [...fetchedData, ...data.data];
+        })
+        
+        await axios("http://localhost:4000/bikes").then((data) => {
+            fetchedData = [...fetchedData, ...data.data];
+        })
+        
+        await axios("http://localhost:4000/laptops").then((data) => {
+            fetchedData = [...fetchedData, ...data.data];
+        })
+        
+        await axios("http://localhost:4000/mobiles").then((data) => {
+            fetchedData = [...fetchedData, ...data.data];
+        })
+
+        for (let i = 0; i < 4; i++) {
+            moreOnCars.push(fetchedData[Math.floor(Math.random() * fetchedData.length)]);
+            topPicsForYou.push(fetchedData[Math.floor(Math.random() * fetchedData.length)]);
+        }
+
+        for (let i = 0; i < 12; i++) {
+            freshRecommendations.push(fetchedData[Math.floor(Math.random() * fetchedData.length)]);
+        }
+
+        setAppData(fetchedData);
+
+    }
     
-    return (<div style={{ display: "block", position:"absolute", zIndex:"1"}}>
+    return appData.length === 0 ? <></> : (<div style={{ display: "block", position:"absolute", zIndex:"1"}}>
         <Navbar/>
         <div>
             <img className="frameDescription" style={{marginTop:"84px"}}src={ `/SVGComponents/Homepage/Component0/FrameDescription.svg`} alt=""/>

@@ -8,7 +8,11 @@
 
   background: #ffffff;
 }
-
+.x {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
 p {
   font-weight: bold;
 }
@@ -16,9 +20,16 @@ body {
   background-color: grey;
 }
 .olxlogo {
-  margin-top: 92px;
+  position: absolute;
+  top: 92px;
+  left: 170px;
+  width: 72px;
+  height: 42px;
 }
 .enternumber {
+  position: absolute;
+  top: 146px;
+  left: 123px;
   font-family: sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -101,6 +112,7 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
+  text-align: center;
 }
 p {
   position: absolute;

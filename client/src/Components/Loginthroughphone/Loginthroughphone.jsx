@@ -7,22 +7,23 @@ export function Loginthroughphone(){
    const [order,setOrder]=useState(false)
 
    useEffect(()=>{
-      setOrder(true)
-   },[order])
+      handleNext()
+   },[phoneNumber])
+
   const handleNext=()=>{
-     if(phoneNumber.length<10 || phoneNumber.length>10){
-        alert("Please enter a valid number.")
+     if(phoneNumber.length===10){
+      setChangeColor(true)
+      setOrder(true)
+     }else{
+      setChangeColor(false)
      }
-     else {
-        setChangeColor(false)
-        setOrder(true)
-     }
+       
   }
     return <>
     <div className="loginpage">
     <img className="x" src={ `/LoginImages/x.svg`} alt="1" />
-         <div className="olxlogo" ><img src={`/LoginImages/olx.svg`} alt="olxlogo"/></div>
-         <div className="enternumber">Enter Your Number</div>
+         <img className="olxlogo" src={`/LoginImages/olx.svg`} alt="olxlogo"/>
+                  <div className="enternumber">Enter Your Number</div>
 
       <div className="number" >
          <div className="code"><span >+91</span></div>
@@ -30,7 +31,7 @@ export function Loginthroughphone(){
          <input onChange={(e)=>setPhoneNumber(e.target.value)} className="numinput" placeholder="Enter Phone Number"></input>
       </div>
 
-      {order?<Link to="/Enterotp">
+      {changeColor?<Link to="/Enterotp">
          <div className="next1"
          style={{
             background: !changeColor ? "linear-gradient(0deg, #ebeeef, #ebeeef), #ffffff":"linear-gradient(0deg, #002F34, #002F34), #FFFFFF",

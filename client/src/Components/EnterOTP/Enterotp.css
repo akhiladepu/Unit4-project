@@ -7,6 +7,13 @@
 
   background: #ffffff;
 }
+.olxlogo {
+  position: absolute;
+  top: 92px;
+  left: 170px;
+  width: 72px;
+  height: 42px;
+}
 .close {
   display: flex;
   align-items: center;
@@ -18,12 +25,13 @@
   justify-content: space-around;
   width: 360px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 260px;
 }
 .otp-field {
   width: 64px;
   height: 64px;
   text-align: center;
+  font-size: 24px;
 }
 .text span {
   font-size: 14px;
@@ -31,7 +39,13 @@
   font-weight: 600;
   font-family: sans-serif;
 }
-.enternumber {
+.enternumber1 {
+  position: absolute;
+  width: 189px;
+  height: 22px;
+  left: 106px;
+  top: 166px;
+
   font-family: Graphik;
   font-style: normal;
   font-weight: 600;
@@ -43,17 +57,19 @@
 }
 
 .text {
-  font-family: sans-serif;
+  position: absolute;
   width: 274px;
   height: 15px;
-  margin-left: 35px;
-  margin-top: 35px;
-  margin-bottom: 25px;
+  left: 50px;
+  top: 221px;
+
+  font-family: Graphik;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 15px;
   text-align: center;
+
   color: #6f6f6f;
 }
 

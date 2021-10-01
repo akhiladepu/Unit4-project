@@ -138,8 +138,8 @@ console.log(arr)
                 </div>
           </div>
           <div className="loginAndSellingbox">
-          <div className="login" onClick={() => { routeChange("Loginthroughphone") }}>Login</div>
-        <div className="startSelling" onClick={() => { routeChange("startSelling") }}>Start Selling</div>
+          <div className="login" onClick={() => { routeChange("Continueoptions") }}>Login</div>
+        <div className="startSelling" onClick={() => { routeChange("") }}>Start Selling</div>
         </div>
        
     </div>

@@ -1,5 +1,5 @@
 import "./PaymentSuccessfull.css"
-import {Link} from "react-router-dom"
+import {Link, Redirect} from "react-router-dom"
 import { Updatingad } from "../Updating/Updatingad"
 import {useState,useEffect} from "react"
 export function PaymentSuccessfull(){
@@ -17,8 +17,8 @@ export function PaymentSuccessfull(){
     <img className="x" src={ `/LoginImages/x.svg`} alt="1" />
     <div className="overAllDiv">
                     
-                        <img className="ellipse" src={ `/PaymentSuccessful/Ellipse.svg`} alt="1" />
-                        <img className="checkMark" src={ `/PaymentSuccessful/checkMark.svg`} alt="1" />
+                    <img className="ellipse" src={ `/PaymentSuccessful/Ellipse.svg`} alt="1" />
+                    <img className="checkMark" src={ `/PaymentSuccessful/checkMark.svg`} alt="1" />
                     <img className="star1" src={ `/PaymentSuccessful/Star 1.svg`} alt="1" />
                     <img className="star2" src={ `/PaymentSuccessful/Star 2.svg`} alt="2" />
                     <img className="star3" src={ `/PaymentSuccessful/Star 3.svg`} alt="3" />
@@ -28,7 +28,7 @@ export function PaymentSuccessfull(){
                </div>
     <div className="congo">Payment Successfull</div>
     <div className="live">You can post a second ad now...</div>
-   <Link to="/postingAnotherAd"><div class="post">Post Another Ad</div></Link>
+   <Redirect to="/"><div class="post">Post Another Ad</div></Redirect>
     <div className="bottomtext">
     <img className="i" src={ `/PaymentSuccessful/i.svg`} alt="i" />
     olx allows 1 free ad in 30 days for <span>Cameras</span></div>

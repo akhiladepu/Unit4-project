@@ -17,10 +17,12 @@ import {Enterotp} from "./Components/EnterOTP/Enterotp"
 import {Updatingad} from "./Components/UpdatingAd/Updating/Updatingad"
 import AdNotPosted from "./Components/UpdatingAd/AdNotPosted/AdNotPosted"
 import { Postloading } from "./Components/UpdatingAd/Loading/Postloading.jsx";
+import {Selectcategory} from "./Components/Selectcategory/Selectcategory"
 
 function App() {
   return (
     <div className="App">
+      
       <Routes />
       {/* <HomePage /> */}
       {/* <Login /> */}

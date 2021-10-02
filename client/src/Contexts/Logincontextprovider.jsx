@@ -7,6 +7,7 @@ export function Logincontextprovider({children}){
 
     const [phoneNumber, setPhoneNumber] = useState("");
     const [changeColor, setChangeColor] = useState(false);
+    const [category,setCategory]=useState("")
 
     const getUsers = async () => {
         await axios("http://localhost/cars").then((data) => {
@@ -23,7 +24,7 @@ export function Logincontextprovider({children}){
             setChangeColor(true)
     },[phoneNumber])
 
-    return <LoginContext.Provider value={{phoneNumber,setPhoneNumber,changeColor,setChangeColor}}>
+    return <LoginContext.Provider value={{category,setCategory,phoneNumber,setPhoneNumber,changeColor,setChangeColor}}>
     {children}
     </LoginContext.Provider>
 }

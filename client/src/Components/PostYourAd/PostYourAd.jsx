@@ -113,7 +113,7 @@ export const PostYourAd = () => {
 
                 <div className="d-flex flex-column">
                     <div>
-                        <InpHead>Brand name *</InpHead>
+                        <img src={`/POSTYOURAD/Brandname.svg `} alt="" style={{marginLeft:'56px',marginTop:'32px',marginBottom:'16px'}} />
                         
                         <SelectBar className="form-select" name="brandName" onChange={handleChange}>
                             <OptionBar value=""></OptionBar>
@@ -124,7 +124,7 @@ export const PostYourAd = () => {
                         </SelectBar>
                     </div>
                     <div>
-                        <InpHead>Year of Purchase *</InpHead>
+                        <img src={`/POSTYOURAD/YearofPurchase.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}}/>
                         <SelectBar className="form-select"  type="text" name="yearOfPurchase" onChange={handleChange}>
                             <OptionBar value=""></OptionBar>
                             {[2020, 2019, 2018, 2017, 2016, 2015,
@@ -136,7 +136,7 @@ export const PostYourAd = () => {
                         </SelectBar>
                     </div>
                     <div>
-                        <InpHead>Model *</InpHead>
+                        <img src={`/POSTYOURAD/Model.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} />
                         <SelectBar className="form-select" type="text" name="model" onChange={handleChange}>
                             <OptionBar value=""></OptionBar>
                             {newModelbase.map((el) => {
@@ -145,7 +145,7 @@ export const PostYourAd = () => {
                         </SelectBar>
                     </div>
                     <div>
-                        <InpHead>Physical Condition *</InpHead>
+                        <img src={`/POSTYOURAD/PhysicalCondition.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} />
                         <SelectBar className="form-select" type="text" name="physicalCondition" onChange={handleChange}>
                             <OptionBar value=""></OptionBar>
                             <OptionBar value="Almost Like new">Almost Like new</OptionBar>
@@ -159,18 +159,19 @@ export const PostYourAd = () => {
                         </SelectBar>
                     </div>
                     <div>
-                        <InpHead>Ad Title *</InpHead>
+                        <img src={`/POSTYOURAD/AdTitle.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} /> <br />
                         <InpBar type="text" name="adTitle" onChange={handleChange}></InpBar>
                     </div>
                     <div>
-                        <InpHead>Description *</InpHead>
+                        <img src={`/POSTYOURAD/Descriptionnew.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} /> <br />
                         <InpBar type="text" name="descrption" onChange={handleChange}></InpBar>
                         
                     </div>
                 </div>
                 
-                <div style={{ width: "652px",marginLeft:"113px" }}>
-                    <InpHead style={{ marginLeft: "0px" }}>Description *</InpHead>
+                <div style={{ width: "652px" ,marginLeft:"100px"}}>
+                    
+                     <img src={`/POSTYOURAD/AdTitle.svg`} alt="" style={{marginLeft:'4px',marginTop:'33px',marginBottom:'16px'}} /> <br />
                     {/* <div className="col-12 d-flex flex-row" style={{flexFlow:"row wrap",justifyContent:"space-between"}}> */}
 
                             {/* follows the same hirarcy as commented above */}
@@ -346,11 +347,11 @@ export const PostYourAd = () => {
 
             <div className="d-flex flex-row" style={{marginBottom:"104px"}}>
                 <div>
-                    <InpHead>Price *</InpHead>
+                    <img src={`/POSTYOURAD/Price.svg`} alt="" style={{marginLeft:'55px',marginTop:'16px',marginBottom:'16px'}} /> <br />
                     <InpBar type="text" name="price" onChange={handleChange}></InpBar>
                 </div>
                 <div style={{marginLeft:"60px"}}>
-                    <InpHead>Pincode *</InpHead>
+                     <img src={`/POSTYOURAD/Pincode.svg`} alt="" style={{marginLeft:'55px',marginTop:'20px',marginBottom:'16px'}} /> <br />
                     <InpBar type="text" name="pincode" onChange={handleChange}></InpBar>
                 </div>
             </div>

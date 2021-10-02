@@ -1,7 +1,9 @@
 import "./Enterotp.css"
 import { useContext, useEffect, useState } from "react"
 import { LoginContext } from "../../Contexts/Logincontextprovider"
-export function Enterotp(){
+import { useHistory } from "react-router"
+export function Enterotp() {
+    const history = useHistory();
     const {phoneNumber}=useContext(LoginContext)
     const [otp,setOtp]=useState(new Array(4).fill(""))
     const handleChange=(el,index)=>{
@@ -9,6 +11,12 @@ export function Enterotp(){
         setOtp([...otp.map((d,idx)=>(idx===index)? el.value:d)])
         if(el.nextSibling){
             el.nextSibling.focus()
+        }
+
+        if (index === 3) {
+            setTimeout(() => {
+                history.push("/");
+            }, 1200)
         }
     }
     return <>

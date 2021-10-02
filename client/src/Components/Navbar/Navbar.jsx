@@ -1,10 +1,10 @@
 import "./Navbar.css";
 import axios from "axios"
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
+import { useHistory } from "react-router";
 function Navbar() {
+
+  const history = useHistory();
   const [product,setProduct]=useState()
   const [searchedProducts,setSearchedProducts]=useState([])
   const locations=[`All India`,`Delhi`,`Mumbai`,`Kolkata`,`hyderabad`,`Chennai`]
@@ -86,6 +86,13 @@ console.log(arr)
    setSearchedProducts([...a])
 })
 }
+
+  const routeChange = (reqPath) => {
+    let path = `/${reqPath}`
+    history.push(path);
+  }
+
+  
   return (
     <>
     <div className="header">
@@ -112,7 +119,7 @@ console.log(arr)
           placeholder="Search for Cars,Mobile Phones and more"
         />
       <img src={`/NavbarImages/search.svg`} className="searchIcon" alt="" />
-      <div className="login">Login</div>
+        <div className="login" onClick={ ()=>{routeChange("Continueoptions")}}>Login</div>
       <div className="startSelling">Start Selling</div>
     </div>
     {

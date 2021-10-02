@@ -82,6 +82,16 @@ export const ViewYourAd2 = () => {
     }
     //Like button state management starts
 
+    const [detail, setdetail] = useState(false);
+    const handleDetail = () => {
+        setdetail(!detail)
+    }
+    
+    // for ad details description button
+    
+
+
+
 
     // fututre use 
 
@@ -105,10 +115,10 @@ export const ViewYourAd2 = () => {
 
                         <img src={images[trig]} style={{ height: "100%", width: "100%" }} alt="" />
                         <div onClick={handleTrig1} style={{ position: "absolute", top: "158px", left: "8px", width: "38px", height: "38px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.5)" }}>
-                            <img src={`/ViewMyAd/SliderRight.svg`} style={{position: "absolute", top:"30%",right:"40%",left:"30%",bottom:"30%"}} alt="" />
+                            <img src={`/ViewMyAd/SliderRight.svg`} style={{width:"13.5px",position: "absolute", top:"23.63%",right:"48%",left:"30%",bottom:"30%"}} alt="" />
                         </div>
                         <div onClick={handleTrig2} style={{ position: "absolute", top: "158px", left: "493px", width: "38px", height: "38px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.5)" }}>
-                            <img src={`/ViewMyAd/SliderRight.svg`} style={{position: "absolute", top:"30%",right:"30%",left:"40%",bottom:"30%",transform:"scaleX(-1)"}} alt="" />
+                            <img src={`/ViewMyAd/SliderRight.svg`} style={{width:"13.5px",position: "absolute", top:"23.63%",right:"30%",left:"40%",bottom:"30%",transform:"scaleX(-1)"}} alt="" />
                         </div>
                     </div>
 
@@ -129,31 +139,47 @@ export const ViewYourAd2 = () => {
                         </SmallPICASHOW>
 
                         <SmallPICASHOW style={{position: "relative"}}>
-                            {images.length >= 100 ? <img src={images[2]} alt="" style={{ width:"100%",height:"100%"} }/> : <div> <div style={{ position:"absolute",width: '100%', height: '100%', background: "rgb(0,0,0,0.4)",zIndex:"14",color:"white",fontSize:"60px",textAlign:"center" }}>
-                                +{images.length-2}
+                            {images.length >= 100 ? <img src={images[2]} alt="" style={{ width:"100%",height:"100%"} }/> : <div> <div style={{ position:"absolute",width:'100.5%',borderRadius:"4px", height: '100%', background: "rgb(0,0,0,0.4)",zIndex:"14",color:"white",fontSize:"60px",textAlign:"center" }}>
+                                <div style={{ width:"27px",height:"26px",marginTop:"42px",marginLeft:"38px",fontFamily: "Graphik",fontStyle: "normal",fontWeight: "normal",fontZize: "24px",lineHeight: "26px"}} >
+                                    +{images.length - 2}
+                                </div> 
                             </div>
-                            <img src={images[3]} style={{ height:"100%", width:"100%"}} alt="" /> </div> }
+                            <img src={images[3]} style={{ height:"113px", width:"100%"}} alt="" /> </div> }
                         </SmallPICASHOW>
 
                     </div>
                 </PhotoClg>
 
                 <ProductDetail className="d-flex flex-column">
-                    <div style={{ position: "relative",width: '100%', height: '64px',background:"rgba(230, 243, 242, 1)"}}>
-                        <p style={{ position: "absolute", top:"26px",left:"24px",fontFamily: "Graphik", fontSize: "24px", fontStyle: "normal", fontWeight: "600", lineheight: "26px", letterspacing: "0em", textAlign: "left",color:"#002F34"}}>
+                    <div style={{ position: "relative",width: '100%', height: '64px',background:" #E6F3F2;transform: matrix(1, 0, 0, -1, 0, 0)"}}>
+                        <p style={{width:"234px",height:"26px", position: "absolute", top:"19px",left:"24px",fontFamily: "Graphik", fontSize: "24px", fontStyle: "normal", fontWeight: "600", lineheight: "26px", letterspacing: "0em", textAlign: "left",color:"#002F34"}}>
                             {allData.model}
                         </p>
                     </div>
-                    <div className="col-12 d-flex flex-row" style={{position:"relative"}}>
-                        <div className="col-6" style={{ position: "relative", background: "rgba(0, 47, 52, 0.8)" }}>
-                            <img src={`/ViewMyAd/Addetails.svg`} alt="" style={{ margin:"15px 64px" }}/>
+                    <div className="col-12 d-flex flex-row" style={{ position: "relative" }}>
+                        
+                        {detail ? <div onClick={handleDetail} className="col-6" style={{ position: "relative", background: "rgba(0, 47, 52, 0.8)" }}>
+                            <img src={`/ViewMyAd/Addetails.svg`} alt="" style={{width:"86px",height:"20px",margin:"15px 64px" }}/>
+                       </div>  : <div onClick={handleDetail} className="col-6" style={{ position: "relative", background: "#FFFFFF",border: "1px solid rgba(0, 47, 52, 0.6)", }}>
+                            <img src={`/ViewMyAd/Addetails23.svg`} alt="" style={{width:"86px",height:"20px",margin:"15px 64px" }}/>
+                       </div>   
+                        }
+                        { detail ? <div onClick={handleDetail} className="col-6" style={{background: "#FFFFFF",border: "1px solid rgba(0, 47, 52, 0.6)",boxSizing: "border-box"}}>
+                            <img src={`/ViewMyAd/Description.svg`} alt="" style={{ width:"100px",height:"20px",margin:"15px 57px" }}/>
+                       </div> : <div onClick={handleDetail} className="col-6" style={{background: "rgba(0, 47, 52, 0.8)",border: "1px solid rgba(0, 47, 52, 0.6)",boxSizing: "border-box"}}>
+                            <img src={`/ViewMyAd/Description93.svg`} alt="" style={{ width:"100px",height:"20px",margin:"15px 57px" }}/>
                        </div>
-                        <div className="col-6" style={{background: "#FFFFFF",border: "1px solid rgba(0, 47, 52, 0.6)",boxSizing: "border-box"}}>
-                            <img src={`/ViewMyAd/Description.svg`} alt="" style={{ margin:"15px 57px" }}/>
-                       </div>
+                            
+                        }
+                        
+
+                        
                     </div>
 
-                    <div className="col-12 d-flex flex-column" style={{position:"absolute"}}>
+
+
+
+                    {detail ? <div className="col-12 d-flex flex-column" style={{ position: "absolute" ,transition: "0.1s"}}>
                         
                         <div className="d-flex flex-row" style={{position:"absolute"}}>
                             <AdDetailKey style={{width:"106px",position:"absolute",top:"142px",left:"24px"}}>Brand Name</AdDetailKey>  <DescriptionKey style={{width:"195px",position:"absolute",top:"142px",left:"230px"}}>{allData.brandName}</DescriptionKey>
@@ -171,7 +197,17 @@ export const ViewYourAd2 = () => {
                             <AdDetailKey style={{width:"160px",position:"absolute",top:"318px",left:"24px"}}>Physical Condition</AdDetailKey>  <DescriptionKey style={{width:"195px",position:"absolute",top:"318px",left:"230px"}}>{allData.physicalCondition}</DescriptionKey>
                         </div>
                             
+                    </div> : <div className="col-12 d-flex flex-column" style={{position: "absolute"}}>
+                            
+                            <div style={{position:"absolute",top:"142px",left:"-10px",width:"379px",fontWeight:"400",lineHeight: "26px"}}>
+                                
+                                   <p style={{width:"100%",position:"absolute",top:"10px",lineHeight: "26px", fontFamily: "Graphik",fontSize:"18px",textAlign: "start"}}>{allData.description}</p> 
+                                
+                            </div>
                     </div>
+                    
+                        
+                    }
 
                 </ProductDetail>
 
@@ -192,7 +228,7 @@ export const ViewYourAd2 = () => {
                         </div>
                         
                         <div className="col-10" style={{ position: "relative", margin: "0px auto", textAlign: 'start' }}>
-                            <p style={{position:"absolute",top:"40px",left:"-70px", fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34", marginBottom: "53px" }}>
+                            <p style={{position:"absolute",top:"34px",left:"-70px", fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34", marginBottom: "53px" }}>
                                 {allData.location}
                             </p>
                         </div>

@@ -1,9 +1,9 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState,useEffect,useContext} from 'react';
 import "./PostYourAd.css"
 import { Headd, InpHead, InpBar, Downarrow, Footer, ImgTaker, FootButton, SelectBar, OptionBar } from './PostYourAddbootStrap';
-
 import ImageUploading from "react-images-uploading";
 import axios from 'axios';
+import { LoginContext } from '../../Contexts/Logincontextprovider';
 
 
 const initState = {
@@ -22,11 +22,16 @@ const initState = {
 
 export const PostYourAd = () => {
 
+
+    const {userId} = useContext(LoginContext);
+
+
+
     console.log('InpHead:', InpHead)
 
     const [text, setText] = useState(initState);   // used for storing text documents
 
-    const [totalData, setTotalData] = useState([]);
+    const [totalData, setTotalData] = useState({});
 
     const [fetchedData, setFetchedData] = useState([]);
     
@@ -48,20 +53,40 @@ export const PostYourAd = () => {
     const handleInput = () => {
         const netData = {
 
-            "brandName": text.brandName,
+        "brandName": text.brandName,
         "yearOfPurchase": text.yearOfPurchase,
         "model": text.model,
         "physicalCondition": text.physicalCondition,
         "productName": text.adTitle,
         "description": text.descrption,
         "price": text.price,
-            "location": text.pincode,
-            "postedOn": Date().split("").splice(4, 11).join(""),
-        "productImages":[...images]
+        "location": text.pincode,
+        "postedOn": Date().split("").splice(4, 11).join(""),
+        "productImages": [...images],
+        "sellerId": userId
         }
-          console.log(netData);  
-        setTotalData([netData]);
+        //   console.log("printing now :",netData);  
+        // setTotalData(netData);
+       handlePost(netData);
+
+
     }
+
+    const handlePost = async(dataToBePosted)  => {
+        
+        await axios.post('http://localhost:4000/cars', {
+            ...dataToBePosted
+        }).then((res) => {
+            console.log(res);
+            return res;
+        })
+ 
+    }
+
+
+   
+
+
 
     let trig = "cars";
 

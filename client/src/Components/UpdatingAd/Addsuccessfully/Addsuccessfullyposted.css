@@ -12,14 +12,16 @@
   border-radius: 4px;
 }
 .x {
+  position: absolute;
   cursor: pointer;
 }
 
 .overAllDiv {
+  position: absolute;
   width: 100px;
   height: 100px;
-  margin-left: 60px; /*change these values to adjust the whole animation*/
-  margin-top: 50px; /*change these values to adjust the whole animation*/
+  right: 270px; /*change these values to adjust the whole animation*/
+  bottom: 500px; /*change these values to adjust the whole animation*/
 }
 
 .ellipse {

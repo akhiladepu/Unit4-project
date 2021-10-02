@@ -368,9 +368,8 @@ export const PostYourAd = () => {
                 </div>
             </div>
             
-
-            <FootButton onClick={() => { handleInput() }}>
-                <img src={`/POSTYOURAD/Redownloadpostadbutton.svg`} alt="" style={{margin:"23px 110px"}} onClick={()=>{routeChange()}}/>
+            <FootButton onClick={handleInput}>
+                <img src={`/POSTYOURAD/Redownloadpostadbutton.svg`} alt="" style={{cursor:`pointer`}} onClick={()=>{routeChange()}}/>
             </FootButton>
 
             <Footer>

@@ -1,4 +1,9 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+import React, {useState} from 'react';
+
+
+
 import './App.css';
 import { Routes } from './Components/Routes/Routes.jsx';
 import {Route} from "react-router-dom"
@@ -19,11 +24,22 @@ import AdNotPosted from "./Components/UpdatingAd/AdNotPosted/AdNotPosted"
 import { Postloading } from "./Components/UpdatingAd/Loading/Postloading.jsx";
 import {Selectcategory} from "./Components/Selectcategory/Selectcategory"
 
+// import Facebooklogin from './Components/FacebookLogin/Facebooklogin';
+// import { dataHeist } from './Components/FacebookLogin/Facebooklogin';
+import { ViewYourAd2 } from './Components/ViewYourAdd/ViewYourAd2';
+
+
 function App() {
   return (
     <div className="App">
       
       <Routes />
+
+
+        {/* <ViewYourAd2 /> */}
+        {/* <Facebooklogin /> */}
+        
+        {/* OLX Home Page */}
       {/* <HomePage /> */}
       {/* <Login /> */}
       {/* <PaymentSuccessful/> */}

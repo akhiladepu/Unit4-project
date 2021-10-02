@@ -1,14 +1,43 @@
 import "./Enterotp.css"
 import { useContext, useEffect, useState } from "react"
 import { LoginContext } from "../../Contexts/Logincontextprovider"
-export function Enterotp(){
-    const {phoneNumber}=useContext(LoginContext)
+import { useHistory } from "react-router"
+import axios from "axios";
+
+export function Enterotp() {
+    const history = useHistory();
+    const {phoneNumber, setUserId, handleLogin, userId, handleUserImage}=useContext(LoginContext)
+ 
     const [otp,setOtp]=useState(new Array(4).fill(""))
-    const handleChange=(el,index)=>{
+    
+    const postUser = async (num) => {
+        await axios.post("http://localhost:4000/users", {
+            mobile: num
+        }).then((data) => {
+            setUserId(data.data._id);
+            handleUserImage(data.data.image)
+            return data;
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+    
+    
+    
+    const handleChange = (el, index) => {
         if(isNaN(el.value))return false
         setOtp([...otp.map((d,idx)=>(idx===index)? el.value:d)])
         if(el.nextSibling){
             el.nextSibling.focus()
+        }
+
+        if (index === 3) {
+            postUser(phoneNumber)
+            setTimeout(() => {
+
+                history.push("/");
+                
+            }, 1200)
         }
     }
     return <>

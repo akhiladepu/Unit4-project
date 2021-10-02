@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import './AddYourAd.css';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 import { UpperDiv,PhotoClg,ProductDetail,AdDetailKey,DescriptionKey,Pricing,SmallerPricing,LowerDiv,SmallPicINF,ImageCont,SmallPICASHOW} from './ViewStylecmp';
 
 export const ViewYourAd2 = () => {
@@ -82,7 +84,7 @@ export const ViewYourAd2 = () => {
     }
     //Like button state management starts
 
-    const [detail, setdetail] = useState(false);
+    const [detail, setdetail] = useState(true);
     const handleDetail = () => {
         setdetail(!detail)
     }
@@ -104,7 +106,25 @@ export const ViewYourAd2 = () => {
     }
 
     return (
-        <div className="col-12">
+        <>
+            
+            <div className="col-12" style={{position: 'absolute'}}>
+                <Navbar />
+            </div>
+
+            <div className="col-12" style={{position: 'absolute' ,top:"100px",left:"55.5px"}}>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" style={{ fontSize: "16px" }}>Home</li>
+                        <img style={{transform:"scaleX(-1)",margin:"0 10.53px"}}src={`/ViewMyAd/SliderRight.svg`} alt="" />
+                        <li class="breadcrumb-item" style={{ fontSize: "16px" }}>Library</li>
+                        <img style={{transform:"scaleX(-1)",margin:"0 10.53px"}}src={`/ViewMyAd/SliderRight.svg`} alt="" />
+                        <li class="breadcrumb-item active" aria-current="page" style={{fontSize:"16px"}}>Data</li>
+                    </ol>
+                </nav>
+            </div>
+
+        <div className="col-12" style={{position: 'absolute',top:"96px"}}>
             
             <UpperDiv className="d-flex flex-row">
                 
@@ -265,11 +285,11 @@ export const ViewYourAd2 = () => {
                         <div className="col-10 d-flex flex-row" style={{position: "relative",margin:"0px auto",textAlign:"start"}}>
                             <div style={{position:"relative"}}>
                                 <p style={{position:"absolute",top:"130px",left:"0px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Contact no</p>
-                                <p style={{position:"absolute",top:"180px",left:"0px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Email</p>
+                                <p style={{position:"absolute",top:"165px",left:"0px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Email</p>
                             </div>
                             <div style={{position:"relative"}}>
                                 <p style={{position:"absolute",top:"130px",left:"80px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>87907896767</p>
-                                <p style={{position:"absolute",top:"180px",left:"80px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Rahul@masai</p>
+                                <p style={{position:"absolute",top:"165px",left:"80px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Rahul@masai</p>
                             </div>
                         </div>
 
@@ -295,10 +315,10 @@ export const ViewYourAd2 = () => {
                         <img src={lowerImg1[0]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont >
                     <div className="d-flex flex-row" style={{position:"relative"}}>
-                        <p style={{ position:"absolute",top:"0px",left:"-6px",width:"80px",textAlign:"start", marginTop: "24px", marginBottom: "17px", marginLeft: "29px", marginRight: "104px", fontFamily: "Graphik", fontWeight: "600", fontStyle: "normal", fontSize: "20px", lineHeight: "22px", color: "#002F34" }}>
-                            ₹{lowerData1.price}
+                        <p style={{ position:"absolute",top:"0px",left:"-6px",width:"150px",textAlign:"start", marginTop: "24px", marginBottom: "17px", marginLeft: "29px", marginRight: "104px", fontFamily: "Graphik", fontWeight: "600", fontStyle: "normal", fontSize: "20px", lineHeight: "22px", color: "#002F34" }}>
+                                {` ₹ ${lowerData1.price}`}
                         </p>
-                        <p style={{ position:"absolute",top:"3px",left:"200px",width:"100px",textAlign:"start", marginTop: "25px", marginBottom: "17px", marginRight: "24px", fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "12px", lineHeight: "13.2px", color: "rgb(0,47,52,0.8)" }}>
+                        <p style={{ position:"absolute",top:"3px",left:"210px",width:"100px",textAlign:"start", marginTop: "25px", marginBottom: "17px", marginRight: "24px", fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "12px", lineHeight: "13.2px", color: "rgb(0,47,52,0.8)" }}>
                             {lowerData1.postedOn}
                         </p>
                     </div>
@@ -321,8 +341,8 @@ export const ViewYourAd2 = () => {
                         <img src={lowerImg2[1]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
                     <div className="d-flex flex-row" style={{position:"relative"}}>
-                        <p style={{ position:"absolute",top:"0px",left:"-6px",width:"80px",textAlign:"start",marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"16px",lineHeight:"22px",color:"#002F34"}}>₹{lowerData2.price}</p>
-                        <p style={{ position:"absolute",top:"3px",left:"200px",width:"100px",textAlign:"start",marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData2.postedOn}</p>
+                            <p style={{ position: "absolute", top: "0px", left: "-6px", width: "150px", textAlign: "start", marginTop: "24px", marginBottom: "17px", marginLeft: "29px", marginRight: "104px", fontFamily: "Graphik", fontWeight: "600", fontStyle: "normal", fontSize: "20px", lineHeight: "22px", color: "#002F34" }}> {`₹ ${lowerData2.price}`} </p>
+                        <p style={{ position:"absolute",top:"3px",left:"210px",width:"100px",textAlign:"start",marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData2.postedOn}</p>
                     </div>
                     <div style={{ textAlign: "start", marginLeft: "24px",position:"relative" }}>
                         <p style={{ position:"absolute",top:"70px",left:"-1px",width:"100px",textAlign:"start",fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData2.brandName}</p>
@@ -341,8 +361,8 @@ export const ViewYourAd2 = () => {
                         <img src={lowerImg3[0]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
                     <div className="d-flex flex-row" style={{position:"relative"}}>
-                        <p style={{position:"absolute",top:"0px",left:"-6px",width:"80px",textAlign:"start", marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"14.5px",lineHeight:"22px",color:"#002F34"}}>₹{lowerData3.price}</p>
-                        <p style={{position:"absolute",top:"3px",left:"200px",width:"100px",textAlign:"start",marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData3.postedOn}</p>
+                            <p style={{ position: "absolute", top: "0px", left: "-6px", width: "150px", textAlign: "start", marginTop: "24px", marginBottom: "17px", marginLeft: "29px", marginRight: "104px", fontFamily: "Graphik", fontWeight: "600", fontStyle: "normal", fontSize: "20px", lineHeight: "22px", color: "#002F34" }}> {`₹ ${lowerData3.price} `} </p>
+                        <p style={{position:"absolute",top:"3px",left:"210px",width:"100px",textAlign:"start",marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData3.postedOn}</p>
                     </div>
                     <div style={{ textAlign: "start", marginLeft: "24px",position:"relative" }}>
                         <p style={{ position:"absolute",top:"70px",left:"-1px",width:"100px",textAlign:"start",fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData3.brandName}</p>
@@ -361,8 +381,8 @@ export const ViewYourAd2 = () => {
                         <img src={lowerImg4[1]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
                     <div className="d-flex flex-row"  style={{position:"relative"}}>
-                        <p style={{ position:"absolute",top:"0px",left:"-6px",width:"80px",textAlign:"start",marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"14.5px",lineHeight:"22px",color:"#002F34"}}>₹{lowerData4.price}</p>
-                        <p style={{position:"absolute",top:"3px",left:"200px",width:"100px",textAlign:"start",marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData4.postedOn}</p>
+                            <p style={{ position: "absolute", top: "0px", left: "-6px", width: "150px", textAlign: "start", marginTop: "24px", marginBottom: "17px", marginLeft: "29px", marginRight: "104px", fontFamily: "Graphik", fontWeight: "600", fontStyle: "normal", fontSize: "20px", lineHeight: "22px", color: "#002F34" }}>{`₹ ${lowerData4.price}`}</p>
+                        <p style={{position:"absolute",top:"3px",left:"210px",width:"100px",textAlign:"start",marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData4.postedOn}</p>
                     </div>
                     <div style={{ textAlign: "start", marginLeft: "24px" ,position:"relative"}}>
                         <p style={{ position:"absolute",top:"70px",left:"-1px",width:"100px",textAlign:"start",fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData4.brandName}</p>
@@ -375,6 +395,16 @@ export const ViewYourAd2 = () => {
             </LowerDiv>
 
 
-        </div>
+            </div>
+
+            <div className="col-12" style={{position: 'absolute',top:"1282px"}}>
+                <div className="footer">
+                    <img src={`/FooterImages/footer1.svg`} className="footer1 img-fluid" alt="footer1" />
+                    <img src={`/FooterImages/footer2.svg`} className="footer1 img-fluid" alt="footer2" />
+                    <img src={`/FooterImages/footer3.svg`} className="footer1 img-fluid" alt="footer3" />
+                </div>
+            </div>
+                
+            </>
     )
 }

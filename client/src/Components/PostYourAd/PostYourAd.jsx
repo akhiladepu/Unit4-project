@@ -24,7 +24,7 @@ const initState = {
 export const PostYourAd = () => {
 
 
-    const {userId} = useContext(LoginContext);
+    const {userId,productId,category} = useContext(LoginContext);
 
 
 
@@ -72,7 +72,7 @@ export const PostYourAd = () => {
     }
 
     const handlePost = async(dataToBePosted) => {
-        await axios.post('http://localhost:4000/cars', {
+        await axios.post(`http://localhost:4000/${category}`, {
             ...dataToBePosted
         }).then((res) => {
             console.log(res);

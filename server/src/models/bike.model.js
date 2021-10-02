@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const bikeSchema = new mongoose.Schema({
-    productLocalId: { type: String, required: true },
+     productLocalId: { type: String},
     productImages: { type: Object, required: true },
     productName: { type: String, required: true },
     brandName: { type: String, required: true },
@@ -12,8 +12,8 @@ const bikeSchema = new mongoose.Schema({
     price: { type: String, required: true },
     location: { type: String, required: true },
     postedOn: { type: String, required: true },
-    featured: { type: Boolean, required: true },
-    sellerLocalId: { type: String, required: true },
+    featured: { type: Boolean},
+    sellerLocalId: { type: String},
 }, {
     versionKey: false,
     timestamps: true

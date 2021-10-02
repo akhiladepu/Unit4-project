@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
+import './AddYourAd.css';
 import { UpperDiv,PhotoClg,ProductDetail,AdDetailKey,DescriptionKey,Pricing,SmallerPricing,LowerDiv,SmallPicINF,ImageCont,SmallPICASHOW} from './ViewStylecmp';
 
 export const ViewYourAd2 = () => {
@@ -100,9 +101,6 @@ export const ViewYourAd2 = () => {
                 <PhotoClg className="d-flex flex-column">
                     <div style={{ position: 'relative', width: "100%", height: "354px" }}>
 
-                        {/* jugggad */}
-                           
-                        {/* jugggadd */}
 
 
                         <img src={images[trig]} style={{ height: "100%", width: "100%" }} alt="" />
@@ -141,40 +139,36 @@ export const ViewYourAd2 = () => {
                 </PhotoClg>
 
                 <ProductDetail className="d-flex flex-column">
-                    <div style={{width: '100%', height: '64px',background:"rgba(230, 243, 242, 1)"}}>
-                        <p style={{margin:"19px 24px",fontFamily: "Graphik", fontSize: "24px", fontStyle: "normal", fontWeight: "600", lineheight: "26px", letterspacing: "0em", textAlign: "left",color:"#002F34"}}>
+                    <div style={{ position: "relative",width: '100%', height: '64px',background:"rgba(230, 243, 242, 1)"}}>
+                        <p style={{ position: "absolute", top:"26px",left:"24px",fontFamily: "Graphik", fontSize: "24px", fontStyle: "normal", fontWeight: "600", lineheight: "26px", letterspacing: "0em", textAlign: "left",color:"#002F34"}}>
                             {allData.model}
                         </p>
                     </div>
-                    <div className="col-12 d-flex flex-row">
-                        <div className="col-6" style={{background: "rgba(0, 47, 52, 0.8)"}}>
-                            <p style={{marginTop:"15px",textAlign: "center",fontFamily: "Graphik",fontWeight: "500",fontSize: "18px",lineHeight: "20px",color:"white"}}>
-                                Ad details
-                            </p>
+                    <div className="col-12 d-flex flex-row" style={{position:"relative"}}>
+                        <div className="col-6" style={{ position: "relative", background: "rgba(0, 47, 52, 0.8)" }}>
+                            <img src={`/ViewMyAd/Addetails.svg`} alt="" style={{ margin:"15px 64px" }}/>
                        </div>
                         <div className="col-6" style={{background: "#FFFFFF",border: "1px solid rgba(0, 47, 52, 0.6)",boxSizing: "border-box"}}>
-                            <p style={{marginTop:"15px",textAlign: "center",fontFamily: "Graphik",fontWeight: "500",fontSize: "18px",lineHeight: "20px",color:"#002F34"}}>
-                                Description
-                            </p>
+                            <img src={`/ViewMyAd/Description.svg`} alt="" style={{ margin:"15px 57px" }}/>
                        </div>
                     </div>
 
-                    <div className="col-12 d-flex flex-column">
+                    <div className="col-12 d-flex flex-column" style={{position:"absolute"}}>
                         
-                        <div className="d-flex flex-row">
-                            <AdDetailKey style={{ marginRight: "100px" }}>Brand Name</AdDetailKey>  <DescriptionKey>{allData.brandName}</DescriptionKey>
+                        <div className="d-flex flex-row" style={{position:"absolute"}}>
+                            <AdDetailKey style={{width:"106px",position:"absolute",top:"142px",left:"24px"}}>Brand Name</AdDetailKey>  <DescriptionKey style={{width:"195px",position:"absolute",top:"142px",left:"230px"}}>{allData.brandName}</DescriptionKey>
                         </div>
 
-                        <div className="d-flex flex-row">
-                            <AdDetailKey style={{ marginRight: "62px" }}>Year of purchase</AdDetailKey>  <DescriptionKey>{allData.yearOfPurchase}</DescriptionKey>
+                        <div className="d-flex flex-row" style={{position:"absolute"}}>
+                            <AdDetailKey style={{width:"144px",position:"absolute",top:"194px",left:"24px"}}>Year of purchase</AdDetailKey>  <DescriptionKey style={{width:"195px",position:"absolute",top:"194px",left:"230px"}}>{allData.yearOfPurchase}</DescriptionKey>
                         </div>
 
-                        <div className="d-flex flex-row">
-                            <AdDetailKey style={{ marginRight: "152px" }}>Model</AdDetailKey>  <DescriptionKey>{allData.model}</DescriptionKey>
+                        <div className="d-flex flex-row" style={{position:"absolute"}}>
+                            <AdDetailKey style={{width:"54px",position:"absolute",top:"246px",left:"24px"}}>Model</AdDetailKey>  <DescriptionKey style={{width:"195px",position:"absolute",top:"246px",left:"230px"}}>{allData.model}</DescriptionKey>
                         </div>
 
-                        <div className="d-flex flex-row">
-                            <AdDetailKey style={{ marginRight: "46px" }}>Physical Condition</AdDetailKey>  <DescriptionKey>{allData.physicalCondition}</DescriptionKey>
+                        <div className="d-flex flex-row" style={{position:"absolute"}}>
+                            <AdDetailKey style={{width:"160px",position:"absolute",top:"318px",left:"24px"}}>Physical Condition</AdDetailKey>  <DescriptionKey style={{width:"195px",position:"absolute",top:"318px",left:"230px"}}>{allData.physicalCondition}</DescriptionKey>
                         </div>
                             
                     </div>
@@ -183,67 +177,63 @@ export const ViewYourAd2 = () => {
 
                 <Pricing className="d-flex flex-column">
 
-                    <SmallerPricing className="d-flex flex-column">
-                        <div className="col-10 d-flex flex-row" style={{ margin:"10px auto",justifyContent: "space-between",marginTop:"32px"}}>
-                            <div>
-                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"600",fontSize:"24px",lineHeight:"26px",color:"#002F34" }}>
-                                    ₹ {allData.price}
+                    <SmallerPricing className="d-flex flex-column" style={{ position: "relative" }}>
+                        <div className="col-10 d-flex flex-row" style={{position:"relative",margin:"10px auto",justifyContent: "space-between",marginTop:"32px"}}>
+                            <div style={{ position: "relative" }} >
+                                <p style={{position:"absolute",top:"0px",left:"0px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"600",fontSize:"24px",lineHeight:"26px",color:"#002F34" }}>
+                                    ₹{allData.price}
                                 </p>
                             </div>
                             <div>
-                                <p style={{ fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>
+                                <p style={{ width:"100px",position:"absolute",top:"5px",left:"170px",fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>
                                     {allData.postedOn}
                                 </p>
                             </div>
                         </div>
                         
-                        <div className="col-10" style={{ margin: "0px auto", textAlign: 'start' }}>
-                            <p style={{ fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34", marginBottom: "53px" }}>
+                        <div className="col-10" style={{ position: "relative", margin: "0px auto", textAlign: 'start' }}>
+                            <p style={{position:"absolute",top:"40px",left:"-70px", fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34", marginBottom: "53px" }}>
                                 {allData.location}
                             </p>
                         </div>
 
-                        <div className="d-flex flex-row" style={{width:"282px", height:"48px",marginLeft:"18px",justifyContent:"space-between"}}>
+                        <div className="d-flex flex-row" style={{position: "relative",width:"282px", height:"48px",marginLeft:"18px",justifyContent:"space-between"}}>
                             
-                            <div onClick={handleEditAd} style={{ width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
-                                <p style={{marginTop:"5px", textAlign: "center", paddingTop: "10px", fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "16px", lineHeight: "18px", color: "rgb(0,47,52,0.8)" }}>
-                                    Edit Ad
-                                </p>
+                            <div onClick={handleEditAd} style={{ position: 'absolute',top:"110px",width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
+                                <img src={`/ViewMyAd/EditAd.svg`} alt="" style={{margin:"15px 32px"}}/>
                             </div>
-                                <div onclick={handleRemoveAd} style={{ width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
-                                <p style={{marginTop:"5px",textAlign: "center", paddingTop: "10px", fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "16px", lineHeight: "18px", color: "rgb(0,47,52,0.8)" }}>
-                                    Remove Ad
-                                </p>
+                                <div onclick={handleRemoveAd} style={{  position: 'absolute',top:"110px",left:"140px",width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
+                                <img src={`/ViewMyAd/Removead.svg`} alt="" style={{margin:"15px 24px"}}/>
                             </div>
 
 
                         </div>
                     </SmallerPricing>
 
-                    <SmallerPricing className="d-flex flex-column" style={{ marginTop: "16px", height: "259px" }}>
+                    <SmallerPricing className="d-flex flex-column" style={{position: "relative", marginTop: "16px", height: "259px" }}>
                         
-                        <div className="col-10" style={{margin:"0px auto",textAlign:"start"}}>
-                            <p style={{ marginTop:"24px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"500",fontSize:"18px",lineHeight:"20px",color:"#002F34"}}>Seller Details</p>
+                        <div className="col-10" style={{ position: "relative" ,margin:"0px auto",textAlign:"start"}}>
+                            <p style={{position: "absolute",top:"24px",left:"-120px",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"500",fontSize:"18px",lineHeight:"20px",color:"#002F34"}}>Seller Details</p>
                         </div>
 
-                        <div className="col-10 d-flex flex-row" style={{margin:"20px auto"}}>
-                            <div style={{ width: "64px", height: "64px", borderRadius: "50%" }}>
+                        <div className="col-10 d-flex flex-row" style={{position:"relative", margin:"20px auto"}}>
+                            <div style={{ position:"absolute",top:"48px",width: "64px", height: "64px", borderRadius: "50%" }}>
                                 <img src="https://www.juventus.com/images/image/private/t_portrait_mobile/dev/t5mex3dyn30xi3ox6ii5.jpg" alt="" style={{ width: "64px", height: "64px", borderRadius: "50%" }} />
                             </div>
-                            <div style={{marginLeft: "24px",textAlign: "start"}}>
-                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"16px",lineHeight:"18px",letterSpace:"0.06em",color:"#000000" }}>Rahul singh</p>
-                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Member since sept,2021</p>
+                            <div style={{position:"relative",marginLeft: "24px",}}>
+                                <p style={{position:"absolute",top:"57px",left:"60px" ,width:"200px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"16px",lineHeight:"18px",letterSpace:"0.06em",color:"#000000" }}>Rahul singh</p>
+                                <p style={{position:"absolute",top:"84px",left:"60px",width:"200px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Member since sept,2021</p>
                             </div>
                         </div>
 
-                        <div className="col-10 d-flex flex-row" style={{margin:"0px auto",textAlign:"start"}}>
-                            <div>
-                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Contact no</p>
-                                <p style={{fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Email</p>
+                        <div className="col-10 d-flex flex-row" style={{position: "relative",margin:"0px auto",textAlign:"start"}}>
+                            <div style={{position:"relative"}}>
+                                <p style={{position:"absolute",top:"130px",left:"0px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Contact no</p>
+                                <p style={{position:"absolute",top:"180px",left:"0px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Email</p>
                             </div>
-                            <div>
-                                <p style={{fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>87907896767</p>
-                                <p style={{fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Rahul@masai</p>
+                            <div style={{position:"relative"}}>
+                                <p style={{position:"absolute",top:"130px",left:"80px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>87907896767</p>
+                                <p style={{position:"absolute",top:"180px",left:"80px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Rahul@masai</p>
                             </div>
                         </div>
 
@@ -258,91 +248,91 @@ export const ViewYourAd2 = () => {
                 <img src={`/ViewMyAd/Toppicksforyou.svg`} alt="" />
             </div>
 
-            <LowerDiv className="d-flex flex-row">
+            <LowerDiv className="d-flex flex-row" style={{position: "relative"}}>
 
-                <SmallPicINF className="d-flex flex-column">
-                    <ImageCont>
-                        <img src={`Feature.svg`} alt="" style={{ position: 'absolute', top: '10px', left: "10px" }} />
+                <SmallPicINF className="d-flex flex-column" style={{position:"relative"}}>
+                    <ImageCont style={{position:"relative"}}>
+                        <img src={`/ViewMyAd/Feature.svg`} alt="" style={{position:"absolute",top: '10px', left: "10px",}} />
                         <div onClick={handleLike1} style={{ position: 'absolute', width: "32px", top: '10px', right: "10px", height: "32px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.6)" }}>
-                            {hover1 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
+                            {hover1 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`/ViewMyAd/like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
                         </div>
                         <img src={lowerImg1[0]} alt="" style={{width:"100%",height:"100%"}} />
-                    </ImageCont>
-                    <div className="d-flex flex-row">
-                        <p style={{ marginTop: "24px", marginBottom: "17px", marginLeft: "29px", marginRight: "104px", fontFamily: "Graphik", fontWeight: "600", fontStyle: "normal", fontSize: "14.8px", lineHeight: "22px", color: "#002F34" }}>
-                            ₹ {lowerData1.price}
+                    </ImageCont >
+                    <div className="d-flex flex-row" style={{position:"relative"}}>
+                        <p style={{ position:"absolute",top:"0px",left:"-6px",width:"80px",textAlign:"start", marginTop: "24px", marginBottom: "17px", marginLeft: "29px", marginRight: "104px", fontFamily: "Graphik", fontWeight: "600", fontStyle: "normal", fontSize: "20px", lineHeight: "22px", color: "#002F34" }}>
+                            ₹{lowerData1.price}
                         </p>
-                        <p style={{ marginTop: "25px", marginBottom: "17px", marginRight: "24px", fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "12px", lineHeight: "13.2px", color: "rgb(0,47,52,0.8)" }}>
+                        <p style={{ position:"absolute",top:"3px",left:"200px",width:"100px",textAlign:"start", marginTop: "25px", marginBottom: "17px", marginRight: "24px", fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "12px", lineHeight: "13.2px", color: "rgb(0,47,52,0.8)" }}>
                             {lowerData1.postedOn}
                         </p>
                     </div>
-                    <div style={{ textAlign: "start", marginLeft: "24px" }}>
-                        <p style={{ fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>
+                    <div style={{ textAlign: "start", marginLeft: "24px",position:"relative" }}>
+                        <p style={{ position:"absolute",top:"70px",left:"-1px",width:"100px",textAlign:"start",fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>
                             {lowerData1.brandName }
                         </p>
                     </div>
-                    <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
-                        <p>{lowerData1.location}</p>
+                    <div style={{ position:"relative" ,textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
+                        <p style={{position:"absolute",top:"110px",left:"-1px",width:"200px",textAlign:"start"}}>{lowerData1.location}</p>
                         </div>
                 </SmallPicINF>
 
                 <SmallPicINF className="d-flex flex-column">
                     <ImageCont>
-                        <img src={`Feature.svg`} alt="" style={{ position: 'absolute', top: '10px', left: "10px" }} />
+                        <img src={`/ViewMyAd/Feature.svg`} alt="" style={{ position: 'absolute', top: '10px', left: "10px" }} />
                         <div onClick={handleLike2} style={{ position: 'absolute', width: "32px", top: '10px', right: "10px", height: "32px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.6)" }}>
-                            {hover2 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
+                            {hover2 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`/ViewMyAd/like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
                         </div>
                         <img src={lowerImg2[1]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
-                    <div className="d-flex flex-row">
-                        <p style={{ marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"16px",lineHeight:"22px",color:"#002F34"}}>₹ {lowerData2.price}</p>
-                        <p style={{marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData2.postedOn}</p>
+                    <div className="d-flex flex-row" style={{position:"relative"}}>
+                        <p style={{ position:"absolute",top:"0px",left:"-6px",width:"80px",textAlign:"start",marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"16px",lineHeight:"22px",color:"#002F34"}}>₹{lowerData2.price}</p>
+                        <p style={{ position:"absolute",top:"3px",left:"200px",width:"100px",textAlign:"start",marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData2.postedOn}</p>
                     </div>
-                    <div style={{ textAlign: "start", marginLeft: "24px" }}>
-                        <p style={{ fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData2.brandName}</p>
+                    <div style={{ textAlign: "start", marginLeft: "24px",position:"relative" }}>
+                        <p style={{ position:"absolute",top:"70px",left:"-1px",width:"100px",textAlign:"start",fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData2.brandName}</p>
                     </div>
-                    <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
-                            <p>{lowerData2.location}</p>
+                    <div style={{position:"relative" ,textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
+                            <p style={{position:"absolute",top:"110px",left:"-1px",width:"200px",textAlign:"start"}}>{lowerData2.location}</p>
                         </div>
                 </SmallPicINF>
 
                 <SmallPicINF className="d-flex flex-column">
                     <ImageCont>
-                        <img src={`Feature.svg`} alt="" style={{ position: 'absolute', top: '10px', left: "10px" }} />
+                        <img src={`/ViewMyAd/Feature.svg`} alt="" style={{ position: 'absolute', top: '10px', left: "10px" }} />
                         <div onClick={handleLike3} style={{ position: 'absolute', width: "32px", top: '10px', right: "10px", height: "32px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.6)" }}>
-                            {hover3 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
+                            {hover3 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`/ViewMyAd/like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
                         </div>
                         <img src={lowerImg3[0]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
-                    <div className="d-flex flex-row">
-                        <p style={{ marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"14.5px",lineHeight:"22px",color:"#002F34"}}>₹ {lowerData3.price}</p>
-                        <p style={{marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData3.postedOn}</p>
+                    <div className="d-flex flex-row" style={{position:"relative"}}>
+                        <p style={{position:"absolute",top:"0px",left:"-6px",width:"80px",textAlign:"start", marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"14.5px",lineHeight:"22px",color:"#002F34"}}>₹{lowerData3.price}</p>
+                        <p style={{position:"absolute",top:"3px",left:"200px",width:"100px",textAlign:"start",marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData3.postedOn}</p>
                     </div>
-                    <div style={{ textAlign: "start", marginLeft: "24px" }}>
-                        <p style={{ fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData3.brandName}</p>
+                    <div style={{ textAlign: "start", marginLeft: "24px",position:"relative" }}>
+                        <p style={{ position:"absolute",top:"70px",left:"-1px",width:"100px",textAlign:"start",fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData3.brandName}</p>
                     </div>
-                    <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
-                            <p>{lowerData3.location}</p>
+                    <div style={{position:"relative",textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
+                            <p style={{position:"absolute",top:"110px",left:"-1px",width:"200px",textAlign:"start"}}>{lowerData3.location}</p>
                         </div>
                 </SmallPicINF>
 
                 <SmallPicINF className="d-flex flex-column">
                     <ImageCont>
-                        <img src={`Feature.svg`} alt="" style={{ position: 'absolute', top: '10px', left: "10px" }} />
+                        <img src={`/ViewMyAd/Feature.svg`} alt="" style={{ position: 'absolute', top: '10px', left: "10px" }} />
                         <div onClick={handleLike4} style={{ position: 'absolute', width: "32px", top: '10px', right: "10px", height: "32px", borderRadius: "50%", background: "rgba(255, 255, 255, 0.6)" }}>
-                            {hover4 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> }
+                            {hover4 ? <img src={`/ViewMyAd/LikeDark.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} /> : <img src={`/ViewMyAd/like.svg`} alt="" style={{ position: 'absolute', top: "25%", left: "20%" }} />}
                         </div>
                         <img src={lowerImg4[1]} alt="" style={{width:"100%",height:"100%"}} />
                     </ImageCont>
-                    <div className="d-flex flex-row">
-                        <p style={{ marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"14.5px",lineHeight:"22px",color:"#002F34"}}>₹ {lowerData4.price}</p>
-                        <p style={{marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData4.postedOn}</p>
+                    <div className="d-flex flex-row"  style={{position:"relative"}}>
+                        <p style={{ position:"absolute",top:"0px",left:"-6px",width:"80px",textAlign:"start",marginTop:"24px",marginBottom:"17px",marginLeft:"29px",marginRight:"104px",fontFamily:"Graphik",fontWeight:"600",fontStyle:"normal",fontSize:"14.5px",lineHeight:"22px",color:"#002F34"}}>₹{lowerData4.price}</p>
+                        <p style={{position:"absolute",top:"3px",left:"200px",width:"100px",textAlign:"start",marginTop:"25px",marginBottom:"17px",marginRight:"24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8)"}}>{lowerData4.postedOn}</p>
                     </div>
-                    <div style={{ textAlign: "start", marginLeft: "24px" }}>
-                        <p style={{ fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData4.brandName}</p>
+                    <div style={{ textAlign: "start", marginLeft: "24px" ,position:"relative"}}>
+                        <p style={{ position:"absolute",top:"70px",left:"-1px",width:"100px",textAlign:"start",fontFamily: "Graphik", fontWeight: "400", fontStyle: "normal", fontSize: "14px", lineHeight: "15px", color: "#002F34" }}>{lowerData4.brandName}</p>
                     </div>
-                    <div style={{textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
-                        <p>{lowerData4.location}</p>
+                    <div style={{position:"relative" ,textAlign:"start",margin:"0px 24px",fontFamily:"Graphik",fontWeight:"400",fontStyle:"normal",fontSize:"12px",lineHeight:"13.2px",color:"rgb(0,47,52,0.8),text",textTransform:"uppercase"}}>
+                        <p style={{position:"absolute",top:"110px",left:"-1px",width:"200px",textAlign:"start"}}>{lowerData4.location}</p>
                         </div>
                 </SmallPicINF>
 

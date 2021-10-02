@@ -31,8 +31,6 @@ font-weight: 500;
 font-size: 18px;
 line-height: 19.8px;
 color: #002F34;
-margin-top:32px;
-margin-left:24px;
 `
 const DescriptionKey = styled.p`
 font-family: Graphik;
@@ -41,7 +39,7 @@ font-weight: normal;
 font-size: 18px;
 line-height: 20px;
 color: #002F34;
-margin-top:32px;
+text-align:start;
 
 `
 

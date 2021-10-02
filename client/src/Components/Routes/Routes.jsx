@@ -10,6 +10,7 @@ import CardMethod from "../UpdatingAd/CardMethod/CardMethod"
 import {Updatingad} from "../UpdatingAd/Updating/Updatingad"
 import PaymentMethod from "../UpdatingAd/PaymentMethod/PaymentMethod";
 import { PostYourAd } from '../PostYourAd/PostYourAd.jsx';
+import { ViewYourAd2 } from '../ViewYourAdd/ViewYourAd2.jsx'
 
 export const Routes = () => {
     return (<>
@@ -28,6 +29,9 @@ export const Routes = () => {
             </Route>
             <Route path="/postyourad" exact>
                 <PostYourAd />
+            </Route>
+            <Route path="/viewyourad" exact>
+                <ViewYourAd2 />
             </Route>
             <Route path="/postloading" exact>
                 <Postloading />

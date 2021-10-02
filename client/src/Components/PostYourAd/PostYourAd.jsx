@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import "./PostYourAd.css"
 import { Headd, InpHead, InpBar, Downarrow, Footer, ImgTaker, FootButton, SelectBar, OptionBar } from './PostYourAddbootStrap';
-
+import { useHistory} from "react-router-dom"
 import ImageUploading from "react-images-uploading";
 import axios from 'axios';
 
@@ -22,7 +22,7 @@ const initState = {
 
 export const PostYourAd = () => {
 
-    console.log('InpHead:', InpHead)
+    const history = useHistory();
 
     const [text, setText] = useState(initState);   // used for storing text documents
 
@@ -59,8 +59,17 @@ export const PostYourAd = () => {
             "postedOn": Date().split("").splice(4, 11).join(""),
         "productImages":[...images]
         }
-          console.log(netData);  
-        setTotalData([netData]);
+        handlePost(netData);
+        // setTotalData([netData]);
+    }
+
+    const handlePost = async(dataToBePosted) => {
+        await axios.post('http://localhost:4000/cars', {
+            ...dataToBePosted
+        }).then((res) => {
+            console.log(res);
+            return res;
+        })
     }
 
     let trig = "cars";
@@ -90,6 +99,11 @@ export const PostYourAd = () => {
     }
     const newModelbase = Array.from(new Set(modelbase));
 
+    const routeChange = () => {
+        let path = "/postloading";
+        history.push(path);
+
+    }
 
     return (
         <div className="col-12">
@@ -158,7 +172,7 @@ export const PostYourAd = () => {
                         </SelectBar>
                     </div>
                     <div>
-                        <img src={`/POSTYOURAD/AdTitle.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} /> <br />
+                        <img src={`/POSTYOURAD/Redownloadadtitle.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} /> <br />
                         <InpBar type="text" name="adTitle" onChange={handleChange}></InpBar>
                     </div>
                     <div>
@@ -357,7 +371,7 @@ export const PostYourAd = () => {
             
 
             <FootButton onClick={handleInput}>
-                <img src={`/POSTYOURAD/PostAd.svg`} alt="" style={{margin:"23px 110px"}} />
+                <img src={`/POSTYOURAD/Redownloadpostadbutton.svg`} alt="" style={{margin:"23px 110px"}} onClick={()=>{routeChange()}}/>
             </FootButton>
 
             <Footer>

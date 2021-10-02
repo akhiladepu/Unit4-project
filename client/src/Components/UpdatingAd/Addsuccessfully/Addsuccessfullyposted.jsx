@@ -1,6 +1,14 @@
 import "./Addsuccessfullyposted.css"
-import {Link} from "react-router-dom"
-export function Addsuccessfullyposted(){
+import {Link, useHistory} from "react-router-dom"
+export function Addsuccessfullyposted() {
+    
+    const history = useHistory();
+
+    const showProduct = () => {
+        let path = "/viewyourad";
+        history.push(path)
+    }
+
     return<div className="container">
     <img className="x" src={ `/LoginImages/x.svg`} alt="1" />
    <div className="overAllDiv">
@@ -17,7 +25,7 @@ export function Addsuccessfullyposted(){
     <div className="congo">CONGRATULATIONS</div>
 <div className="live">Your ad will go live shortly</div>
    <Link to="/postingAnotherAd"><div className="posts">Post Another Ad</div></Link> 
-    <div className="view">View Your Ad</div>
+        <div className="view" onClick={()=>{showProduct()}}>View Your Ad</div>
     <div className="bottomtext">olx allows 1 free ad in 30 days for <span>Cameras</span></div>
     
     </div>

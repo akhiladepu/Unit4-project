@@ -51,6 +51,9 @@ export const Routes = () => {
             <Route path="/paymentmethod" exact>
                 <PaymentMethod />
             </Route>
+            <Route path="/viewyourad" exact>
+                <ViewYourAd2/>
+            </Route>
     </Switch>
     </>);
 }

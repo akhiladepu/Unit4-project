@@ -11,9 +11,10 @@ export function Postloading(){
         setTimeout(() => {
          setChange(true)
         }, 1000);
-    },[])
+    }, [])
+    
     return<div>
-    <Route path="/" exact>{!change?<Updatingad/>:<Addsuccessfullyposted/>}</Route>{/*after clicking on post ad butto*/}
+    <Route path="/postloading" exact>{!change?<Updatingad/>:<Addsuccessfullyposted/>}</Route>{/*after clicking on post ad butto*/}
     <Route path="/postingAnotherAd" exact><AdNotPosted/></Route>
     
     

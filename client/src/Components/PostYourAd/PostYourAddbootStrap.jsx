@@ -72,15 +72,15 @@ cursor:pointer;
 `
 
 const FootButton = styled.div`
-Width :312px;
-Height :72px;
+width :312px;
+height :72px;
 background: rgba(0, 127, 124, 0.1);
 border: 1px solid rgba(0, 127, 124, 0.6);
-box-sizing: border-box;
 border-radius: 4px;
 margin-top:104px;
 margin-left:564px;
 margin-bottom:96px;
+
 `
 
 export {Headd,InpHead,InpBar,SelectBar,Downarrow,Footer,ImgTaker,FootButton,OptionBar}

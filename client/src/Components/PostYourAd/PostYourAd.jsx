@@ -358,7 +358,7 @@ export const PostYourAd = () => {
             
 
             <FootButton onClick={handleInput}>
-                <img src={`/POSTYOURAD/PostAd.svg`} alt="" style={{margin:"23px 110px"}} />
+                <img src={`/POSTYOURAD/PostAd.svg`} alt="" style={{margin:"23px 110px",zIndex:"12"}} />
             </FootButton>
 
             <Footer>

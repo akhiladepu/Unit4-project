@@ -8,7 +8,8 @@ import AdNotPosted from "../UpdatingAd/AdNotPosted/AdNotPosted"
 import { PaymentSuccessfull } from "../UpdatingAd/PaymentSuccesfull/PaymentSuccessfull";
 import CardMethod from "../UpdatingAd/CardMethod/CardMethod"
 import {Updatingad} from "../UpdatingAd/Updating/Updatingad"
-import PaymentMethod from "../UpdatingAd/PaymentMethod/PaymentMethod"
+import PaymentMethod from "../UpdatingAd/PaymentMethod/PaymentMethod";
+import { PostYourAd } from '../PostYourAd/PostYourAd.jsx';
 
 export const Routes = () => {
     return (<>
@@ -24,6 +25,9 @@ export const Routes = () => {
             </Route>
             <Route path="/Enterotp" exact >
                 <Enterotp />
+            </Route>
+            <Route path="/postyouradd" exact>
+                <PostYourAd />
             </Route>
             <Route path="/postloading" exact>
                 <Postloading />

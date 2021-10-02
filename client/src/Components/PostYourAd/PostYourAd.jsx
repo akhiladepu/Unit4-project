@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import "./PostYourAd.css"
 import { Headd, InpHead, InpBar, Downarrow, Footer, ImgTaker, FootButton, SelectBar, OptionBar } from './PostYourAddbootStrap';
+
 import ImageUploading from "react-images-uploading";
 import axios from 'axios';
 
@@ -20,6 +21,8 @@ const initState = {
 
 
 export const PostYourAd = () => {
+
+    console.log('InpHead:', InpHead)
 
     const [text, setText] = useState(initState);   // used for storing text documents
 

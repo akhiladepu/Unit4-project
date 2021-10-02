@@ -4,8 +4,6 @@ import React, {useState} from 'react';
 
 
 
-import { PostYourAd } from './Components/PostYourAd/PostYourAd';
-
 import './App.css';
 import { Routes } from './Components/Routes/Routes.jsx';
 import {Route} from "react-router-dom"
@@ -37,7 +35,6 @@ function App() {
 
 
         {/* <ViewYourAd2 /> */}
-      <PostYourAd />
         {/* <Facebooklogin /> */}
         
         {/* OLX Home Page */}

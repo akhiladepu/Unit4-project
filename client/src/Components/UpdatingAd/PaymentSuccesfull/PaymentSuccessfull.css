@@ -180,5 +180,6 @@
   color: #002f34;
 }
 .i {
-  margin-bottom: 5px;
+  position:absolute;
+  right:295px;
 }

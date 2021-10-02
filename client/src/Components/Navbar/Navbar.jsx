@@ -127,7 +127,7 @@ function Navbar() {
           placeholder="Search for Cars,Mobile Phones and more"
         />
       <img src={`/NavbarImages/search.svg`} className="searchIcon" alt="" />
-{isLoggedIn ?<img className="profile1" src="/NavbarImages/profile.png" alt=""></img>
+        {isLoggedIn ? <><img className="chat" src={`/NavbarImages/chat.svg`} alt=""/><img className="notification" src={`/NavbarImages/notification.svg`} alt=""/><img className="profile1" src="/NavbarImages/profile.png" alt=""></img><img className="arrow" src={`/NavbarImages/arrowDown.svg`} alt=""/></>
         :<div className="login" onClick={ ()=>{routeChange("Continueoptions")}}>Login</div>}
         <div className="startSelling" onClick={() => { routeChange("selectcategory") }}>Start Selling</div>
     </div>

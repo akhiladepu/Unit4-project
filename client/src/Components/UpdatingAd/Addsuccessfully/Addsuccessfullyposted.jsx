@@ -1,8 +1,18 @@
 import "./Addsuccessfullyposted.css"
 import {Link, useHistory} from "react-router-dom"
+import { useContext } from "react";
+import {LoginContext} from "../../../Contexts/Logincontextprovider"
+
 export function Addsuccessfullyposted() {
-    
+
     const history = useHistory();
+
+    const routeChange = () => {
+        let path = '/';
+        history.push(path)
+    }
+
+    const {category} = useContext(LoginContext)
 
     const showProduct = () => {
         let path = "/viewyourad";
@@ -10,7 +20,7 @@ export function Addsuccessfullyposted() {
     }
 
     return<div className="container">
-    <img className="x" src={ `/LoginImages/x.svg`} alt="1" />
+        <img className="x" src={`/LoginImages/x.svg`} alt="1" onClick={()=>{routeChange()}}/>
    <div className="overAllDiv">
                     
                         <img className="ellipse" src={ `/PaymentSuccessful/Ellipse.svg`} alt="1" />
@@ -26,7 +36,7 @@ export function Addsuccessfullyposted() {
 <div className="live">Your ad will go live shortly</div>
    <Link to="/postingAnotherAd"><div className="posts">Post Another Ad</div></Link> 
         <div className="view" onClick={()=>{showProduct()}}>View Your Ad</div>
-    <div className="bottomtext">olx allows 1 free ad in 30 days for <span>Cameras</span></div>
+        <div className="bottomtext"><img className="iCompo" src={`/PaymentSuccessful/i.svg`} alt="" />OLX allows 1 free ad in 30 days for <span>{category}</span></div>
     
     </div>
 }

@@ -90,7 +90,7 @@ function CardMethod() {
           </div>
         </div>
         <div className="saveCardDetail">
-          <input type="checkbox" className="checkbox" />
+          <input type="checkbox" className="checkbox" name="checkbox"/>
           <img src={`./icons/cardDetail.svg`} className="detail" alt="" />
         </div>
          

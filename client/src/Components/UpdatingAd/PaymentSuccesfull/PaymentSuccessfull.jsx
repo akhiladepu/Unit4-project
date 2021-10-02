@@ -1,9 +1,21 @@
 import "./PaymentSuccessfull.css"
 import {Link, Redirect} from "react-router-dom"
 import { Updatingad } from "../Updating/Updatingad"
-import {useState,useEffect} from "react"
+import { useState, useEffect, useContext } from "react";
+import { useHistory } from "react-router-dom";
+import {LoginContext} from "../../../Contexts/Logincontextprovider"
+
 export function PaymentSuccessfull(){
-    const [change,setChange]=useState(false)
+
+    const { category } = useContext(LoginContext);
+
+    const history = useHistory();
+    const [change, setChange] = useState(false);
+
+    const routeChange1 = () => {
+        let path = '/';
+        history.push(path)
+    }
     
     useEffect(()=>{
         handleChange()
@@ -12,9 +24,15 @@ export function PaymentSuccessfull(){
         setTimeout(() => {
           setChange(true)
          }, 1000);
-      }
+    }
+    
+    const routeChange = () => {
+        let path = '/selectcategory';
+        history.push(path)
+    }
+
     return<><div className="container">
-    <img className="x" src={ `/LoginImages/x.svg`} alt="1" />
+    <img className="x" src={ `/LoginImages/x.svg`} alt="1" onClick={()=>{routeChange1()}} />
     <div className="overAllDiv">
                     
                     <img className="ellipse" src={ `/PaymentSuccessful/Ellipse.svg`} alt="1" />
@@ -28,10 +46,10 @@ export function PaymentSuccessfull(){
                </div>
     <div className="congo">Payment Successfull</div>
     <div className="live">You can post a second ad now...</div>
-   <div className="post">Post Another Ad</div>
+   <div className="post" onClick={()=>{routeChange()}}>Post Another Ad</div>
     <div className="bottomtext">
     <img className="i" src={ `/PaymentSuccessful/i.svg`} alt="i" />
-    olx allows 1 free ad in 30 days for <span>Cameras</span></div>
+    OLX allows 1 free ad in 30 days for <span>{category}</span></div>
     
     </div>
     

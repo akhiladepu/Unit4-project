@@ -6,6 +6,11 @@ import axios from "axios";
 
 export function Enterotp() {
     const history = useHistory();
+
+    const routeChange = () => {
+        let path = '/';
+        history.push(path)
+    }
     const {phoneNumber, setUserId, handleLogin, userId, handleUserImage}=useContext(LoginContext)
  
     const [otp,setOtp]=useState(new Array(4).fill(""))
@@ -42,7 +47,7 @@ export function Enterotp() {
     }
     return <>
     <div className="otppage">
-    <img className="x" src={ `/LoginImages/x.svg`} alt="1" />
+    <img className="x" src={ `/LoginImages/x.svg`} alt="1" onClick={()=>{routeChange()}}/>
         <img className="olxlogo" src={`/LoginImages/olx.svg`} alt="olxlogo"/>
         <div className="enternumber1">Enter Your received</div>
         <div className="text">We sent a 4-digit code to <span 

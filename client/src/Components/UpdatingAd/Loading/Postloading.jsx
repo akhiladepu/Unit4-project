@@ -4,6 +4,7 @@ import { Addsuccessfullyposted } from "../Addsuccessfully/Addsuccessfullyposted"
 import { useEffect,useState } from "react"
 import { Route } from "react-router-dom"
 import AdNotPosted from "../AdNotPosted/AdNotPosted"
+
 export function Postloading(){
     const [change,setChange]=useState(false)
 

@@ -1,11 +1,21 @@
 import "./Continuepage.css"
-import {Link} from "react-router-dom"
-export function Continueoptions(){
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
+export function Continueoptions() {
+
+    const history = useHistory();
+
+    const routeChange = () => {
+        let path = '/';
+        history.push(path)
+    }
+
     return <>
     
     <div className="continuepage">
     
-    <img className="x" src={ `/LoginImages/x.svg`} alt="1" />
+    <img className="x" src={ `/LoginImages/x.svg`} alt="1" onClick={()=>{routeChange()}}/>
 
    <div className="guitarbox" >
     <img className="leftarrow" src={`/LoginImages/rightarrow.svg`} alt="left"/>
@@ -27,13 +37,13 @@ export function Continueoptions(){
     </Link>
     <Link to="/Loginthroughphone">
     <div className="continueWithfb">
-    <img className="phonelogo" src="/LoginImages/facebook.svg" alt="phone"></img>
+    <img className="fblogo" src="/LoginImages/facebook.svg" alt="phone"></img>
     <span className="phonetext">Continue with facebook</span>
     </div>
     </Link>
     <Link to="/Loginthroughphone">
     <div className="continueWithgoogle">
-    <img className="phonelogo" src="/LoginImages/google.svg" alt="phone"></img>
+    <img className="googlelogo" src="/LoginImages/google.svg" alt="phone"></img>
     <span className="phonetext">Continue with google</span>
     </div>
     </Link>

@@ -2,7 +2,16 @@ import "./Loginthroughphone.css"
 import {Link} from "react-router-dom"
 import { useContext, useEffect, useState } from "react"
 import { LoginContext } from "../../Contexts/Logincontextprovider"
+import { useHistory } from "react-router-dom";
+
 export function Loginthroughphone(){
+
+    const history = useHistory();
+
+    const routeChange = () => {
+        let path = '/';
+        history.push(path)
+    }
    const {phoneNumber,setPhoneNumber,changeColor,setChangeColor}=useContext(LoginContext)
    const [order,setOrder]=useState(false)
 
@@ -21,14 +30,14 @@ export function Loginthroughphone(){
   }
     return <>
     <div className="loginpage">
-    <img className="x" src={ `/LoginImages/x.svg`} alt="1" />
+    <img className="x" src={ `/LoginImages/x.svg`} alt="1" onClick={()=>{routeChange()}}/>
          <img className="olxlogo" src={`/LoginImages/olx.svg`} alt="olxlogo"/>
                   <div className="enternumber">Enter Your Number</div>
 
       <div className="number" >
          <div className="code"><span >+91</span></div>
          <div className="line"> <span ></span></div>
-         <input onChange={(e)=>setPhoneNumber(e.target.value)} className="numinput" placeholder="Enter Phone Number"></input>
+         <input maxlength="10"onChange={(e)=>setPhoneNumber(e.target.value)} className="numinput" placeholder="Enter Phone Number"></input>
       </div>
 
       {changeColor?<Link to="/Enterotp">
@@ -51,7 +60,7 @@ export function Loginthroughphone(){
          >Next
          </div>
       }
-         <p>we will never reveal your number to anyone else nor we will use  it to send you spam  </p>
+         <p>We will never reveal your number to anyone else nor we will use  it to send you spam  </p>
     </div>
     </>
 }

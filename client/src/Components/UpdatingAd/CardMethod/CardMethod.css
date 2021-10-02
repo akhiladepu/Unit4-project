@@ -63,6 +63,8 @@ top: 133px;
 
 .nameInput{
     position: absolute;
+    padding-left: 24px;
+    font-size:18px;
 width: 490px;
 height: 60px;
 left: 48px;
@@ -70,6 +72,7 @@ top: 162px;
 border: none;
 background: #EBEEEF;
 border-radius: 4px;
+color: #002F34;
 }
 
 .cardNumber{
@@ -80,6 +83,8 @@ top: 245px;
 
 .cardInput{
     position: absolute;
+    padding-left: 24px;
+    font-size:18px;
 width: 490px;
 height: 60px;
 border: none;
@@ -87,6 +92,7 @@ left: 48px;
 top: 274px;
 background: #EBEEEF;
 border-radius: 4px;
+color: #002F34;
 }
 
 .dateAndCvv{
@@ -103,11 +109,14 @@ top: 357px;
 }
 .expiryInput{
     position: absolute;
+    padding-left: 24px;
+    font-size:18px;
 width: 238px;
 height: 60px;
 border: none;
 left: 48px;
 top: 385px;
+color: #002F34;
 
 background: #EBEEEF;
 border-radius: 4px;
@@ -121,6 +130,8 @@ top: 357px;
 
 .cvvInput{
     position: absolute;
+    padding-left: 24px;
+    font-size:18px;
 width: 238px;
 height: 60px;
 left: 300px;
@@ -128,6 +139,7 @@ border: none;
 top: 385px;
 background: #EBEEEF;
 border-radius: 4px;
+color: #002F34;
 }
 
 .saveCardDetail{
@@ -142,10 +154,10 @@ border-radius: 4px;
 }
 .checkbox{
     position: absolute;
-width: 24px;
-height: 24px;
-left: 27px;
-top: 15px;
+    width: 24px;
+    height: 24px;
+    left: 27px;
+    top: 15px;
 }
 
 .detail{

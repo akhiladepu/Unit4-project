@@ -15,7 +15,7 @@ export const HomePage = () => {
 
     const history = useHistory();
 
-    const { handleProductId } = useContext(LoginContext)
+    const { isLoggedIn, handleProductId } = useContext(LoginContext)
 
     const [appData, setAppData] = useState([]);
 
@@ -101,7 +101,7 @@ export const HomePage = () => {
         </div>
         <div className="topPicsForYou">
             <div className="topPicsForYouHead">
-                <img src={`/SVGComponents/Homepage/Component3/Top picks for you.svg`} alt=""/>
+                {isLoggedIn ? <img src={`/NavbarImages/basedonsearch.svg`} alt="" /> : <img src={`/SVGComponents/Homepage/Component3/Top picks for you.svg`} alt="" />}
             </div>
             <div className="topPicsForYouProducts">
                 {topPicsForYou.map((el) => {

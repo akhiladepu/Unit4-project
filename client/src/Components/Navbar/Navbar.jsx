@@ -2,9 +2,11 @@ import "./Navbar.css";
 import axios from "axios"
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router";
-function Navbar() {
+import { Link } from "react-router-dom";
 
+function Navbar() {
   const history = useHistory();
+  const isLoggedIn =false;
   const [product,setProduct]=useState()
   const [searchedProducts,setSearchedProducts]=useState([])
   const locations=[`All India`,`Delhi`,`Mumbai`,`Kolkata`,`hyderabad`,`Chennai`]
@@ -95,7 +97,7 @@ console.log(arr)
   
   return (
     <>
-    <div className="header">
+    <div className="header1">
       <img src={`/NavbarImages/olx.svg`} className="logo" alt="" />
       <img className="locationlogo" src={`/NavbarImages/location.svg`} alt="" />
       <select className="locations">
@@ -119,14 +121,11 @@ console.log(arr)
           placeholder="Search for Cars,Mobile Phones and more"
         />
       <img src={`/NavbarImages/search.svg`} className="searchIcon" alt="" />
-        <div className="login" onClick={ ()=>{routeChange("Continueoptions")}}>Login</div>
+{isLoggedIn ?<img className="profile1" src="/NavbarImages/profile.png" alt=""></img>
+        :<div className="login" onClick={ ()=>{routeChange("Continueoptions")}}>Login</div>}
       <div className="startSelling">Start Selling</div>
     </div>
-    {
-      searchedProducts.map(el=>(
-        <p>{el.productName}</p>
-      ))
-    }
+    
     </>
   );
 }

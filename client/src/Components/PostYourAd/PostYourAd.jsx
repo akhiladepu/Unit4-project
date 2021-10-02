@@ -52,17 +52,16 @@ export const PostYourAd = () => {
         "yearOfPurchase": text.yearOfPurchase,
         "model": text.model,
         "physicalCondition": text.physicalCondition,
-        "adTitle": text.adTitle,
-        "descrption": text.descrption,
+        "productName": text.adTitle,
+        "description": text.descrption,
         "price": text.price,
-            "pincode": text.pincode,
+            "location": text.pincode,
+            "postedOn": Date().split("").splice(4, 11).join(""),
         "productImages":[...images]
         }
           console.log(netData);  
         setTotalData([netData]);
-        
     }
-
 
     let trig = "cars";
 

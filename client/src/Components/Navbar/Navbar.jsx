@@ -129,7 +129,7 @@ function Navbar() {
       <img src={`/NavbarImages/search.svg`} className="searchIcon" alt="" />
 {isLoggedIn ?<img className="profile1" src="/NavbarImages/profile.png" alt=""></img>
         :<div className="login" onClick={ ()=>{routeChange("Continueoptions")}}>Login</div>}
-      <div className="startSelling">Start Selling</div>
+        <div className="startSelling" onClick={() => { routeChange("postyourad") }}>Start Selling</div>
     </div>
     
     </>

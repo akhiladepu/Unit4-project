@@ -3,7 +3,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import React, {useState} from 'react';
 
 
-import { ViewYourAdd } from './Components/ViewYourAdd/ViewYourAdd';
+
 import { PostYourAd } from './Components/PostYourAd/PostYourAd';
 
 import './App.css';

@@ -22,6 +22,7 @@ import {Enterotp} from "./Components/EnterOTP/Enterotp"
 import {Updatingad} from "./Components/UpdatingAd/Updating/Updatingad"
 import AdNotPosted from "./Components/UpdatingAd/AdNotPosted/AdNotPosted"
 import { Postloading } from "./Components/UpdatingAd/Loading/Postloading.jsx";
+import {Selectcategory} from "./Components/Selectcategory/Selectcategory"
 
 // import Facebooklogin from './Components/FacebookLogin/Facebooklogin';
 // import { dataHeist } from './Components/FacebookLogin/Facebooklogin';
@@ -31,6 +32,7 @@ import { ViewYourAd2 } from './Components/ViewYourAdd/ViewYourAd2';
 function App() {
   return (
     <div className="App">
+      
       <Routes />
 
 

@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     last_name: { type: String},
     email: { type: String},
     password: { type: String},
-    mobile: { type: Number, required: true },
+    mobile: { type: Number, required: true},
     image: { type: String, default: `https://statics.olx.in/external/base/img/avatar_${rndInt}.png` },
     wishlist: {type: Object}
 }, {

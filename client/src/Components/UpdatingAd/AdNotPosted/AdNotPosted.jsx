@@ -1,11 +1,13 @@
 import "./AdNotPosted.css";
-import { useState } from "react";
+import {  useState } from "react";
 import {Redirect,Link} from "react-router-dom"
+
 
 function AdNotPosted() {
   const [order, setOrder] = useState(false);
   const [postAdd, setPostAdd] = useState(false);
   const [wait, setWait] = useState(false);
+
 
   // const handleClick = () => {
   //   if (!order) {

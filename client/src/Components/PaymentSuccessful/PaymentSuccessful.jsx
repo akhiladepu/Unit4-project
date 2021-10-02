@@ -62,5 +62,3 @@ export const PaymentSuccessful = () => {
     </div>
   );
 };
-
-export default PaymentSuccessful;

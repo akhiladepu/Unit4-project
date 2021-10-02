@@ -1,0 +1,97 @@
+.otppage {
+  position: absolute;
+  width: 412px;
+  height: 648px;
+  left: 514px;
+  top: 126px;
+
+  background: #ffffff;
+}
+.olxlogo {
+  position: absolute;
+  top: 92px;
+  left: 170px;
+  width: 72px;
+  height: 42px;
+}
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 25px;
+}
+.otpbox {
+  display: flex;
+  justify-content: space-around;
+  width: 360px;
+  margin: auto;
+  margin-top: 260px;
+}
+.otp-field {
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  font-size: 24px;
+}
+.text span {
+  font-size: 14px;
+  color: #002f34;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.enternumber1 {
+  position: absolute;
+  width: 189px;
+  height: 22px;
+  left: 106px;
+  top: 166px;
+
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #002f34;
+}
+
+.text {
+  position: absolute;
+  width: 274px;
+  height: 15px;
+  left: 50px;
+  top: 221px;
+
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+
+  color: #6f6f6f;
+}
+
+.resend {
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: left;
+  margin-left: 24px;
+  margin-top: 72px;
+  color: rgba(0, 47, 52, 0.8);
+}
+.call {
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: left;
+  margin-left: 24px;
+  margin-top: 16px;
+  color: rgba(0, 47, 52, 0.8);
+}

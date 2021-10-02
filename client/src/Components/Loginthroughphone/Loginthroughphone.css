@@ -1,0 +1,132 @@
+.loginpage {
+  border: 1px solid black;
+  position: absolute;
+  width: 412px;
+  height: 648px;
+  left: 514px;
+  top: 126px;
+
+  background: #ffffff;
+}
+.x {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+p {
+  font-weight: bold;
+}
+body {
+  background-color: grey;
+}
+.olxlogo {
+  position: absolute;
+  top: 92px;
+  left: 170px;
+  width: 72px;
+  height: 42px;
+}
+.enternumber {
+  position: absolute;
+  top: 146px;
+  left: 123px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 22px;
+  margin-top: 35px;
+  color: #002f34;
+}
+.number {
+  position: absolute;
+  left: 24px;
+  top: 212px;
+  height: 48px;
+  width: 364px;
+  background: #ffffff;
+  border: 1px solid #7f9799;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.code {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  /* identical to box height */
+
+  color: #a9a9a9;
+}
+.line {
+  position: absolute;
+  width: 0px;
+  height: 28px;
+  left: 53px;
+  top: 10px;
+  border: 1px solid #888888;
+}
+.numinput {
+  position: absolute;
+  left: 67px;
+  top: 14px;
+  width: 190px;
+  height: 20px;
+  border: 1px solid white;
+  font-size: 16px;
+  color: #002f34;
+  border: 0;
+  outline: none;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #9d9d9d;
+}
+
+.next1 {
+  position: absolute;
+  left: 24px;
+  top: 340px;
+  width: 364px;
+  height: 56px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height */
+  padding-top: 15px;
+  background: linear-gradient(0deg, #ebeeef, #ebeeef), #ffffff;
+  border: 2px solid #ebeeef;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+p {
+  position: absolute;
+  left: 39px;
+  right: 39px;
+  bottom: 39px;
+  top: 420px;
+  font-size: 11px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+
+  color: #6f6f6f;
+}

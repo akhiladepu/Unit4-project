@@ -61,7 +61,6 @@ export const PostYourAd = () => {
     }
 
 
-
     let trig = "cars";
 
     useEffect(() => {
@@ -205,7 +204,9 @@ export const PostYourAd = () => {
                             </div>
                                             </ImgTaker> :
                                             <ImgTaker style={{ position: 'relative' }}>
-                                                <div onClick={() => onImageRemove(0)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <div onClick={() => onImageRemove(0)} style={{ position: 'absolute', height: '25px', width: "25px", borderRadius: "50%", background: "rgb(255,255,255,0.4)", textAlign: "center", right: "4%", top: "4%" }}>
+                                                    <img src={`/POSTYOURAD/x.svg`} alt="" style={{ position: "absolute", top: "10%", left: "10%", height: "80%", width: "80%" }} />
+                                                </div>
                                                 <img src={imageList[0].data_url} alt="" width="100%" height="100%" />
                                             </ImgTaker>
                                         }
@@ -219,7 +220,7 @@ export const PostYourAd = () => {
                             </div>
                                             </ImgTaker> :
                                             <ImgTaker style={{ position: 'relative' }}>
-                                                <div onClick={() => onImageRemove(1)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <div onClick={() => onImageRemove(1)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>   <img src={`/POSTYOURAD/x.svg`} alt="" style={{ position: "absolute", top: "10%", left: "10%", height: "80%", width: "80%" }} />  </div>
                                                 <img src={imageList[1].data_url} alt="" width="100%" height="100%" />
                                             </ImgTaker>
                                         }
@@ -233,7 +234,7 @@ export const PostYourAd = () => {
                             </div>
                                             </ImgTaker> :
                                             <ImgTaker style={{ position: 'relative' }}>
-                                                <div onClick={() => onImageRemove(2)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <div onClick={() => onImageRemove(2)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>   <img src={`/POSTYOURAD/x.svg`} alt="" style={{ position: "absolute", top: "10%", left: "10%", height: "80%", width: "80%" }} />  </div>
                                                 <img src={imageList[2].data_url} alt="" width="100%" height="100%" />
                                             </ImgTaker>
                                         }
@@ -247,7 +248,7 @@ export const PostYourAd = () => {
                             </div>
                                             </ImgTaker> :
                                             <ImgTaker style={{ position: 'relative' }}>
-                                                <div onClick={() => onImageRemove(3)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <div onClick={() => onImageRemove(3)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>   <img src={`/POSTYOURAD/x.svg`} alt="" style={{ position: "absolute", top: "10%", left: "10%", height: "80%", width: "80%" }} />   </div>
                                                 <img src={imageList[3].data_url} alt="" width="100%" height="100%" />
                                             </ImgTaker>
                                         }
@@ -261,7 +262,7 @@ export const PostYourAd = () => {
                             </div>
                                             </ImgTaker> :
                                             <ImgTaker style={{ position: 'relative' }}>
-                                                <div onClick={() => onImageRemove(4)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <div onClick={() => onImageRemove(4)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>   <img src={`/POSTYOURAD/x.svg`} alt="" style={{ position: "absolute", top: "10%", left: "10%", height: "80%", width: "80%" }} />   </div>
                                                 <img src={imageList[4].data_url} alt="" width="100%" height="100%" />
                                             </ImgTaker>
                                         }
@@ -275,7 +276,7 @@ export const PostYourAd = () => {
                             </div>
                                             </ImgTaker> :
                                             <ImgTaker style={{ position: 'relative' }}>
-                                                <div onClick={() => onImageRemove(5)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <div onClick={() => onImageRemove(5)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>  <img src={`/POSTYOURAD/x.svg`} alt="" style={{ position: "absolute", top: "10%", left: "10%", height: "80%", width: "80%" }} />  </div>
                                                 <img src={imageList[5].data_url} alt="" width="100%" height="100%" />
                                             </ImgTaker>
                                         }
@@ -289,7 +290,7 @@ export const PostYourAd = () => {
                             </div>
                                             </ImgTaker> :
                                             <ImgTaker style={{ position: 'relative' }}>
-                                                <div onClick={() => onImageRemove(6)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <div onClick={() => onImageRemove(6)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>   <img src={`/POSTYOURAD/x.svg`} alt="" style={{ position: "absolute", top: "10%", left: "10%", height: "80%", width: "80%" }} /> </div>
                                                 <img src={imageList[6].data_url} alt="" width="100%" height="100%" />
                                             </ImgTaker>
                                         }
@@ -303,7 +304,7 @@ export const PostYourAd = () => {
                             </div>
                                             </ImgTaker> :
                                             <ImgTaker style={{ position: 'relative' }}>
-                                                <div onClick={() => onImageRemove(7)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>X</div>
+                                                <div onClick={() => onImageRemove(7)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"rgba(0, 47, 52, 0.8)"}}>   <img src={`/POSTYOURAD/x.svg`} alt="" style={{ position: "absolute", top: "10%", left: "10%", height: "80%", width: "80%" }} />   </div>
                                                 <img src={imageList[7].data_url} alt="" width="100%" height="100%" />
                                             </ImgTaker>
                                         }
@@ -316,7 +317,7 @@ export const PostYourAd = () => {
                             </div>
                                             </ImgTaker> :
                                             <ImgTaker style={{ position: 'relative' }}>
-                                                <div onClick={() => onImageRemove(8)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"#002F34"}}>X</div>
+                                                <div onClick={() => onImageRemove(8)} style={{ position: 'absolute',height: '25px',width:"25px",borderRadius:"50%",background:"rgb(255,255,255,0.4)",textAlign:"center",right:"4%",top:"4%",fontFamily:"Helvetica",fontWeight:"700",color:"#002F34"}}>    <img src={`/POSTYOURAD/x.svg`} alt="" style={{ position: "absolute", top: "10%", left: "10%", height: "80%", width: "80%" }} />   </div>
                                                 <img src={imageList[8].data_url} alt="" width="100%" height="100%" />
                                             </ImgTaker>
                                         }

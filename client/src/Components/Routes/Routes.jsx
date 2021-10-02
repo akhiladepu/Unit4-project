@@ -12,6 +12,8 @@ import PaymentMethod from "../UpdatingAd/PaymentMethod/PaymentMethod";
 import { PostYourAd } from '../PostYourAd/PostYourAd.jsx';
 import { ViewYourAd2 } from '../ViewYourAdd/ViewYourAd2.jsx';
 
+import { Selectcategory } from "../Selectcategory/Selectcategory.jsx"
+
 export const Routes = () => {
     return (<>
         <Switch>
@@ -50,6 +52,12 @@ export const Routes = () => {
             </Route>
             <Route path="/paymentmethod" exact>
                 <PaymentMethod />
+            </Route>
+            <Route path="/selectcategory" exact>
+                <Selectcategory />
+            </Route>
+            <Route path="/viewyourad" exact>
+                <ViewYourAd2/>
             </Route>
     </Switch>
     </>);

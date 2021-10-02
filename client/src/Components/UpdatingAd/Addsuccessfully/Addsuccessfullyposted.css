@@ -12,14 +12,16 @@
   border-radius: 4px;
 }
 .x {
+  position: absolute;
   cursor: pointer;
 }
 
 .overAllDiv {
+  position: absolute;
   width: 100px;
   height: 100px;
-  margin-left: 60px; /*change these values to adjust the whole animation*/
-  margin-top: 50px; /*change these values to adjust the whole animation*/
+  right: 270px; /*change these values to adjust the whole animation*/
+  bottom: 500px; /*change these values to adjust the whole animation*/
 }
 
 .ellipse {
@@ -162,7 +164,7 @@
 }
 .bottomtext {
   position: absolute;
-  width: 287px;
+  width:300px;
   height: 15px;
   left: 120px;
   top: 612px;
@@ -177,4 +179,9 @@
 }
 .bottomtext span {
   color: #002f34;
+}
+.iCompo {
+  position:absolute;
+  right:295px;
+  bottom:0.1px
 }

@@ -95,6 +95,8 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: 20px;
+  position:absolute;
+  left:54px;
   /* identical to box height */
 
   color: #002f34;
@@ -156,6 +158,22 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.phonelogo {
+  position:absolute;
+  left:25px;
+}
+
+.fblogo {
+  position:absolute;
+  left:27px;
+}
+
+.googlelogo {
+  position:absolute;
+  left:23.19px;
+}
+
 /* }
 .help {
   width: 230px;

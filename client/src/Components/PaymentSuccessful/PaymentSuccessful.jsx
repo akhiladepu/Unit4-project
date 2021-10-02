@@ -11,7 +11,7 @@ export const PaymentSuccessful = () => {
   }, []);
 
   return (
-    <div cla="header">
+    <div className="header">
       <div className="overAllDiv">
         <div className="checkMarkDiv">
           <img

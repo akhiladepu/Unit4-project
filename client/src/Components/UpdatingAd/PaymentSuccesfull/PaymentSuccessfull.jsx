@@ -28,7 +28,7 @@ export function PaymentSuccessfull(){
                </div>
     <div className="congo">Payment Successfull</div>
     <div className="live">You can post a second ad now...</div>
-   <Redirect to="/"><div class="post">Post Another Ad</div></Redirect>
+   <div className="post">Post Another Ad</div>
     <div className="bottomtext">
     <img className="i" src={ `/PaymentSuccessful/i.svg`} alt="i" />
     olx allows 1 free ad in 30 days for <span>Cameras</span></div>

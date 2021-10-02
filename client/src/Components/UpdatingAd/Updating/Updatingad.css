@@ -9,16 +9,20 @@
   box-shadow: 0px 2px 20px rgba(0, 47, 52, 0.08);
   border-radius: 4px;
 }
+.gif {
+  position: absolute;
+  left: 182px;
+  top: 17px;
+}
 body {
   background: #f5fafa;
 }
 .update {
   width: 239px;
   height: 26px;
-  margin-left: 127px;
-
-  margin: auto;
-  margin-top: 24px;
+  position: absolute;
+  left: 127px;
+  top: 137px;
   font-family: Graphik;
   font-style: normal;
   font-weight: 500;
@@ -31,8 +35,9 @@ body {
 .ready {
   width: 259px;
   height: 36px;
-  margin-left: 117px;
-  margin-top: 16px;
+  position: absolute;
+  left: 117px;
+  top: 160px;
   font-family: Graphik;
   font-style: normal;
   font-weight: normal;

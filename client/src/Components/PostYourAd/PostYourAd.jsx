@@ -102,7 +102,6 @@ export const PostYourAd = () => {
     const routeChange = () => {
         let path = "/postloading";
         history.push(path);
-
     }
 
     return (
@@ -370,7 +369,7 @@ export const PostYourAd = () => {
             </div>
             
 
-            <FootButton onClick={handleInput}>
+            <FootButton onClick={() => { handleInput() }}>
                 <img src={`/POSTYOURAD/Redownloadpostadbutton.svg`} alt="" style={{margin:"23px 110px"}} onClick={()=>{routeChange()}}/>
             </FootButton>
 

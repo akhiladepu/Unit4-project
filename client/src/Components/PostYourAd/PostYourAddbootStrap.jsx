@@ -24,6 +24,8 @@ width:563px;
 height : 56px;
 border-radius :4px;
 padding-left:10px;
+border: 1px solid #002F34;
+outline:none;
 `
 const Downarrow = styled.i`
 position:absolute;
@@ -36,7 +38,6 @@ width:563px;
 height : 56px;
 border-radius :4px;
 border: 1px solid #002F34;
-
 &:hover {
     border: 1px solid #002F34;
   }

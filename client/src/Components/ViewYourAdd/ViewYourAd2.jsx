@@ -293,7 +293,6 @@ export const ViewYourAd2 = () => {
                             </div>
                         </div>
 
-
                     </SmallerPricing>
 
                 </Pricing>

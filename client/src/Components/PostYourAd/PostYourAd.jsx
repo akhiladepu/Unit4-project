@@ -195,7 +195,7 @@ export const PostYourAd = () => {
                         </SelectBar>
                     </div>
                     <div>
-                        <img src={`/POSTYOURAD/Redownloadadtitle.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} /> <br />
+                        <img src={`/POSTYOURAD/AdTitle.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} /> <br />
                         <InpBar type="text" name="adTitle" onChange={handleChange}></InpBar>
                     </div>
                     <div>
@@ -207,7 +207,7 @@ export const PostYourAd = () => {
                 
                 <div style={{ width: "652px" ,marginLeft:"100px"}}>
                     
-                     <img src={`/POSTYOURAD/AdTitle.svg`} alt="" style={{marginLeft:'4px',marginTop:'33px',marginBottom:'16px'}} /> <br />
+                     <img src={`/POSTYOURAD/ADDImages.svg`} alt="" style={{marginLeft:'4px',marginTop:'34px',marginBottom:'16px'}} /> <br />
                     {/* <div className="col-12 d-flex flex-row" style={{flexFlow:"row wrap",justifyContent:"space-between"}}> */}
 
                             {/* follows the same hirarcy as commented above */}
@@ -383,7 +383,7 @@ export const PostYourAd = () => {
 
             <div className="d-flex flex-row" style={{marginBottom:"104px"}}>
                 <div>
-                    <img src={`/POSTYOURAD/Price.svg`} alt="" style={{marginLeft:'55px',marginTop:'16px',marginBottom:'16px'}} /> <br />
+                    <img src={`/POSTYOURAD/Price.svg`} alt="" style={{marginLeft:'55px',marginTop:'20.7px',marginBottom:'16px'}} /> <br />
                     <InpBar type="text" name="price" onChange={handleChange}></InpBar>
                 </div>
                 <div style={{marginLeft:"60px"}}>

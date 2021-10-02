@@ -1,23 +1,14 @@
 import "./Navbar.css";
 import axios from "axios"
 import { useState, useEffect } from "react";
-// import { Redirect } from "react-router-dom";
-
-import { useHistory } from "react-router-dom";
-// import { Link } from "react-router-dom";
-// import Dropdown from 'react-dropdown';
-// import 'react-dropdown/style.css';
-
-
+import { Link } from "react-router-dom";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 function Navbar() {
-
-  const history = useHistory();
   const [product,setProduct]=useState()
   const [searchedProducts,setSearchedProducts]=useState([])
-
   const locations=[`All India`,`Delhi`,`Mumbai`,`Kolkata`,`hyderabad`,`Chennai`]
-
-  const countries = [
+  const items = [
     `All Categories`,'Electronics & appliances', 'Properties', 'Mobile & Tablets',
     'Commercial Vehicles & spares',`Books,Sports & Hobbies`
   ];
@@ -26,7 +17,6 @@ function Navbar() {
   },[])
   var element;
   var arr;
-  
   var p1,p2,p3;
   var a
 const search=()=>{
@@ -96,96 +86,41 @@ console.log(arr)
    setSearchedProducts([...a])
 })
 }
-
-  const routeChange = (setPath) =>{ 
-    let path = `/${setPath}`; 
-    history.push(path);
-  }
-
   return (
     <>
     <div className="header">
       <img src={`/NavbarImages/olx.svg`} className="logo" alt="" />
-      <div className="locationlogo"><img src={`/NavbarImages/location.svg`} alt="" /></div>
-        <select className="location">
-            
+      <img className="locationlogo" src={`/NavbarImages/location.svg`} alt="" />
+      <select className="locations">
               {
                 locations.map(el=>(
                   <option className="options" title={el}>{el}</option>
                 ))
               }
-        </select>
-        <div className="search">
-                <div >
-                <select className="categories">
-                {
-                  countries.map(el=>(
-                    <option className="options" title={el}>{el}</option>
-                  ))
-                }
-                </select>
-                </div>
-                <div><input
-                onChange={(e=>setProduct(e.target.value))}
-                type="text"
-                className="input"
-                  placeholder="Search for Cars,Mobile Phones and more"
-                /></div>
-                <div className="searchBar"
-                onClick={search}
-                >
-                      <img src={`/NavbarImages/searchIcon.svg`} className="searchIcon" alt="" />
-                </div>
-          </div>
-          <div className="loginAndSellingbox">
-          <div className="login" onClick={() => { routeChange("Continueoptions") }}>Login</div>
-        <div className="startSelling" onClick={() => { routeChange("") }}>Start Selling</div>
-        </div>
-       
+      </select>
+      <select className="categories">
+              {
+                items.map(el=>(
+                  <option className="options" title={el}>{el}</option>
+                ))
+              }
+      </select>
+      <input
+        onChange={(e=>setProduct(e.target.value))}
+        type="text"
+        className="input"
+          placeholder="Search for Cars,Mobile Phones and more"
+        />
+      <img src={`/NavbarImages/search.svg`} className="searchIcon" alt="" />
+      <div className="login">Login</div>
+      <div className="startSelling">Start Selling</div>
     </div>
     {
       searchedProducts.map(el=>(
         <p>{el.productName}</p>
       ))
-      
     }
     </>
   );
 }
-
 export default Navbar;
-
-// {<div className="header">
-// <div className="first-col">
-//   <img src={`/NavbarImages/olx.svg`} className="logo" alt="" />
-//   <div className="location">
-//     <img src={`/NavbarImages/location.svg`} alt="" />
-//     <div className="option">
-//       <select options={option} displayValue="country" />
-//     </div>
-//     <img src={`/NavbarImages/down.svg`} alt="" />
-//   </div>
-//   <div className="search">
-//     <div className="categories">
-//       <p>All Categories</p>
-//       <img src={`/NavbarImages/down.svg`} alt="" />
-//     </div>
-//     <input
-//       type="text"
-//       className="input"
-//       placeholder="Search for Cars,Mobile Phones and more"
-//     />
-//     <div className="searchBar">
-//       <img src={`/NavbarImages/searchIcon.svg`} className="searchIcon" alt="" />
-//     </div>
-//   </div>
-// </div>
-// <div className="secound-col">
-//   <div className="login">
-//     <p className="loginText">Login</p>
-//   </div>
-//   <div className="startSelling">
-//     <p className="seelingText">Start Selling</p>
-//   </div>
-// </div>
-// </div>}

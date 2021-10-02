@@ -6,16 +6,16 @@ import axios from "axios";
 
 export function Enterotp() {
     const history = useHistory();
-    const {phoneNumber, setUserId, handleLogin, userId}=useContext(LoginContext)
-    console.log('userId:', userId)
-    console.log('phoneNumber:', phoneNumber);
+    const {phoneNumber, setUserId, handleLogin, userId, handleUserImage}=useContext(LoginContext)
+ 
     const [otp,setOtp]=useState(new Array(4).fill(""))
     
     const postUser = async (num) => {
         await axios.post("http://localhost:4000/users", {
             mobile: num
         }).then((data) => {
-            setUserId(data.data._id)
+            setUserId(data.data._id);
+            handleUserImage(data.data.image)
             return data;
         }).catch((err) => {
             console.log(err);

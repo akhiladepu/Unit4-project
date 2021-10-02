@@ -203,7 +203,7 @@ export const ViewYourAd2 = () => {
                                 <img src={`/ViewMyAd/EditAd.svg`} alt="" style={{margin:"15px 32px"}}/>
                             </div>
                                 <div onclick={handleRemoveAd} style={{  position: 'absolute',top:"110px",left:"140px",width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
-                                <img src={`/ViewMyAd/EditAd.svg`} alt="" style={{margin:"15px 32px"}}/>
+                                <img src={`/ViewMyAd/Removead.svg`} alt="" style={{margin:"15px 24px"}}/>
                             </div>
 
 

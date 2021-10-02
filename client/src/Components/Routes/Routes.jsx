@@ -26,7 +26,7 @@ export const Routes = () => {
             <Route path="/Enterotp" exact >
                 <Enterotp />
             </Route>
-            <Route path="/postyouradd" exact>
+            <Route path="/postyourad" exact>
                 <PostYourAd />
             </Route>
             <Route path="/postloading" exact>

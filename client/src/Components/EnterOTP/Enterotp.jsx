@@ -2,11 +2,29 @@ import "./Enterotp.css"
 import { useContext, useEffect, useState } from "react"
 import { LoginContext } from "../../Contexts/Logincontextprovider"
 import { useHistory } from "react-router"
+import axios from "axios";
+
 export function Enterotp() {
     const history = useHistory();
-    const {phoneNumber}=useContext(LoginContext)
+    const {phoneNumber, setUserId, handleLogin, userId}=useContext(LoginContext)
+    console.log('userId:', userId)
+    console.log('phoneNumber:', phoneNumber);
     const [otp,setOtp]=useState(new Array(4).fill(""))
-    const handleChange=(el,index)=>{
+    
+    const postUser = async (num) => {
+        await axios.post("http://localhost:4000/users", {
+            mobile: num
+        }).then((data) => {
+            setUserId(data.data._id)
+            return data;
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
+    
+    
+    
+    const handleChange = (el, index) => {
         if(isNaN(el.value))return false
         setOtp([...otp.map((d,idx)=>(idx===index)? el.value:d)])
         if(el.nextSibling){
@@ -14,8 +32,11 @@ export function Enterotp() {
         }
 
         if (index === 3) {
+            postUser(phoneNumber)
             setTimeout(() => {
+
                 history.push("/");
+                
             }, 1200)
         }
     }

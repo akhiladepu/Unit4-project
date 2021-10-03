@@ -31,6 +31,7 @@ router.get("", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
         const mobile = await Mobile.findById(req.params.id).lean().exec();
+        console.log('mobile:', mobile)
         return res.send(mobile);
     }
     catch (err) {

@@ -31,6 +31,7 @@ router.get("", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
         const car = await Car.findById(req.params.id).lean().exec();
+        console.log('car:', car)
         return res.send(car);
     }
     catch (err) {

@@ -10,9 +10,8 @@ export function Logincontextprovider({children}){
     const [phoneNumber, setPhoneNumber] = useState("");
     const [changeColor, setChangeColor] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [userId, setUserId] = useState("");
-    const [category,setCategory]=useState("")
-    console.log('category:', category)
+    const [userId, setUserId] = useState("61591eeb10458c0d64c9be6e");
+    const [category, setCategory] = useState("cars");
     const getUsers = async () => {
         await axios("http://localhost/cars").then((data) => {
             console.log(data.data);

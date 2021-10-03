@@ -1,16 +1,21 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useContext } from 'react';
 import axios from 'axios';
 import './AddYourAd.css';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import { UpperDiv,PhotoClg,ProductDetail,AdDetailKey,DescriptionKey,Pricing,SmallerPricing,LowerDiv,SmallPicINF,ImageCont,SmallPICASHOW} from './ViewStylecmp';
+import { LoginContext } from '../../Contexts/Logincontextprovider';
 
 export const ViewYourAd2 = () => {
+
+    const { userId, productId, category } = useContext(LoginContext);
+
+    const [userData, setUserData] = useState({});
+
 
     const [allData, setAllData] = useState([]);    // handlimng all datas
     const [images, setImages] = useState([]);   // handle main images 
 
-    const [userData, setUserData] = useState({});
 
     const [lowerImg1, setLowerImg1] = useState([]);
     const [lowerImg2, setLowerImg2] = useState([]);
@@ -22,10 +27,18 @@ export const ViewYourAd2 = () => {
     const [lowerData4,setLowerData4]=useState([]); 
 
     useEffect(() => {
-        axios.get("http://localhost:4000/cars")
+        axios.get(`http://localhost:4000/${category}`)
             .then((data) => {
-                setAllData(data.data[2]);
-                setImages(data.data[0].productImages);
+                // console.log('data:', data.data)
+                // setAllData(data.data[0]);
+                // setImages(data.data[0].productImages);
+                for (let i = 0; i < data.data.length; i++) {
+                    if (data.data[i]._id === productId) {
+                        setAllData(data.data[i]);
+                        setImages(data.data[i].productImages);
+                        break;
+                    }
+                }
                 setLowerImg1(data.data[1].productImages);
                 setLowerImg2(data.data[2].productImages)
                 setLowerImg3(data.data[3].productImages)
@@ -34,12 +47,19 @@ export const ViewYourAd2 = () => {
                 setLowerData2(data.data[2]);
                 setLowerData3(data.data[3]);
                 setLowerData4(data.data[4]);
-            })
-        axios.get("http://localhost:4000/users")
-            .then((userData) => {
-                setUserData(userData.data[1]);
-                console.log(userData.data[1])
+            });
+        
+        axios.get(`http://localhost:4000/users`)
+            .then((data) => {
+                for (let i = data.data.length - 1; i >= 0; i--) {
+                    if (data.data[i]._id === userId) {
+                        setUserData(data.data[i])
+                        break;
+                    }
+                }
         })
+
+        
     },[])
 
     
@@ -122,12 +142,12 @@ export const ViewYourAd2 = () => {
 
             <div className="col-12" style={{position: 'absolute' ,top:"100px",left:"55.5px"}}>
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item" style={{ fontSize: "16px" }}>Home</li>
+                    <ol className="breadcrumb">
+                        <li className="breadcrumb-item" style={{ fontSize: "16px" }}>Home</li>
                         <img style={{transform:"scaleX(-1)",margin:"0 10.53px"}}src={`/ViewMyAd/SliderRight.svg`} alt="" />
-                        <li class="breadcrumb-item" style={{ fontSize: "16px" }}>Library</li>
+                        <li className="breadcrumb-item" style={{ fontSize: "16px" }}>{category}</li>
                         <img style={{transform:"scaleX(-1)",margin:"0 10.53px"}}src={`/ViewMyAd/SliderRight.svg`} alt="" />
-                        <li class="breadcrumb-item active" aria-current="page" style={{fontSize:"16px"}}>Data</li>
+                        <li className="breadcrumb-item active" aria-current="page" style={{fontSize:"16px"}}>{allData.model}</li>
                     </ol>
                 </nav>
             </div>
@@ -153,14 +173,14 @@ export const ViewYourAd2 = () => {
                     <div className="d-flex flex-row" style={{ justifyContent: "space-between" }}>
                         
                         <SmallPICASHOW>
-                            {images.length >= 2 ? <img src={images[1]} alt="" style={{ width:"100%",height:"100%"} }/> : <div> <div style={{ position:"absolute",width: '100%', height: '100%', background: "rgb(0,0,0,0.4)",zIndex:"14",color:"white",fontSize:"60px",textAlign:"center" }}>
+                            {images.length === 2 ? <img src={images[1]} alt="" style={{ width:"100%",height:"100%"} }/> : <div> <div style={{ position:"absolute",width: '100%', height: '100%', background: "rgb(0,0,0,0.4)",zIndex:"14",color:"white",fontSize:"60px",textAlign:"center" }}>
                                 +{images.length-2}
                             </div>
                                 <img src={images[1]} style={{ height:"100%", width:"100%"}} alt="" /> </div> }
                         </SmallPICASHOW>
 
                         <SmallPICASHOW>
-                            {images.length >= 3 ? <img src={images[2]} alt="" style={{ width:"100%",height:"100%"} }/> : <div> <div style={{ position:"absolute",width: '100%', height: '100%', background: "rgb(0,0,0,0.4)",zIndex:"14",color:"white",fontSize:"60px",textAlign:"center" }}>
+                            {images.length === 3 ? <img src={images[2]} alt="" style={{ width:"100%",height:"100%"} }/> : <div> <div style={{ position:"absolute",width: '100%', height: '100%', background: "rgb(0,0,0,0.4)",zIndex:"14",color:"white",fontSize:"60px",textAlign:"center" }}>
                                 +{images.length-2}
                             </div>
                             <img src={images[2]} style={{ height:"100%", width:"100%"}} alt="" /> </div> }
@@ -270,7 +290,7 @@ export const ViewYourAd2 = () => {
                             <div onClick={handleEditAd} style={{ position: 'absolute',top:"110px",width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
                                 <img src={`/ViewMyAd/EditAd.svg`} alt="" style={{margin:"15px 32px"}}/>
                             </div>
-                                <div onclick={handleRemoveAd} style={{  position: 'absolute',top:"110px",left:"140px",width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
+                                <div onClick={handleRemoveAd} style={{  position: 'absolute',top:"110px",left:"140px",width: "47%", border: "1px solid #002F34",boxSizing: "border-box",borderRadius:"4px" }}>
                                 <img src={`/ViewMyAd/Removead.svg`} alt="" style={{margin:"15px 24px"}}/>
                             </div>
 
@@ -286,11 +306,11 @@ export const ViewYourAd2 = () => {
 
                         <div className="col-10 d-flex flex-row" style={{position:"relative", margin:"20px auto"}}>
                             <div style={{ position:"absolute",top:"48px",width: "64px", height: "64px", borderRadius: "50%" }}>
-                                <img src="https://www.juventus.com/images/image/private/t_portrait_mobile/dev/t5mex3dyn30xi3ox6ii5.jpg" alt="" style={{ width: "64px", height: "64px", borderRadius: "50%" }} />
+                                <img src={userData.image} alt="" style={{ width: "64px", height: "64px", borderRadius: "50%" }} />
                             </div>
                             <div style={{position:"relative",marginLeft: "24px",}}>
-                                <p style={{position:"absolute",top:"57px",left:"60px" ,width:"200px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"normal",fontSize:"16px",lineHeight:"18px",letterSpace:"0.06em",color:"#000000" }}>Rahul singh</p>
-                                <p style={{position:"absolute",top:"84px",left:"60px",width:"200px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Member since sept,2021</p>
+                                    <p style={{ position: "absolute", top: "57px", left: "60px", width: "200px", textAlign: "start", fontFamily: "Graphik", fontStyle: "normal", fontWeight: "normal", fontSize: "16px", lineHeight: "18px", letterSpace: "0.06em", color: "#000000" }}>{`${userData.first_name} ${userData.last_name}`}</p>
+                                <p style={{position:"absolute",top:"84px",left:"60px",width:"200px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Member since Oct,2021</p>
                             </div>
                         </div>
 
@@ -300,8 +320,8 @@ export const ViewYourAd2 = () => {
                                 <p style={{position:"absolute",top:"165px",left:"0px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",fontWeight:"400",fontSize:"16px",lineHeight:"17.6px",color:"#002F34"}}>Email</p>
                             </div>
                             <div style={{position:"relative"}}>
-                                <p style={{position:"absolute",top:"130px",left:"80px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>87907896767</p>
-                                <p style={{position:"absolute",top:"165px",left:"80px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>Rahul@masai</p>
+                                <p style={{position:"absolute",top:"130px",left:"80px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>{userData.mobile}</p>
+                                <p style={{position:"absolute",top:"165px",left:"80px",width:"100px",textAlign: "start",fontFamily: "Graphik",fontStyle: "normal",marginLeft:"32px",fontWeight:"400",fontSize:"14px",lineHeight:"15.4px",color:"rgb(0,47,52,0.8)"}}>{userData.email}</p>
                             </div>
                         </div>
 

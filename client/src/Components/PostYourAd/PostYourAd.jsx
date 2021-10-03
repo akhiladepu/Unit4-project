@@ -26,9 +26,6 @@ export const PostYourAd = () => {
 
     const {userId,handleProductId,category} = useContext(LoginContext);
 
-
-
-    console.log('InpHead:', InpHead)
     const history = useHistory();
 
     const [text, setText] = useState(initState);   // used for storing text documents
@@ -97,12 +94,8 @@ export const PostYourAd = () => {
 
    
 
-
-
-    let trig = "cars";
-
     useEffect(() => {
-        axios.get(`http://localhost:4000/${trig}`)
+        axios.get(`http://localhost:4000/${category}`)
             .then((data) => { setFetchedData(data.data);})
     },[])
 

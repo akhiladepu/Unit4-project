@@ -1,0 +1,213 @@
+
+
+.navbar{
+width: 100%;
+height: 74px;
+/* display: flex; */
+
+background: rgba(0, 47, 52, 0.04);
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+
+.navDiv{
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: space-between;
+}
+.navImage{
+    display: flex;
+    /* border: 1px solid black; */
+    align-items: center;
+    margin-left: 50px;
+    width: 12%;
+    justify-content: space-between;
+}
+
+.backArrow{
+width: 24px;
+height: 24px;
+float: left;
+}
+
+.infoDiv{
+    position: absolute;
+width: 586px;
+height: 764px;
+left: 427px;
+top: 92px;
+
+background: #FFFFFF;
+box-shadow: 0px 8px 30px 4px rgba(50, 50, 50, 0.08);
+}
+
+.secureCreditBaground{
+    position: absolute;
+width: 490px;
+height: 60px;
+left: 48px;
+top: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #FFF6D9;
+border-radius: 4px;
+}
+
+.nameCard{
+    position: absolute;
+left: 48px;
+top: 133px;
+}
+
+.nameInput{
+    position: absolute;
+    padding-left: 24px;
+    font-size:18px;
+width: 490px;
+height: 60px;
+left: 48px;
+top: 162px;
+border: none;
+background: #EBEEEF;
+border-radius: 4px;
+color: #002F34;
+}
+
+.cardNumber{
+    position: absolute;
+left: 48px;
+top: 245px;
+}
+
+.cardInput{
+    position: absolute;
+    padding-left: 24px;
+    font-size:18px;
+width: 490px;
+height: 60px;
+border: none;
+left: 48px;
+top: 274px;
+background: #EBEEEF;
+border-radius: 4px;
+color: #002F34;
+}
+
+.dateAndCvv{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expiryDate{
+    position: absolute;
+left: 48px;
+top: 357px;
+}
+.expiryInput{
+    position: absolute;
+    padding-left: 24px;
+    font-size:18px;
+width: 238px;
+height: 60px;
+border: none;
+left: 48px;
+top: 385px;
+color: #002F34;
+
+background: #EBEEEF;
+border-radius: 4px;
+}
+
+.cvvText{
+    position: absolute;
+left: 299px;
+top: 357px;
+}
+
+.cvvInput{
+    position: absolute;
+    padding-left: 24px;
+    font-size:18px;
+width: 238px;
+height: 60px;
+left: 300px;
+border: none;
+top: 385px;
+background: #EBEEEF;
+border-radius: 4px;
+color: #002F34;
+}
+
+.saveCardDetail{
+    position: absolute;
+width: 490px;
+height: 60px;
+left: 48px;
+top: 479px;
+border: 2px solid #EBEEEF;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.checkbox{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 27px;
+    top: 15px;
+}
+
+.detail{
+    position: absolute;
+width: 377px;
+height: 20px;
+left: 90px;
+top: 15px;
+}
+.detailNotFilled{
+    position: absolute;
+width: 364px;
+height: 56px;
+left: 111px;
+top: 584px;
+background: #E6F3F2;
+border: 1px solid #B8DBDB;
+box-sizing: border-box;
+border-radius: 4px;
+font-family: Graphik;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+color: #5C7D80;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+.detailFilled{
+    position: absolute;
+width: 364px;
+height: 56px;
+left: 111px;
+top: 584px;
+background: #002F34;
+box-sizing: border-box;
+border-radius: 4px;
+font-family: Graphik;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+color: #FFFFFF;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}

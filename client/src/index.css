@@ -1,13 +1,83 @@
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 47, 52, 0.5); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 47, 52, 0.8); 
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: "Graphik";
+    src: url(../src/Fonts/Graphik/GraphikThin.otf);
+    font-weight: 100;
 }
+
+@font-face {
+    font-family: "Graphik";
+    src: url(../src/Fonts/Graphik/GraphikExtralight.otf);
+    font-weight: 200;
+}
+
+
+@font-face {
+    font-family: "Graphik";
+    src: url(../src/Fonts/Graphik/GraphikLight.otf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url(../src/Fonts/Graphik/GraphikRegular.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url(../src/Fonts/Graphik/GraphikMedium.otf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url(../src/Fonts/Graphik/GraphikSemibold.otf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url(../src/Fonts/Graphik/GraphikBold.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url(../src/Fonts/Graphik/GraphikBlack.otf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Graphik";
+    src: url(../src/Fonts/Graphik/GraphikSuper.otf);
+    font-weight: 900;
+}
+

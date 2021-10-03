@@ -1,0 +1,64 @@
+.overAllDiv{
+    width:100px;
+    height:100px;
+    margin-left:300px;/*change these values to adjust the whole animation*/
+    margin-top:100px;/*change these values to adjust the whole animation*/
+}
+
+.ellipse{
+    position:absolute;
+    margin-top:81px;
+    margin-left:64px;
+}
+
+.checkMark{
+    position:absolute;
+    margin-top:124px;
+    margin-left:107px;
+
+}
+
+.starsDiv{
+    transition: 0.2s;
+    position:absolute;
+    width: 240px;
+    height: 237px;
+}
+
+.star1{
+    position:absolute;
+    margin-top:103px;
+}
+
+.star2{
+    position:absolute;
+    margin-top:33px;
+    margin-left:9px;
+}
+
+.star3{
+    position:absolute;
+    margin-top:48px;
+    margin-left:88px;
+}
+
+.star4{
+    position:absolute;
+    margin-left:192px;
+    margin-top:89px;
+}
+
+.star5{
+    position:absolute;
+    margin-left:134px;
+}
+
+.header{
+    position: absolute;
+width: 100vh;
+height: 900px;
+left: 0px;
+top: 0px;
+background: #F5FAFA;
+backdrop-filter: blur(50px);
+}

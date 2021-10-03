@@ -1,0 +1,232 @@
+.closebox {
+  text-align: right;
+  align-items: end;
+  padding-right: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+body {
+  background-color: grey;
+}
+.continuepage {
+  position: absolute;
+  width: 412px;
+  height: 648px;
+  left: 514px;
+  top: 126px;
+  background-color: white;
+  border: 1px solid black;
+}
+.close {
+  position: absolute;
+  top: 300px;
+  right: 700px;
+}
+.close p {
+  font-size: 30px;
+}
+.help {
+  position: absolute;
+  width: 258px;
+  height: 36px;
+  left: 77px;
+  top: 160px;
+
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #000000;
+}
+.continueWithPhone {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding-right: 70px;
+  justify-content: space-around;
+  top: 276px;
+  left: 24px;
+  width: 364px;
+  height: 48px;
+  background: #ffffff;
+  border: 2px solid #002f34;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.continueWithfb {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding-right: 70px;
+  justify-content: space-around;
+  top: 340px;
+  left: 24px;
+  width: 364px;
+  height: 48px;
+  background: #ffffff;
+  border: 2px solid #002f34;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.continueWithgoogle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding-right: 70px;
+  justify-content: space-around;
+  top: 404px;
+  left: 24px;
+  width: 364px;
+  height: 48px;
+  background: #ffffff;
+  border: 2px solid #002f34;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.continueWithPhone span,
+.continueWithfb span,
+.continueWithgoogle span {
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  position:absolute;
+  left:54px;
+  /* identical to box height */
+
+  color: #002f34;
+}
+.continueWithPhone img {
+  margin: 0;
+}
+.guitarbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.details {
+  position: absolute;
+  top: 484px;
+  left: 42px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+
+  color: #000000;
+}
+.policy {
+  position: absolute;
+  top: 523px;
+  left: 39px;
+  right: 39px;
+  bottom: 99px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+
+  color: #6f6f6f;
+}
+.policy span {
+  color: #39ccf1;
+}
+.dots div {
+  font-size: 8px;
+  width: 7px;
+  height: 7px;
+  color: grey;
+  margin: 5px;
+  background: #c4c4c4;
+  border-radius: 15px;
+}
+.dots {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 220px;
+  align-items: center;
+  justify-content: center;
+}
+
+.phonelogo {
+  position:absolute;
+  left:25px;
+}
+
+.fblogo {
+  position:absolute;
+  left:27px;
+}
+
+.googlelogo {
+  position:absolute;
+  left:23.19px;
+}
+
+/* }
+.help {
+  width: 230px;
+  margin: auto;
+  margin-bottom: 15px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  font-family: sans-serif;
+  color: #000000;
+}
+
+.continueWithPhone {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 40px;
+  width: 300px;
+  background: #ffffff;
+  border: 2px solid #002f34;
+  text-decoration: underline #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 20px auto;
+}
+.phonelogo {
+  margin-right: 40px;
+}
+.phonetext {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+.details {
+  color: black;
+  font-size: 10px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  font-weight: 500;
+}
+.policy {
+  font-size: 12px;
+  width: 250px;
+  margin: auto;
+  color: grey;
+}
+.policy span {
+  color: #40a2fd;
+} */

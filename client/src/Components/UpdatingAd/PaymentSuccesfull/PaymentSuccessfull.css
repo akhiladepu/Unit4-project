@@ -1,0 +1,185 @@
+.container {
+  width: 492px;
+  height: 656px;
+  position: absolute;
+  width: 492px;
+  height: 656px;
+  left: 474px;
+  top: 122px;
+
+  background: #ffffff;
+  box-shadow: 0px 8px 30px 4px rgba(50, 50, 50, 0.08);
+  border-radius: 4px;
+}
+.x {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.overAllDiv {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 270px; /*change these values to adjust the whole animation*/
+  bottom: 500px; /*change these values to adjust the whole animation*/
+}
+
+.ellipse {
+  position: absolute;
+  margin-top: 81px;
+  margin-left: 64px;
+}
+
+.checkMark {
+  position: absolute;
+  margin-top: 124px;
+  margin-left: 107px;
+}
+
+.starsDiv {
+  transition: 0.2s;
+  position: absolute;
+  width: 240px;
+  height: 237px;
+}
+
+.star1 {
+  position: absolute;
+  margin-top: 103px;
+}
+
+.star2 {
+  position: absolute;
+  margin-top: 33px;
+  margin-left: 9px;
+}
+
+.star3 {
+  position: absolute;
+  margin-top: 48px;
+  margin-left: 88px;
+}
+
+.star4 {
+  position: absolute;
+  margin-left: 192px;
+  margin-top: 89px;
+}
+
+.star5 {
+  position: absolute;
+  margin-left: 134px;
+}
+
+.circlebox {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: aqua;
+  border-radius: 60px;
+  margin: auto;
+  margin-left: 135px;
+  margin-top: 70px;
+  align-items: center;
+  padding-top: 35px;
+}
+.congo {
+  position: absolute;
+  width: 210px;
+  height: 22px;
+  left: 141px;
+  top: 286px;
+
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #002f34;
+}
+.live {
+  width: 50%;
+  height: 18px;
+  margin: auto;
+  top: 322px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #002f34;
+}
+.post {
+  position: absolute;
+  width: 364px;
+  height: 56px;
+  top: 492px;
+  left: 64px;
+  background: linear-gradient(0deg, #002f34, #002f34), #ffffff;
+  border: 2px solid #002f34;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height */
+
+  text-align: center;
+  padding-top: 15px;
+  color: #ffffff;
+}
+.view {
+  position: absolute;
+  width: 364px;
+  height: 56px;
+  top: 492px;
+  left: 64px;
+  background: linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+  border: 2px solid #002f34;
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height */
+
+  text-align: center;
+  padding-top: 15px;
+
+  color: #002f34;
+}
+.bottomtext {
+  position: absolute;
+  width: 287px;
+  height: 15px;
+  left: 118px;
+  top: 612px;
+
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+
+  color: #6e6e6e;
+}
+.bottomtext span {
+  color: #002f34;
+}
+.i {
+  position:absolute;
+  right:295px;
+}

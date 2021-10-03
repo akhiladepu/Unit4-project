@@ -1,0 +1,85 @@
+.navbar {
+  width: 100%;
+  height: 74px;
+  /* display: flex; */
+
+  background: rgba(0, 47, 52, 0.04);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.navDiv {
+  display: flex;
+  align-items: center;
+  width: 55%;
+  justify-content: space-between;
+}
+.navImage {
+  display: flex;
+  /* border: 1px solid black; */
+  align-items: center;
+  margin-left: 66px;
+  width: 14.5%;
+  justify-content: space-between;
+}
+.category1 {
+  position: absolute;
+  top: 114px;
+  left: 56px;
+  width: 334px;
+  height: 64px;
+}
+.car {
+  position: absolute;
+  top: 210px;
+  left: 56px;
+}
+.car {
+  position: absolute;
+  top: 210px;
+  left: 56px;
+}
+.propertiy {
+  position: absolute;
+  top: 290px;
+  left: 56px;
+}
+.mobiles {
+  position: absolute;
+  top: 370px;
+  left: 56px;
+}
+.furniture {
+  position: absolute;
+  top: 450px;
+  left: 56px;
+}
+.vehicle {
+  position: absolute;
+  top: 530px;
+  left: 56px;
+}
+.application {
+  position: absolute;
+  top: 610px;
+  left: 56px;
+}
+.fashion {
+  position: absolute;
+  top: 690px;
+  left: 56px;
+}
+.books {
+  position: absolute;
+  top: 770px;
+  left: 56px;
+}
+.footer2 {
+  position: absolute;
+  top: 938px;
+  height: 62px;
+}
+.whole {
+  position: absolute;
+  top: 290px;
+  left: 721px;
+}

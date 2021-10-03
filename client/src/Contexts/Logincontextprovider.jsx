@@ -6,7 +6,7 @@ export const LoginContext = createContext({ isLoggedIn: "", handleLogin: () => {
 export function Logincontextprovider({children}){
 
     // const [userImageURL, setUserImageURL] = useState("");
-    // const [productId, setProductId] = useState("");
+    const [productId, setProductId] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [changeColor, setChangeColor] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -30,6 +30,7 @@ export function Logincontextprovider({children}){
 
     const handleProductId = (id) => {
         console.log(id)
+        setProductId(id);
     }
 
     useEffect(() => {
@@ -41,7 +42,7 @@ export function Logincontextprovider({children}){
             setChangeColor(true)
     },[phoneNumber])
 
-    return <LoginContext.Provider value={{category,setCategory, phoneNumber,setPhoneNumber,changeColor,setChangeColor, isLoggedIn, handleLogin, userId, setUserId, handleUserImage, handleProductId}}>
+    return <LoginContext.Provider value={{productId,handleProductId,category,setCategory, phoneNumber,setPhoneNumber,changeColor,setChangeColor, isLoggedIn, handleLogin, userId, setUserId, handleUserImage, handleProductId}}>
    {children}
     </LoginContext.Provider>
 }

@@ -24,7 +24,7 @@ const initState = {
 export const PostYourAd = () => {
 
 
-    const {userId,productId,category} = useContext(LoginContext);
+    const {userId,handleProductId,category} = useContext(LoginContext);
 
 
 
@@ -68,6 +68,7 @@ export const PostYourAd = () => {
         "sellerId": userId
         }
         handlePost(netData);
+        
         // setTotalData([netData]);
     }
 
@@ -75,9 +76,11 @@ export const PostYourAd = () => {
         await axios.post(`http://localhost:4000/${category}`, {
             ...dataToBePosted
         }).then((res) => {
-            console.log(res);
+            console.log(res.data._id);
+            handleProductId(res.data._id);
             return res;
         })
+        
     }
 
     // const handlePost = async(dataToBePosted)  => {

@@ -10,6 +10,8 @@ export const ViewYourAd2 = () => {
     const [allData, setAllData] = useState([]);    // handlimng all datas
     const [images, setImages] = useState([]);   // handle main images 
 
+    const [userData, setUserData] = useState({});
+
     const [lowerImg1, setLowerImg1] = useState([]);
     const [lowerImg2, setLowerImg2] = useState([]);
     const [lowerImg3, setLowerImg3] = useState([]);
@@ -22,7 +24,7 @@ export const ViewYourAd2 = () => {
     useEffect(() => {
         axios.get("http://localhost:4000/cars")
             .then((data) => {
-                setAllData(data.data[0]);
+                setAllData(data.data[2]);
                 setImages(data.data[0].productImages);
                 setLowerImg1(data.data[1].productImages);
                 setLowerImg2(data.data[2].productImages)
@@ -33,6 +35,11 @@ export const ViewYourAd2 = () => {
                 setLowerData3(data.data[3]);
                 setLowerData4(data.data[4]);
             })
+        axios.get("http://localhost:4000/users")
+            .then((userData) => {
+                setUserData(userData.data[1]);
+                console.log(userData.data[1])
+        })
     },[])
 
     
@@ -61,6 +68,7 @@ export const ViewYourAd2 = () => {
         }
     }
 
+    
     
     
 
@@ -172,8 +180,12 @@ export const ViewYourAd2 = () => {
 
                 <ProductDetail className="d-flex flex-column">
                     <div style={{ position: "relative",width: '100%', height: '64px',background:" #E6F3F2;transform: matrix(1, 0, 0, -1, 0, 0)"}}>
-                        <p style={{width:"234px",height:"26px", position: "absolute", top:"19px",left:"24px",fontFamily: "Graphik", fontSize: "24px", fontStyle: "normal", fontWeight: "600", lineheight: "26px", letterspacing: "0em", textAlign: "left",color:"#002F34"}}>
-                            {allData.model}
+                            <p style={{ display: "flex",width:"234px",height:"26px", position: "absolute", top:"19px",left:"24px",fontFamily: "Graphik", fontSize: "24px", fontStyle: "normal", fontWeight: "600", lineheight: "26px", letterspacing: "0em", textAlign: "left",color:"#002F34"}}>
+                                <span style={{flex:"1 1 auto",minWidth:"0"}}>
+                                    <span style={{whiteSpace: "nowrap",overflow: "hidden",textOverflow:"ellipsis"}}>
+                                    {allData.model} 
+                                    </span> 
+                                </span>
                         </p>
                     </div>
                     <div className="col-12 d-flex flex-row" style={{ position: "relative" }}>

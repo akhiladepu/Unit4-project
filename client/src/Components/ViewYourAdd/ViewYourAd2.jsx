@@ -173,23 +173,17 @@ export const ViewYourAd2 = () => {
                     <div className="d-flex flex-row" style={{ justifyContent: "space-between" }}>
                         
                         <SmallPICASHOW>
-                            {images.length === 2 ? <img src={images[1]} alt="" style={{ width:"100%",height:"100%"} }/> : <div> <div style={{ position:"absolute",width: '100%', height: '100%', background: "rgb(0,0,0,0.4)",zIndex:"14",color:"white",fontSize:"60px",textAlign:"center" }}>
-                                +{images.length-2}
-                            </div>
-                                <img src={images[1]} style={{ height:"100%", width:"100%"}} alt="" /> </div> }
+                             <img src={images[1]} alt="" style={{ width:"100%",height:"100%"} }/>  
                         </SmallPICASHOW>
 
                         <SmallPICASHOW>
-                            {images.length === 3 ? <img src={images[2]} alt="" style={{ width:"100%",height:"100%"} }/> : <div> <div style={{ position:"absolute",width: '100%', height: '100%', background: "rgb(0,0,0,0.4)",zIndex:"14",color:"white",fontSize:"60px",textAlign:"center" }}>
-                                +{images.length-2}
-                            </div>
-                            <img src={images[2]} style={{ height:"100%", width:"100%"}} alt="" /> </div> }
+                             <img src={images[2]} alt="" style={{ width:"100%",height:"100%"} }/>
                         </SmallPICASHOW>
 
                         <SmallPICASHOW style={{position: "relative"}}>
                             {images.length >= 100 ? <img src={images[2]} alt="" style={{ width:"100%",height:"100%"} }/> : <div> <div style={{ position:"absolute",width:'100.5%',borderRadius:"4px", height: '100%', background: "rgb(0,0,0,0.4)",zIndex:"14",color:"white",fontSize:"60px",textAlign:"center" }}>
                                 <div style={{ width:"27px",height:"26px",marginTop:"42px",marginLeft:"38px",fontFamily: "Graphik",fontStyle: "normal",fontWeight: "normal",fontZize: "24px",lineHeight: "26px"}} >
-                                    +{images.length - 2}
+                                    +{  images.length - 2 >0 ? images.length - 2 : 0}
                                 </div> 
                             </div>
                             <img src={images[3]} style={{ height:"113px", width:"100%"}} alt="" /> </div> }

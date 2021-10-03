@@ -1,9 +1,10 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState,useEffect,useContext} from 'react';
 import "./PostYourAd.css"
 import { Headd, InpHead, InpBar, Downarrow, Footer, ImgTaker, FootButton, SelectBar, OptionBar } from './PostYourAddbootStrap';
 import { useHistory} from "react-router-dom"
 import ImageUploading from "react-images-uploading";
 import axios from 'axios';
+import { LoginContext } from '../../Contexts/Logincontextprovider';
 
 
 const initState = {
@@ -22,11 +23,17 @@ const initState = {
 
 export const PostYourAd = () => {
 
+
+    const {userId,handleProductId,category} = useContext(LoginContext);
+
+
+
+    console.log('InpHead:', InpHead)
     const history = useHistory();
 
     const [text, setText] = useState(initState);   // used for storing text documents
 
-    const [totalData, setTotalData] = useState([]);
+    const [totalData, setTotalData] = useState({});
 
     const [fetchedData, setFetchedData] = useState([]);
     
@@ -48,29 +55,49 @@ export const PostYourAd = () => {
     const handleInput = () => {
         const netData = {
 
-            "brandName": text.brandName,
+        "brandName": text.brandName,
         "yearOfPurchase": text.yearOfPurchase,
         "model": text.model,
         "physicalCondition": text.physicalCondition,
         "productName": text.adTitle,
         "description": text.descrption,
         "price": text.price,
-            "location": text.pincode,
-            "postedOn": Date().split("").splice(4, 11).join(""),
-        "productImages":[...images]
+        "location": text.pincode,
+        "postedOn": Date().split("").splice(4, 11).join(""),
+        "productImages": [...images],
+        "sellerId": userId
         }
         handlePost(netData);
+        
         // setTotalData([netData]);
     }
 
     const handlePost = async(dataToBePosted) => {
-        await axios.post('http://localhost:4000/cars', {
+        await axios.post(`http://localhost:4000/${category}`, {
             ...dataToBePosted
         }).then((res) => {
-            console.log(res);
+            console.log(res.data._id);
+            handleProductId(res.data._id);
             return res;
         })
+        
     }
+
+    // const handlePost = async(dataToBePosted)  => {
+        
+    //     await axios.post('http://localhost:4000/cars', {
+    //         ...dataToBePosted
+    //     }).then((res) => {
+    //         console.log(res);
+    //         return res;
+    //     })
+ 
+   // }
+
+
+   
+
+
 
     let trig = "cars";
 
@@ -171,7 +198,7 @@ export const PostYourAd = () => {
                         </SelectBar>
                     </div>
                     <div>
-                        <img src={`/POSTYOURAD/Redownloadadtitle.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} /> <br />
+                        <img src={`/POSTYOURAD/AdTitle.svg`} alt="" style={{marginLeft:'56px',marginTop:'16px',marginBottom:'16px'}} /> <br />
                         <InpBar type="text" name="adTitle" onChange={handleChange}></InpBar>
                     </div>
                     <div>
@@ -183,7 +210,7 @@ export const PostYourAd = () => {
                 
                 <div style={{ width: "652px" ,marginLeft:"100px"}}>
                     
-                     <img src={`/POSTYOURAD/AdTitle.svg`} alt="" style={{marginLeft:'4px',marginTop:'33px',marginBottom:'16px'}} /> <br />
+                     <img src={`/POSTYOURAD/ADDImages.svg`} alt="" style={{marginLeft:'4px',marginTop:'34px',marginBottom:'16px'}} /> <br />
                     {/* <div className="col-12 d-flex flex-row" style={{flexFlow:"row wrap",justifyContent:"space-between"}}> */}
 
                             {/* follows the same hirarcy as commented above */}
@@ -359,7 +386,7 @@ export const PostYourAd = () => {
 
             <div className="d-flex flex-row" style={{marginBottom:"104px"}}>
                 <div>
-                    <img src={`/POSTYOURAD/Price.svg`} alt="" style={{marginLeft:'55px',marginTop:'16px',marginBottom:'16px'}} /> <br />
+                    <img src={`/POSTYOURAD/Price.svg`} alt="" style={{marginLeft:'55px',marginTop:'20.7px',marginBottom:'16px'}} /> <br />
                     <InpBar type="text" name="price" onChange={handleChange}></InpBar>
                 </div>
                 <div style={{marginLeft:"60px"}}>

@@ -6,11 +6,12 @@ import {Enterotp} from "../EnterOTP/Enterotp.jsx"
 import { Postloading } from "../UpdatingAd/Loading/Postloading.jsx";
 import AdNotPosted from "../UpdatingAd/AdNotPosted/AdNotPosted"
 import { PaymentSuccessfull } from "../UpdatingAd/PaymentSuccesfull/PaymentSuccessfull";
-import CardMethod from "../UpdatingAd/CardMethod/CardMethod"
-import {Updatingad} from "../UpdatingAd/Updating/Updatingad"
+import CardMethod from "../UpdatingAd/CardMethod/CardMethod";
+import { Updatingad } from "../UpdatingAd/Updating/Updatingad";
 import PaymentMethod from "../UpdatingAd/PaymentMethod/PaymentMethod";
 import { PostYourAd } from '../PostYourAd/PostYourAd.jsx';
-import { ViewYourAd2 } from '../ViewYourAdd/ViewYourAd2.jsx'
+import { ViewYourAd2 } from '../ViewYourAdd/ViewYourAd2.jsx';
+
 import { Selectcategory } from "../Selectcategory/Selectcategory.jsx"
 
 export const Routes = () => {

@@ -15,6 +15,8 @@ const SmallPICASHOW = styled.div`
 Width:143px;
 Height:113px;
 margin-top:23px;
+background: linear-gradient(0deg, rgba(0, 47, 52, 0.35), rgba(0, 47, 52, 0.35));
+
 `
 
 const ProductDetail = styled.div`

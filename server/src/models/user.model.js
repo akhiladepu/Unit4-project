@@ -7,9 +7,9 @@ const randomIntFromInterval = (min, max) => { // min and max included
 const rndInt = randomIntFromInterval(1, 4);
 
 const userSchema = new mongoose.Schema({
-    first_name: { type: String},
-    last_name: { type: String},
-    email: { type: String},
+    first_name: { type: String, default:"First Name"},
+    last_name: { type: String, default:"Last Name"},
+    email: { type: String, default:"First Name @email.com"},
     password: { type: String},
     mobile: { type: Number, required: true},
     image: { type: String, default: `https://statics.olx.in/external/base/img/avatar_${rndInt}.png` },

@@ -17,80 +17,76 @@ function Navbar() {
     `All Categories`, 'Electronics & appliances', 'Properties', 'Mobile & Tablets',
     'Commercial Vehicles & spares', `Books,Sports & Hobbies`
   ];
-  useEffect(() => {
-    search()
-  }, [])
-  var element;
-  var arr;
-  var p1, p2, p3;
-  var a
-  const search = () => {
-    axios.get(`http://localhost:3005/Cars`)
-      .then((res) => {
-        arr = res.data
-        console.log(arr)
-        a = []
-        for (let i = 0; i < arr.length; i++) {
-          element = arr[i].productName.split(" ")
-          p1 = element[0].toLowerCase()
-          if (p1 === product) {
-            a.push(arr[i])
-          }
-        }
-        if (product === "cars") {
-          a = arr
-        }
-        setSearchedProducts([...a])
-      })
-    axios.get(`http://localhost:3005/Laptops`)
-      .then((res) => {
-        arr = res.data
-        console.log(arr)
-        for (let i = 0; i < arr.length; i++) {
-          element = arr[i].productName.split(" ")
-          p1 = element[0].toLowerCase()
-          if (p1 === product) {
-            a.push(arr[i])
-          }
-        }
-        if (product === "laptops") {
-          a = arr
-        }
-        setSearchedProducts([...a])
-      })
-    axios.get(`http://localhost:3005/Mobiles`)
-      .then((res) => {
-        arr = res.data
-        console.log(arr)
-        for (let i = 0; i < arr.length; i++) {
-          element = arr[i].productName.split(" ")
-          p1 = element[0].toLowerCase()
-          if (p1 === product) {
-            a.push(arr[i])
-          }
-        }
-        if (product === "mobiles") {
-          a = arr
-        }
-        setSearchedProducts([...a])
-      })
-    axios.get(`http://localhost:3005/Bikes`)
-      .then((res) => {
-        arr = res.data
-        console.log(arr)
-        for (let i = 0; i < arr.length; i++) {
-          element = arr[i].productName.split(" ")
-          p1 = element[0].toLowerCase()
-          if (p1 === product) {
-            a.push(arr[i])
-          }
-        }
-        if (product === "bikes") {
-          a = arr
-        }
-        setSearchedProducts([...a])
-      })
-  }
+  // useEffect(() => {
+  //   search()
+  // }, [])
+  // var element;
+  // var arr;
+  // var p1, p2, p3;
+  // var a;
+  // const search = () => {
+  //   axios.get(`http://localhost:4000/cars`)
+  //     .then((res) => {
+  //       arr = res.data
+  //       a = []
+  //       for (let i = 0; i < arr.length; i++) {
+  //         element = arr[i].productName.split(" ")
+  //         p1 = element[0].toLowerCase()
+  //         if (p1 === product) {
+  //           a.push(arr[i])
+  //         }
+  //       }
+  //       if (product === "cars") {
+  //         a = arr
+  //       }
+  //       setSearchedProducts([...a])
+  //     })
+  //   axios.get(`http://localhost:4000/laptops`)
+  //     .then((res) => {
+  //       arr = res.data
+  //       for (let i = 0; i < arr.length; i++) {
+  //         element = arr[i].productName.split(" ")
+  //         p1 = element[0].toLowerCase()
+  //         if (p1 === product) {
+  //           a.push(arr[i])
+  //         }
+  //       }
+  //       if (product === "laptops") {
+  //         a = arr
+  //       }
+  //       setSearchedProducts([...a])
+  //     })
+  //   axios.get(`http://localhost:4000/mobiles`)
+  //     .then((res) => {
+  //       arr = res.data
+  //       for (let i = 0; i < arr.length; i++) {
+  //         element = arr[i].productName.split(" ")
+  //         p1 = element[0].toLowerCase()
+  //         if (p1 === product) {
+  //           a.push(arr[i])
+  //         }
+  //       }
+  //       if (product === "mobiles") {
+  //         a = arr
+  //       }
+  //       setSearchedProducts([...a])
+  //     })
+  //   axios.get(`http://localhost:4000/bikes`)
+  //     .then((res) => {
+  //       arr = res.data
+  //       for (let i = 0; i < arr.length; i++) {
+  //         element = arr[i].productName.split(" ")
+  //         p1 = element[0].toLowerCase()
+  //         if (p1 === product) {
+  //           a.push(arr[i])
+  //         }
+  //       }
+  //       if (product === "bikes") {
+  //         a = arr
+  //       }
+  //       setSearchedProducts([...a])
+  //     })
+  // }
 
   const routeChange = (reqPath) => {
     handleLogin();
@@ -124,7 +120,7 @@ function Navbar() {
         onChange={(e=>setProduct(e.target.value))}
         type="text"
         className="input"
-          placeholder="Search for Cars,Mobile Phones and more"
+          placeholder="Search for Cars, Mobile Phones and more"
         />
       <img src={`/NavbarImages/search.svg`} className="searchIcon" alt="" />
         {isLoggedIn ? <><img className="chat" src={`/NavbarImages/chat.svg`} alt=""/><img className="notification" src={`/NavbarImages/notification.svg`} alt=""/><img className="profile1" src="/NavbarImages/profile.png" alt=""></img><img className="arrow" src={`/NavbarImages/arrowDown.svg`} alt=""/></>

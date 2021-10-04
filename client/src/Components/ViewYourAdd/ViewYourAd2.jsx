@@ -59,7 +59,9 @@ export const ViewYourAd2 = () => {
         })
 
         
-    },[])
+    }, [])
+    
+    
 
     
 

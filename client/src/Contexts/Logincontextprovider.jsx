@@ -12,29 +12,29 @@ export function Logincontextprovider({children}){
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userId, setUserId] = useState("61591eeb10458c0d64c9be6e");
     const [category, setCategory] = useState("cars");
-    const getUsers = async () => {
-        await axios("http://localhost/cars").then((data) => {
-            console.log(data.data);
-        })
-    }
+    // const getUsers = async () => {
+    //     await axios("http://localhost/cars").then((data) => {
+    //         console.log(data.data);
+    //     })
+    // }
 
     const handleLogin = () => {
         setIsLoggedIn(!isLoggedIn);
     }
 
     const handleUserImage = (text) => {
-        console.log('text:', text)
+        // console.log('text:', text)
         // setUserImageURL(text);
     }
 
     const handleProductId = (id) => {
-        console.log(id)
+        // console.log(id)
         setProductId(id);
     }
 
-    useEffect(() => {
-        getUsers();
-    }, []);
+    // useEffect(() => {
+    //     getUsers();
+    // }, []);
 
     useEffect(()=>{
         if (phoneNumber.length === 10)

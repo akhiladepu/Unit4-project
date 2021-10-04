@@ -37,7 +37,7 @@ export function Loginthroughphone(){
       <div className="number" >
          <div className="code"><span >+91</span></div>
          <div className="line"> <span ></span></div>
-         <input maxlength="10"onChange={(e)=>setPhoneNumber(e.target.value)} className="numinput" placeholder="Enter Phone Number"></input>
+         <input maxLength="10"onChange={(e)=>setPhoneNumber(e.target.value)} className="numinput" placeholder="Enter Phone Number"></input>
       </div>
 
       {changeColor?<Link to="/Enterotp">

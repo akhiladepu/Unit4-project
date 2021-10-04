@@ -49,7 +49,7 @@ export const PostYourAd = () => {
         setText({...text,[name]: value});
     }
 
-    const handleInput = () => {
+    const handleInput = async () => {
         const netData = {
 
         "brandName": text.brandName,
@@ -64,16 +64,19 @@ export const PostYourAd = () => {
         "productImages": [...images],
         "sellerId": userId
         }
-        handlePost(netData);
+        await handlePost(netData);
         
         // setTotalData([netData]);
     }
 
+
+
     const handlePost = async(dataToBePosted) => {
+        // console.log('dataToBePosted:', dataToBePosted)
         await axios.post(`http://localhost:4000/${category}`, {
-            ...dataToBePosted
+            ...dataToBePosted  
         }).then((res) => {
-            console.log(res.data._id);
+            // console.log(res.data._id);
             handleProductId(res.data._id);
             return res;
         })

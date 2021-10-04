@@ -85,7 +85,7 @@ export const HomePage = () => {
             <div className="moreOnCarsProducts">
                 {moreOnCars.map((el) => {
                     return (<>
-                        <div className="displayProductComponent" onClick={() => { handleProductId(el._id); routeChange() }}>
+                        <div key={ el._id} className="displayProductComponent" onClick={() => { handleProductId(el._id); routeChange() }}>
                             <img className="displayProductComponentImage" src={`${el.productImages[0]}`} alt="" />
                             {el.featured ? <img className="displayProductComponentFeatured" src={ `/SVGComponents/Homepage/Component2/Featured.svg`} alt=""/>:<></>}
                             {el.wishlisted ? <img className="displayProductComponentWishlistIcon" src={`/SVGComponents/Homepage/Component2/wishlisted.svg`} alt="" onClick={(clickEvent) => { clickEvent.stopPropagation(); console.log("wishlistIcon Clicked")}}/>:<img className="displayProductComponentWishlistIcon" src={ `/SVGComponents/Homepage/Component2/notWishlisted.svg`} alt=""  onClick={(clickEvent) => { clickEvent.stopPropagation(); console.log("wishlistIcon Clicked")}}/>}
@@ -106,7 +106,7 @@ export const HomePage = () => {
             <div className="topPicsForYouProducts">
                 {topPicsForYou.map((el) => {
                     return (<>
-                        <div className="displayProductComponent" onClick={() => { handleProductId(el._id); routeChange() }}>
+                        <div key={ el._id} className="displayProductComponent" onClick={() => { handleProductId(el._id); routeChange() }}>
                             <img className="displayProductComponentImage" src={`${el.productImages[0]}`} alt="" />
                             {el.featured ? <img className="displayProductComponentFeatured" src={ `/SVGComponents/Homepage/Component2/Featured.svg`} alt=""/>:<></>}
                             {el.wishlisted ? <img className="displayProductComponentWishlistIcon" src={`/SVGComponents/Homepage/Component2/wishlisted.svg`} alt="" onClick={(clickEvent) => { clickEvent.stopPropagation(); console.log("wishlistIcon Clicked")}}/>:<img className="displayProductComponentWishlistIcon" src={ `/SVGComponents/Homepage/Component2/notWishlisted.svg`} alt=""  onClick={(clickEvent) => { clickEvent.stopPropagation(); console.log("wishlistIcon Clicked")}}/>}
@@ -127,7 +127,7 @@ export const HomePage = () => {
             <div className="FreshRecommendationsProducts">
                 {freshRecommendations.map((el) => {
                     return (<>
-                        <div className="displayProductComponent" onClick={() => { handleProductId(el._id); routeChange() }}>
+                        <div key={ el._id} className="displayProductComponent" onClick={() => { handleProductId(el._id); routeChange() }}>
                             <img className="displayProductComponentImage" src={`${el.productImages[0]}`} alt="" />
                             {el.featured ? <img className="displayProductComponentFeatured" src={`/SVGComponents/Homepage/Component2/Featured.svg`} alt="" /> : <></>}
                             {el.wishlisted ? <img className="displayProductComponentWishlistIcon" src={`/SVGComponents/Homepage/Component2/wishlisted.svg`} alt="" onClick={(clickEvent) => { clickEvent.stopPropagation(); console.log("wishlistIcon Clicked")}}/>:<img className="displayProductComponentWishlistIcon" src={ `/SVGComponents/Homepage/Component2/notWishlisted.svg`} alt=""  onClick={(clickEvent) => { clickEvent.stopPropagation(); console.log("wishlistIcon Clicked")}}/>}

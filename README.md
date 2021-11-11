@@ -2,7 +2,7 @@
 ![](https://user-images.githubusercontent.com/72969348/135753886-4a3be8eb-6d00-4b86-8a7b-c55c92af065c.png)
 
     
-# Project OLX
+# Project OLX clone ( for educational purpose only )
 
 The OLX marketplace is a platform for buying and selling services and goods such as electronics, fashion items, furniture, household goods, cars and bikes. This Project is assigned to us by masai during the construct week.
 

@@ -70,8 +70,8 @@ Developers
 - [Nikhil Gupta](https://github.com/NikhilGuptan)
 
 Designers
-- [Sandipan Chakraborty]()
-- [Pooja Suresh]()
+- [Sandipan Chakraborty](https://www.behance.net/sandipan007)
+- [Pooja Suresh](https://www.behance.net/poojas9)
 
 
   

@@ -4,14 +4,15 @@
     
 # Project OLX clone ( for educational purpose only )
 
-The OLX marketplace is a platform for buying and selling services and goods such as electronics, fashion items, furniture, household goods, cars and bikes. This Project is assigned to us by masai during the construct week.
+The OLX marketplace is a platform for buying and selling services and goods such as electronics, fashion items, furniture, household goods, cars, and bikes. This Project is assigned to us by MASAS SCHOOL during the construct week of UNIT-4.
+    In this project, we have tried to build the pixel-perfect design given by the designers from the UXD batch. With our efforts and the technology stack, that we have learned till Unit-4 in the MASAI SCHOOL, we were able to clone the whole website with the same features.
 
 
-## Tech Stack
+## Tech Stacks Used
 
 **Client:** React 
 
-**Server:** Node, Express , MongoDB
+**Server:** Node, Express, MongoDB
 
   
 ## Features
@@ -22,16 +23,9 @@ The OLX marketplace is a platform for buying and selling services and goods such
 - Ad visibility
 
   
-## Deployment
+# Deployed Link
 
-To deploy this project run, First clone clone the project to local computer and start following the below steps.
-
-```bash
-  git clone https://github.com/cybervirus997/Olx.git
-  cd Olx/server
-  npm run server
-```
-Now visit the deployed site : https://projectolx-cybervirus997.vercel.app/
+https://olx-clone-team4.vercel.app/
   
 ## Screenshots
 - Home Page
